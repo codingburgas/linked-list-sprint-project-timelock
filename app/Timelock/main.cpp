@@ -1,8 +1,9 @@
-#include <iostream>
-using namespace std;
+#include "pch.h"
+#include "startingScreen.h"
 
 int main()
 {
-    cout << "Hello World!";
+    displayStartingScreen();
+    void chooseAnswer();
 }
 
