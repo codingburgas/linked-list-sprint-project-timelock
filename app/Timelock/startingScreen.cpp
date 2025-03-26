@@ -3,6 +3,9 @@
 
 void displayStartingScreen()
 {
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
     string timelock[11] = {
         "                                                                                                                        ",
         "      .**************..*********..****************..*************..*************..**************..**************..*************.",
@@ -16,15 +19,15 @@ void displayStartingScreen()
         "        **************  ********  ****************  *************  *************  **************  **************  ************",
         "                                                                                                                         "
     };
-    
+
     for (int i = 0; i < 4; i++)
     {
         cout << endl;
     }
-    
-    for (int i = 0; i < 11; i++) 
+
+    for (int i = 0; i < 11; i++)
     {
-        cout << timelock[i] << endl;
+        cout << purpleColor << timelock[i] << resetColor << endl;
     }
 
     for (int i = 0; i < 4; i++)
@@ -32,36 +35,40 @@ void displayStartingScreen()
         cout << endl;
     }
 
-    for (int i = 0; i < 49; i++)
+    cout << "Select a choice!";
+
+    for (int i = 0; i < 33; i++)
     {
         cout << " ";
     }
 
-    cout << "1.REGISTER                     2.LOGIN" << endl;
+    cout << "1.SIGN UP                     2.LOGIN" << endl;
 
     for (int i = 0; i < 2; i++)
     {
         cout << endl;
     }
+
     chooseAnswer();
 }
 
 void chooseAnswer()
 {
-    cout << "Choose an answer:" << endl;
-    int answer;
-    cin >> answer;
+    cout << "Your choice: ";
+    int choice;
+    cin >> choice;
+    cout << endl;
 
-    if (answer == 1)
+    if (choice == 1)
     {
-        cout << "Start your registration. Please fill the questions bellow." << endl;
+        signUp();
     }
-    else if (answer == 2)
+    else if (choice == 2)
     {
-        cout << "Login to an existing account." << endl;
+        login();
     }
     else
     {
-        cout << "Invalid answer! Choose 1. to REGISTER or 2. to LOGIN" << endl;
+        cout << "Invalid choice! Choose 1. to SIGN UP or 2. to LOGIN" << endl;
     }
 }

@@ -127,10 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="login.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="signUp.cpp" />
     <ClCompile Include="startingScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="login.h" />
+    <ClInclude Include="signUp.h" />
     <ClInclude Include="startingScreen.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
