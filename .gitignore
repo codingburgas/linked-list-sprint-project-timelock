@@ -9,10 +9,13 @@
 
 # Precompiled Headers
 *.gch
+*.pch
+*.ipch
 
 # Compiled Dynamic libraries
 *.so
 *.dylib
+*.dll
 
 # Fortran module files
 *.mod
@@ -22,9 +25,50 @@
 *.lai
 *.la
 *.lib
-!app/library/lib/*.lib
+!app/library/lib/*.lib 
 
 # Executables
 *.exe
 *.out
 *.app
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace
+*.sublime-project
+
+# Build directories
+build/
+dist/
+*.log
+*.cache
+
+# VS-specific files
+*.user
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+*.VC.db-wal
+*.VC.db-shm
+
+# Visual Studio Temporary Files
+.vs/
+*.ipch
+*.dbmdl
+*.VC.db
+*.pdb
+*.ilk
+*.exp
+*.idb
+*.tlog
+*.lastbuildstate
+
+# macOS files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+Desktop.ini
