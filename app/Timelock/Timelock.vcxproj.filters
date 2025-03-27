@@ -30,6 +30,21 @@
     <ClCompile Include="timeline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="prehistoric.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="classical.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="middleAge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="earlyModern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="startingScreen.h">
@@ -45,6 +60,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="timeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prehistoric.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="classical.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="middleAge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="earlyModern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modern.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

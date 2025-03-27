@@ -127,14 +127,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="classical.cpp" />
+    <ClCompile Include="earlyModern.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="middleAge.cpp" />
+    <ClCompile Include="modern.cpp" />
+    <ClCompile Include="prehistoric.cpp" />
     <ClCompile Include="signUp.cpp" />
     <ClCompile Include="startingScreen.cpp" />
     <ClCompile Include="timeline.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="classical.h" />
+    <ClInclude Include="earlyModern.h" />
     <ClInclude Include="login.h" />
+    <ClInclude Include="middleAge.h" />
+    <ClInclude Include="modern.h" />
+    <ClInclude Include="prehistoric.h" />
     <ClInclude Include="signUp.h" />
     <ClInclude Include="startingScreen.h" />
     <ClInclude Include="pch.h" />
