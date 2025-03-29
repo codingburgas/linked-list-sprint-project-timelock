@@ -29,7 +29,9 @@ void displayStartingScreen()
         cout << " ";
     }
 
+
     cout << "1.SIGN UP                     2.LOGIN" << endl;
+    chooseAnswer();
 
     for (int i = 0; i < 2; i++)
     {

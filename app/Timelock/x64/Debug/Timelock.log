@@ -1,12 +1,1 @@
-﻿  classical.cpp
-  earlyModern.cpp
-  login.cpp
-  main.cpp
-  middleAge.cpp
-  modern.cpp
-  prehistoric.cpp
-  signUp.cpp
-  startingScreen.cpp
-  timeline.cpp
-  Generating Code...
-  Timelock.vcxproj -> C:\Users\PC\Documents\vesi\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe
+﻿LINK : fatal error LNK1168: cannot open C:\Users\PC\Documents\vesi\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe for writing
