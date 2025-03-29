@@ -51,10 +51,12 @@ void chooseAnswer()
     if (choice == 1)
     {
         signUp();
+        system("cls");
     }
     else if (choice == 2)
     {
         login();
+        system("cls");
     }
     else
     {
