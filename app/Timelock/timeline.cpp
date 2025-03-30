@@ -93,15 +93,18 @@ void displayTimeline()
     }
     else if (era == 3)
     {
-        cout << endl << "Start exploring " << purpleColor << "The Middle Age " << resetColor << "era events!";
+     
     }
     else if (era == 4)
     {
-        cout << endl << "Start exploring " << purpleColor << "Early Modern " << resetColor << "era events!";
+        system("cls");
+        displayEarlyModern();
     }
     else if (era == 5)
     {
-        cout << endl << "Start exploring " << purpleColor << "Modern " << resetColor << "era events!";
+        system("cls");
+        displayModern();
+        
     }
 
 }
