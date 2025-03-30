@@ -1,8 +1,10 @@
 ﻿  prehistoric.cpp
+  startingScreen.cpp
+  timeline.cpp
   Generating code
-  2 of 125 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
+  4 of 126 functions ( 3.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Timelock.vcxproj -> C:\Users\Jujka\Documents\Timelock\linked-list-sprint-project-timelock\app\x64\Release\Timelock.exe
   'pwsh.exe' is not recognized as an internal or external command,

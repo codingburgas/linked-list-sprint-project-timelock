@@ -7,4 +7,3 @@
 
 void displayStartingScreen();
 void chooseAnswer();
-void displayTimeline();
