@@ -93,7 +93,8 @@ void displayTimeline()
     }
     else if (era == 3)
     {
-     
+        system("cls");
+        displayMiddleAge();
     }
     else if (era == 4)
     {

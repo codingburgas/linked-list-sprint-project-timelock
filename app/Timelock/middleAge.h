@@ -2,3 +2,4 @@
 
 #pragma once
 
+void displayMiddleAge();
