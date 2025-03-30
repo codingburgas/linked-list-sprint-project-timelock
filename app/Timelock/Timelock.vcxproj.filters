@@ -77,8 +77,5 @@
     <ClInclude Include="modern.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="title.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

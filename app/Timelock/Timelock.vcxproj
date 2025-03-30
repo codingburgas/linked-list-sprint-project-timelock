@@ -142,7 +142,6 @@
     <ClInclude Include="classical.h" />
     <ClInclude Include="earlyModern.h" />
     <ClInclude Include="login.h" />
-    <ClInclude Include="title.h" />
     <ClInclude Include="middleAge.h" />
     <ClInclude Include="modern.h" />
     <ClInclude Include="prehistoric.h" />

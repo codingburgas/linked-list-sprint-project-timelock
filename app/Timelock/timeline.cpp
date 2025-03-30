@@ -1,12 +1,30 @@
 #include "timeline.h"
-#include "title.h"
+#include "prehistoric.h"
+#include "classical.h"
+#include "middleAge.h"
+#include "earlyModern.h"
+#include "modern.h"
 
 void displayTimeline()
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
-    for (int i = 0; i < 4; i++)
+    string title[11] = {
+    "                                                                                                                        ",
+    "      .**************..*********..****************..*************..*************..*********..*************..**************.",
+    "      *   .________.      .__.       _.      ._      .________.      .__.           .__.       ._.   ._       .________.   *",
+    "      *   |___  ___|      |  |      |  \\    /  |     |  ______|      |  |           |  |      |   \\ |  |      |  ______|   *",
+    "      *      |  |         |  |      |   \\  /   |     |  |_____       |  |           |  |      |    \\|  |      |  |_____    *",
+    "      *      |  |         |  |      |    \\/    |     |  ______|      |  |           |  |      |  .     |      |  ______|   *",
+    "      *      |  |         |  |      |  |\\  /|  |     |  |_____       |  |____.      |  |      |  |\\    |      |  |_____    *",
+    "      *      |__|         |__|      |__| \\/ |__|     |________|      |_______|      |__|      |__| \\.__|      |________|   *",
+    "      *.              ..        ..                ..             ..             ..         ..             ..              .*",
+    "        **************  ********  ****************  *************  *************  *********  *************  *************",
+    "                                                                                                                         "
+    };
+
+    for (int i = 0; i < 2; i++)
     {
         cout << endl;
     }
@@ -65,7 +83,8 @@ void displayTimeline()
 
     if (era == 1)
     {
-        cout << endl << "Start exploring " << purpleColor <<  "Prehistoric " << resetColor << "era events!";
+        system("cls");
+        displayPrehistoric();
     }
     else if (era == 2)
     {

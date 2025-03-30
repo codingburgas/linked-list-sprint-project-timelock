@@ -1,13 +1,27 @@
 #include "startingScreen.h"
-#include "title.h"
 
 void displayStartingScreen()
 {
+
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
+    const string title[11] = {
+    "                                                                                                                        ",
+    "      .**************..*********..****************..*************..*************..**************..**************..************.",
+    "      *   .________.      .__.       _.      ._      .________.      .__.            ________       .________.     .__.  __.   *",
+    "      *   |___  ___|      |  |      |  \\    /  |     |  ______|      |  |           /  .__.  \\      |  ______|     |  | /  /   *",
+    "      *      |  |         |  |      |   \\  /   |     |  |_____       |  |           |  |  |  |      |  |           |  |/  /    *",
+    "      *      |  |         |  |      |    \\/    |     |  ______|      |  |           |  |  |  |      |  |           |     /     *",
+    "      *      |  |         |  |      |  |\\  /|  |     |  |_____       |  |____.      |  |__|  |      |  |_____.     |  |\\  \\    *",
+    "      *      |__|         |__|      |__| \\/ |__|     |________|      |_______|      \\________/      |________|     |__| \\__\\   *",
+    "      *.              ..        ..                ..             ..             ..              ..              ..            .*",
+    "        **************  ********  ****************  *************  *************  **************  **************  ************",
+    "                                                                                                                         "
+    };
 
-    for (int i = 0; i < 4; i++)
+
+    for (int i = 0; i < 2; i++)
     {
         cout << endl;
     }
@@ -24,13 +38,8 @@ void displayStartingScreen()
 
     cout << "Select a choice!";
 
-    for (int i = 0; i < 33; i++)
-    {
-        cout << " ";
-    }
+    cout << setw(38) << "1.SIGN UP" << setw(30) << "2.LOGIN" << endl;
 
-
-    cout << "1.SIGN UP                     2.LOGIN" << endl;
     chooseAnswer();
 
     for (int i = 0; i < 2; i++)
@@ -43,7 +52,7 @@ void displayStartingScreen()
 
 void chooseAnswer()
 {
-    cout << "Your choice: ";
+    cout << endl << "Your choice: ";
     int choice;
     cin >> choice;
     cout << endl;
