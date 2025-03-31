@@ -2,4 +2,5 @@
 
 #pragma once
 
+void displayLogin();
 void login();

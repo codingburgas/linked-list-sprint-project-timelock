@@ -2,6 +2,7 @@
 
 #pragma once
 
+void displaySignUp();
 void signUp();
 
 

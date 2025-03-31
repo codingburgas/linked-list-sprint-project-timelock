@@ -59,13 +59,13 @@ void chooseAnswer()
 
     if (choice == 1)
     {
-        signUp();
         system("cls");
+        displaySignUp();
     }
     else if (choice == 2)
     {
-        login();
         system("cls");
+        displayLogin();
     }
     else
     {
