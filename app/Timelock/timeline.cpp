@@ -15,10 +15,39 @@ void testEraData() {
     addEra(5, "Modern era");
 }
 
+
+string eras[5] = {
+    "1. Prehistoric era",
+    "2. Classical era",
+    "3. The Middle Age era",
+    "4. Early Modern era",
+    "5. Modern era"
+};
+
+string resetColor = "\033[37m";   // White 
+string purpleColor = "\033[35m";  // Purple
+
+void printEndl(int num) {
+    for (int i = 0; i < num; i++) {
+        cout << endl;
+    }
+}
+
+void printStrRepeat(string str, int num) {
+    for (int i = 0; i < num; i++) {
+        cout << str;
+    }
+}
+
+void displayEras(){
+    for (string str : eras) {
+        cout << str << endl;
+    }
+}
+
+
 void displayTimeline(bool isAdmin)
 {
-    string resetColor = "\033[37m";   // White 
-    string purpleColor = "\033[35m";  // Purple
 
     string title[11] = {
     "",
@@ -33,31 +62,17 @@ void displayTimeline(bool isAdmin)
     "       **************  ********  ****************  *************  *************  *********  *************  **************",
     ""
     };
-
+    printEndl(2);
     testEraData();
-
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
-
     for (int i = 0; i < 11; i++)
     {
         centerText(purpleColor + title[i] + resetColor);
-        cout << endl;
     }
 
-    for (int i = 0; i < 5; i++)
-    {
-        cout << endl;
-    }
-
-    for (int i = 0; i < 10; i++)
-    {
-        cout << " ";
-    }
-
+    printEndl(5);
+    printStrRepeat("", 10);
     cout << "<<";
+
     for (int i = 1; i < 29; i++)
     {
         if (i % 5 == 0)
@@ -71,23 +86,11 @@ void displayTimeline(bool isAdmin)
     }
     cout << "->>" << endl;
 
-    string eras[5] = {
-        "1. Prehistoric era",
-        "2. Classical era",
-        "3. The Middle Age era",
-        "4. Early Modern era",
-        "5. Modern era"
-    };
+    printStrRepeat(" ", 16);
 
-
-    for (int i = 0; i < 8; i++)
-    {
-        cout << "  ";
-    } 
     for (int i = 0; i < 5; i++)
     {
         cout << eras[i] << "      ";
-        
     }
 
     for (const auto& line : title) {
@@ -173,8 +176,8 @@ void displayTimeline(bool isAdmin)
 
 }
 void addEra(int id, string name) {
-    EraNode* newEra = new EraNode{ id, name, headEra };
-    headEra = newEra;
+    headEra = new EraNode{ id, name, headEra };
+     
     cout << "Era added successfully!" << endl;
 }
 

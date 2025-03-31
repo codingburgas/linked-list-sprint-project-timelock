@@ -15,3 +15,4 @@ void addEra(int id, string name);
 void editEra();
 void deleteEra();
 void displayTimeline(bool isAdmin = false);
+void displayEras();
