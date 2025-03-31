@@ -20,7 +20,7 @@ void displayTimeline()
     "      *      |  |         |  |      |  |\\  /|  |     |  |_____       |  |____.      |  |      |  |\\    |      |  |_____    *",
     "      *      |__|         |__|      |__| \\/ |__|     |________|      |_______|      |__|      |__| \\.__|      |________|   *",
     "      *.              ..        ..                ..             ..             ..         ..             ..              .*",
-    "        **************  ********  ****************  *************  *************  *********  *************  **************",
+    "       **************  ********  ****************  *************  *************  *********  *************  **************",
     ""
     };
 
@@ -31,7 +31,8 @@ void displayTimeline()
 
     for (int i = 0; i < 11; i++)
     {
-        cout << purpleColor << title[i] << resetColor << endl;
+        centerText(purpleColor + title[i] + resetColor);
+        cout << endl;
     }
 
     for (int i = 0; i < 5; i++)
@@ -39,7 +40,7 @@ void displayTimeline()
         cout << endl;
     }
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 10; i++)
     {
         cout << " ";
     }
@@ -67,7 +68,7 @@ void displayTimeline()
     };
 
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 8; i++)
     {
         cout << "  ";
     } 

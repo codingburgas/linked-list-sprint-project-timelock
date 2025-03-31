@@ -1,4 +1,6 @@
 #include "login.h"
+#include "accessData.h"
+#include "validation.h"
 
 void displayLogin()
 {
@@ -15,7 +17,7 @@ void displayLogin()
     "               *   |  |____.      |  |__|  |      |  |__|  |        |  |       |  |\\    |   *",
     "               *   |_______|      \\________/      \\________/        |__|       |__| \\.__|   *",
     "               *.              ..             ..               ..          ..              .*",
-    "                 **************  *************  ***************  **********  ************** ",
+    "                **************  *************  ***************  **********  ************** ",
     ""
     };
 
@@ -27,7 +29,8 @@ void displayLogin()
 
     for (int i = 0; i < 11; i++)
     {
-        cout << purpleColor << title[i] << resetColor << endl;
+        centerText(purpleColor + title[i] + resetColor);
+        cout << endl;
     }
 
     for (int i = 0; i < 4; i++)
@@ -40,17 +43,14 @@ void displayLogin()
 
 void login()
 {
-	cout << "Login to an existing account." << endl;
-
-	string username, password;
-
-	cout << "Enter your username: ";
-	cin >> username;
-	cout << endl;
-
-	cout << "Enter your password: ";
-	cin >> password;
-	cout << endl;
-
-
+    loadAccounts();
+    string username, password;
+    cout << "Enter your username: "; cin >> username;
+    cout << "Enter your password: "; cin >> password;
+    if (!doesAccountExist(username) || !isPasswordCorrect(username, password)) {
+        cout << "Invalid username or password!" << endl;
+        return;
+    }
+    strcpy_s(currentUser, username.c_str());
+    cout << "Login successful! Role: " << getRole(username) << endl;
 }

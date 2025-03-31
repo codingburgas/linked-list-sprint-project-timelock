@@ -45,6 +45,15 @@
     <ClCompile Include="modern.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="accessData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="validation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="startingScreen.h">
@@ -75,6 +84,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="modern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="accessData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="validation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

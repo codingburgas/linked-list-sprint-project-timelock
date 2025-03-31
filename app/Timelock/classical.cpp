@@ -26,7 +26,8 @@ void displayClassical()
 
     for (int i = 0; i < 11; i++)
     {
-        cout << purpleColor << title[i] << resetColor << endl;
+        centerText(purpleColor + title[i] + resetColor);
+        cout << endl;
     }
 
     for (int i = 0; i < 2; i++)
@@ -34,7 +35,7 @@ void displayClassical()
         cout << endl;
     }
 
-    cout << setw(70) << "Start exploring " << purpleColor << "Classical " << resetColor << "era events!";
+    centerText("Start exploring " + purpleColor + "Classical " + resetColor + "era events!");
 
     for (int i = 0; i < 2; i++)
     {

@@ -16,7 +16,7 @@ void displayModern()
     "      *   |  |\\  /|  |      |  |__|  |      |  |___|  |      |  |_____       |  |\\  \\        |  |\\    |   *",
     "      *   |__| \\/ |__|      \\________/      |_______./       |________|      |__| \\__\\       |__| \\.__|   *",
     "      *.                ..              ..              ..               ..              ..              .*",
-    "        ****************  **************  **************  ***************  **************  **************",
+    "     ****************  **************  **************  ***************  **************  **************",
     ""
     };
 
@@ -27,7 +27,8 @@ void displayModern()
 
     for (int i = 0; i < 11; i++)
     {
-        cout << purpleColor << title[i] << resetColor << endl;
+        centerText(purpleColor + title[i] + resetColor);
+        cout << endl;
     }
 
     for (int i = 0; i < 2; i++)
@@ -35,7 +36,7 @@ void displayModern()
         cout << endl;
     }
 
-    cout << setw(60) << "Start exploring " << purpleColor << "Modern " << resetColor << "era events!";
+    centerText("Start exploring " + purpleColor + "Modern " + resetColor + "era events!");
 
     for (int i = 0; i < 2; i++)
     {
