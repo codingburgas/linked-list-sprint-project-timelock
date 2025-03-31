@@ -34,7 +34,7 @@ void displayClassical()
         cout << endl;
     }
 
-    cout << setw(60) << "Start exploring " << purpleColor << "Classical " << resetColor << "era events!";
+    cout << setw(70) << "Start exploring " << purpleColor << "Classical " << resetColor << "era events!";
 
     for (int i = 0; i < 2; i++)
     {
