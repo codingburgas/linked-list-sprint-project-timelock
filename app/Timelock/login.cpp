@@ -1,6 +1,8 @@
 #include "login.h"
 #include "accessData.h"
 #include "validation.h"
+#include "admin.h"
+#include "user.h"
 
 void displayLogin()
 {
@@ -52,5 +54,13 @@ void login()
         return;
     }
     strcpy_s(currentUser, username.c_str());
+    string role = getRole(username);
     cout << "Login successful! Role: " << getRole(username) << endl;
+
+    if (role == "admin") {
+        adminPanel();  
+    }
+    else {
+        userPanel();  
+    }
 }

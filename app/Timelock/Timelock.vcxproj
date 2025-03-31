@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="accessData.cpp" />
+    <ClCompile Include="admin.cpp" />
     <ClCompile Include="classical.cpp" />
     <ClCompile Include="earlyModern.cpp" />
     <ClCompile Include="login.cpp" />
@@ -139,10 +140,12 @@
     <ClCompile Include="signUp.cpp" />
     <ClCompile Include="startingScreen.cpp" />
     <ClCompile Include="timeline.cpp" />
+    <ClCompile Include="user.cpp" />
     <ClCompile Include="validation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="accessData.h" />
+    <ClInclude Include="admin.h" />
     <ClInclude Include="classical.h" />
     <ClInclude Include="earlyModern.h" />
     <ClInclude Include="login.h" />
@@ -153,6 +156,7 @@
     <ClInclude Include="startingScreen.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="timeline.h" />
+    <ClInclude Include="user.h" />
     <ClInclude Include="validation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

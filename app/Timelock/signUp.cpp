@@ -1,6 +1,8 @@
 #include "signUp.h"
 #include "accessData.h"
 #include "validation.h"
+#include "admin.h"
+#include "user.h"
 
 void displaySignUp()
 {
@@ -60,8 +62,10 @@ void signUp()
         cout << "Username already exists!" << endl;
         return;
     }
-    cout << "Select a password: "; cin >> password;
-    cout << "Confirm password: "; cin >> confirmPassword;
+    cout << "Select a password: "; 
+    cin >> password;
+    cout << "Confirm password: "; 
+    cin >> confirmPassword;
     if (password != confirmPassword) {
         cout << "Passwords do not match!" << endl;
         return;
@@ -73,4 +77,11 @@ void signUp()
     }
     saveAccount(username, password, role);
     cout << "SIGN UP successful!" << endl;
+    
+    if (role == "admin") {
+        adminPanel();
+    }
+    else {
+        userPanel();
+    }
 }
