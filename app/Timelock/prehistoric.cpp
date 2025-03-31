@@ -29,11 +29,7 @@ void displayPrehistoric()
     ""
     };
 
-
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     for (int i = 0; i < 21; i++)
     {
@@ -41,16 +37,11 @@ void displayPrehistoric()
         cout << endl;
     }
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     centerText("Start exploring " + purpleColor + "Prehistoric " + resetColor+ "era events!");
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
+
 }
 

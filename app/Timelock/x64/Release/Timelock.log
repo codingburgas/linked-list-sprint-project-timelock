@@ -1,7 +1,9 @@
-﻿  admin.cpp
+﻿  login.cpp
   Generating code
-  6 of 276 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+  2 of 294 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Timelock.vcxproj -> C:\Users\PC\Documents\vesi\linked-list-sprint-project-timelock\app\x64\Release\Timelock.exe
+  Timelock.vcxproj -> C:\Users\Jujka\Documents\Timelock\linked-list-sprint-project-timelock\app\x64\Release\Timelock.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

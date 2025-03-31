@@ -6,5 +6,5 @@ using namespace std;
 
 void userPanel() {
     cout << "User Panel:" << endl;
-    displayTimeline(false);
+    displayTimeline();
 }

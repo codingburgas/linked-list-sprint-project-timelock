@@ -6,7 +6,7 @@
 #include "modern.h"
 
 
-EraNode* headEra = nullptr;
+ERANODE* headEra = nullptr;
 void testEraData() {
     addEra(1, "Prehistoric era");
     addEra(2, "Classical era");
@@ -27,17 +27,6 @@ string eras[5] = {
 string resetColor = "\033[37m";   // White 
 string purpleColor = "\033[35m";  // Purple
 
-void printEndl(int num) {
-    for (int i = 0; i < num; i++) {
-        cout << endl;
-    }
-}
-
-void printStrRepeat(string str, int num) {
-    for (int i = 0; i < num; i++) {
-        cout << str;
-    }
-}
 
 void displayEras(){
     for (string str : eras) {
@@ -46,9 +35,8 @@ void displayEras(){
 }
 
 
-void displayTimeline(bool isAdmin)
+void displayTimeline()
 {
-
     string title[11] = {
     "",
     "      .**************..*********..****************..*************..*************..*********..*************..**************.",
@@ -59,18 +47,20 @@ void displayTimeline(bool isAdmin)
     "      *      |  |         |  |      |  |\\  /|  |     |  |_____       |  |____.      |  |      |  |\\    |      |  |_____    *",
     "      *      |__|         |__|      |__| \\/ |__|     |________|      |_______|      |__|      |__| \\.__|      |________|   *",
     "      *.              ..        ..                ..             ..             ..         ..             ..              .*",
-    "       **************  ********  ****************  *************  *************  *********  *************  **************",
+    "      **************  ********  ****************  *************  *************  *********  *************  **************",
     ""
     };
+
     printEndl(2);
-    testEraData();
+
     for (int i = 0; i < 11; i++)
     {
         centerText(purpleColor + title[i] + resetColor);
+        cout << endl;
     }
 
     printEndl(5);
-    printStrRepeat("", 10);
+    printStrRepeat(" ", 10);
     cout << "<<";
 
     for (int i = 1; i < 29; i++)
@@ -93,57 +83,10 @@ void displayTimeline(bool isAdmin)
         cout << eras[i] << "      ";
     }
 
-    for (const auto& line : title) {
-        cout << purpleColor << line << resetColor << endl;
-    }
+    printEndl(3);
+    printStrRepeat(" ", 2);
+    cout << "Choose an era to explore: ";
 
-    cout << "Available Eras:" << endl;
-    EraNode* temp = headEra;
-    while (temp) {
-        cout << temp->id << ". " << temp->name << endl;
-        temp = temp->next;
-    }
-
-    if (isAdmin) {
-        cout << "1. Add Era" << endl;
-        cout << "2. Edit Era" << endl;
-        cout << "3. Delete Era" << endl;
-        cout << "4. Explore Era" << endl;
-        cout << "Choose an option: ";
-        int choice;
-        cin >> choice;
-
-        switch (choice) {
-        case 1:
-            displayTimeline(true);
-            break;
-        case 2: {
-            int id;
-            string name;
-            cout << "Enter Era ID: ";
-            cin >> id;
-            cin.ignore();
-            cout << "Enter Era Name: ";
-            getline(cin, name);
-            addEra(id, name);
-            break;
-        }
-        case 3:
-            editEra();
-            break;
-        case 4:
-            deleteEra();
-            break;
-        case 5:
-            cout << "Logging out..." << endl;
-            break;
-        default: cout << "Invalid option!" << endl;
-            return;
-        }
-    }
-
-
-    cout << endl << endl << endl << "Choose an era to explore: ";
     int era;
     cin >> era;
   
@@ -173,10 +116,10 @@ void displayTimeline(bool isAdmin)
         displayModern();
         
     }
-
 }
+
 void addEra(int id, string name) {
-    headEra = new EraNode{ id, name, headEra };
+    headEra = new ERANODE{ id, name, headEra };
      
     cout << "Era added successfully!" << endl;
 }
@@ -192,7 +135,7 @@ void editEra() {
     cin >> id;
     cin.ignore();
 
-    EraNode* temp = headEra;
+    ERANODE* temp = headEra;
     while (temp) {
         if (temp->id == id) {
             cout << "Enter new name: ";
@@ -216,7 +159,7 @@ void deleteEra() {
     cout << "Enter the ID of the Era to delete: ";
     cin >> id;
 
-    EraNode* temp = headEra, * prev = nullptr;
+    ERANODE* temp = headEra, * prev = nullptr;
     while (temp && temp->id != id) {
         prev = temp;
         temp = temp->next;

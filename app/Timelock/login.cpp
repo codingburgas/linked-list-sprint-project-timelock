@@ -3,6 +3,7 @@
 #include "validation.h"
 #include "admin.h"
 #include "user.h"
+#include "timeline.h"
 
 void displayLogin()
 {
@@ -23,11 +24,7 @@ void displayLogin()
     ""
     };
 
-
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     for (int i = 0; i < 11; i++)
     {
@@ -35,32 +32,70 @@ void displayLogin()
         cout << endl;
     }
 
-    for (int i = 0; i < 4; i++)
-    {
-        cout << endl;
-    }
+    printStrRepeat(" ", 8);
+
+    centerText(purpleColor + "LOGIN " + resetColor + "to an existing account.");
+
+    printEndl(4);
 
     login();
 }
 
 void login()
 {
+    string redColor = "\033[31m";     // Red
+    string greenColor = "\033[32m";   // Green
+    string resetColor = "\033[37m";   // White 
+
     loadAccounts();
+
     string username, password;
-    cout << "Enter your username: "; cin >> username;
-    cout << "Enter your password: "; cin >> password;
-    if (!doesAccountExist(username) || !isPasswordCorrect(username, password)) {
-        cout << "Invalid username or password!" << endl;
-        return;
+
+    bool validUsername = false;
+    while (!validUsername)
+    {
+        centerText("    Enter your USERNAME: ");
+        cin >> username;
+
+        if (!doesAccountExist(username))
+        {
+            cout << endl;
+            centerText(redColor + "               Username does not exist! Try again." + resetColor);
+            printEndl(2);
+        }
+        else
+        {
+            validUsername = true;
+        }
     }
+
+    bool validPassword = false;
+    while (!validPassword)
+    {
+        centerText("    Enter your PASSWORD: ");
+        cin >> password;
+
+        if (!isPasswordCorrect(username, password))
+        {
+            cout << endl;
+            centerText(redColor + "               Incorrect password! Try again." + resetColor);
+            printEndl(2);
+        }
+        else
+        {
+            validPassword = true;
+        }
+    }
+
     strcpy_s(currentUser, username.c_str());
     string role = getRole(username);
-    cout << "Login successful! Role: " << getRole(username) << endl;
 
-    if (role == "admin") {
-        adminPanel();  
-    }
-    else {
-        userPanel();  
-    }
+    cout << endl;
+    centerText(greenColor + "               Login successful! You are logged in as " + role + "." + resetColor);
+
+    sleep_for(seconds(2));
+
+    system("cls"); 
+
+    displayTimeline();
 }

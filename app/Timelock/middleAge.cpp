@@ -7,7 +7,7 @@ void displayMiddleAge()
 
     string title[21] = {
     "",
-    "      .*****************..********..**************..***************..**************..**************.",
+    "      .****************..********..**************..***************..**************..***************.",
     "      *    _.      ._       .__.       ________         _______         .__.           .________.   *",
     "      *   |  \\    /  |      |  |      |   __   \\       |   __   \\       |  |           |  ______|   *",
     "      *   |   \\  /   |      |  |      |  |   |  |      |  |   |  |      |  |           |  |_____    *",
@@ -29,11 +29,7 @@ void displayMiddleAge()
     ""
     };
 
-
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     for (int i = 0; i < 21; i++)
     {
@@ -41,17 +37,11 @@ void displayMiddleAge()
         cout << endl;
     }
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     centerText("Start exploring " + purpleColor + "Middle Age " + resetColor + "era events!");
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 }
 
 

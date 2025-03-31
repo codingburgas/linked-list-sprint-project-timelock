@@ -16,16 +16,12 @@ void displayStartingScreen()
     "      *      |  |         |  |      |    \\/    |     |  ______|      |  |           |  |  |  |      |  |           |     /     *",
     "      *      |  |         |  |      |  |\\  /|  |     |  |_____       |  |____.      |  |__|  |      |  |_____.     |  |\\  \\    *",
     "      *      |__|         |__|      |__| \\/ |__|     |________|      |_______|      \\________/      |________|     |__| \\__\\   *",
-    "      *.              ..        ..                ..             ..             ..              ..              ..            .*",
-    "       **************  ********  ****************  *************  *************  **************  **************  ************",
+    "      *.             ..        ..                ..              ..             ..              ..              ..            .*",
+    "      *************  ********  ****************  **************  *************  **************  **************  ************",
     ""
     };
 
-
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     for (int i = 0; i < 11; i++)
     {
@@ -33,44 +29,52 @@ void displayStartingScreen()
         cout << endl;
     }
 
-    for (int i = 0; i < 4; i++)
-    {
-        cout << endl;
-    }
+    printEndl(4);
 
+    printStrRepeat(" ", 2);
     cout << "Select a choice!";
 
-    cout << setw(38) << "1.SIGN UP" << setw(30) << "2.LOGIN" << endl;
+    printStrRepeat(" ", 33);
+    cout << "1.SIGN UP";
+    printStrRepeat(" ", 30);
+    cout << "2.LOGIN" << endl;
 
     chooseAnswer();
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
-
-    displayTimeline();
+    printEndl(2);
 }
 
 void chooseAnswer()
 {
-    cout << endl << "Your choice: ";
-    int choice;
-    cin >> choice;
-    cout << endl;
+    string redColor = "\033[31m";     // Red
+    string resetColor = "\033[37m";   // White 
 
-    if (choice == 1)
+    int choice;
+    bool isValid = false;
+
+    while (!isValid)
     {
-        system("cls");
-        displaySignUp();
-    }
-    else if (choice == 2)
-    {
-        system("cls");
-        displayLogin();
-    }
-    else
-    {
-        cout << "Invalid choice! Choose 1. to SIGN UP or 2. to LOGIN" << endl;
+        cout << endl;
+        printStrRepeat(" ", 2);
+        cout << "Your choice: ";
+        cin >> choice;
+        cout << endl;
+
+        if (choice == 1)
+        {
+            isValid = true;
+            system("cls");
+            displaySignUp();
+        }
+        else if (choice == 2)
+        {
+            isValid = true;
+            system("cls");
+            displayLogin();
+        }
+        else
+        {
+            cout << redColor << "Invalid choice! Choose 1. to SIGN UP or 2. to LOGIN" << resetColor << endl;
+        }
     }
 }

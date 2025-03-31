@@ -3,85 +3,122 @@
 #include "validation.h"
 #include "admin.h"
 #include "user.h"
+#include "timeline.h"
 
 void displaySignUp()
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
-    const string title[21] = {
+    const string title[11] = {
     "",
-    "                .**************..**********..*************..**************.",
-    "                *     ______        .__.       ________       ._.    ._    *",
-    "                *    '  ____|       |  |      /   _____|      |   \\ |  |   *",
-    "                *   |  (__          |  |      |  |            |    \\|  |   *",
-    "                *    '.___ `.       |  |      |  |  .__.      |  .     |   *",
-    "                *    _____)  |      |  |      |  |__|  |      |  |\\    |   *",
-    "                *   |______.'       |__|      \\________/      |__| \\.__|   *",
-    "                *.             ..          ..             ..              .*",
-    "                *************  **********  *************  **************",
-    "",
-    "                .**************..**************.",
-    "                *   .__.  .__.       _______     *",
-    "                *   |  |  |  |      |   __  \\    *",
-    "                *   |  |  |  |      |  |__|  |   *",
-    "                *   |  |  |  |      |   ____/    *",
-    "                *   |  |__|  |      |  |         *",
-    "                *   \\________/      |__|         *",
-    "                *.              ..              .*",
-    "                 **************  **************",
+    " .*************..**********..*************..**************.                   .**************..**************.",
+    "  *     ______        .__.       ________       ._.    ._    *                 *   .__.  .__.       _______     *",
+    "  *    '  ____|       |  |      /   _____|      |   \\ |  |   *                 *   |  |  |  |      |   __  \\    *",
+    "  *   |  (__          |  |      |  |            |    \\|  |   *                 *   |  |  |  |      |  |__|  |   *",
+    "  *    '.___ `.       |  |      |  |  .__.      |  .     |   *                 *   |  |  |  |      |   ____/    *",
+    "  *    _____)  |      |  |      |  |__|  |      |  |\\    |   *                 *   |  |__|  |      |  |         *",
+    " *   |______.'       |__|      \\________/      |__| \\.__|   *                 *   \\________/      |__|         *",
+    "  *.             ..          ..             ..              .*                 *.              ..              .*",
+    "  *************  **********  *************  **************                     **************  **************",
     ""
     };
 
+    printEndl(2);
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
-
-    for (int i = 0; i < 21; i++)
+    for (int i = 0; i < 11; i++)
     {
         centerText(purpleColor + title[i] + resetColor);
         cout << endl;
     }
 
-    for (int i = 0; i < 4; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
+
+    printStrRepeat(" ", 10);
+
+    centerText(resetColor + "Start " + purpleColor + "SIGNING UP" + resetColor + ". Please fill the questions bellow." + resetColor);
+    
+    printEndl(4);
+
     signUp();
 }
 
 
 void signUp()
 {
+    string redColor = "\033[31m";     // Red
+    string greenColor = "\033[32m";   // Green
+    string resetColor = "\033[37m";   // White 
+
     loadAccounts();
+
     string username, password, confirmPassword, role;
-    cout << "Select a username: "; cin >> username;
-    if (doesAccountExist(username)) {
-        cout << "Username already exists!" << endl;
-        return;
+
+    bool validUsername = false;
+    while (!validUsername)
+    {
+        centerText("Select a USERNAME: ");
+        cin >> username;
+
+        if (doesAccountExist(username))
+        {
+            cout << endl;
+            centerText(redColor + "          This username already exists! Try a new one!" + resetColor);
+            printEndl(2);
+        }
+        else
+        {
+            validUsername = true;
+        }
     }
-    cout << "Select a password: "; 
-    cin >> password;
-    cout << "Confirm password: "; 
-    cin >> confirmPassword;
-    if (password != confirmPassword) {
-        cout << "Passwords do not match!" << endl;
-        return;
+
+    bool passwordsMatch = false;
+    while (!passwordsMatch)
+    {
+        centerText("Select a PASSWORD: ");
+        cin >> password;
+
+        centerText("Confirm PASSWORD: ");
+        cin >> confirmPassword;
+
+        if (password != confirmPassword)
+        {
+            cout << endl;
+            centerText(redColor + "           Passwords do not match! Try again!" + resetColor);
+            printEndl(2);
+        }
+        else
+        {
+            passwordsMatch = true;
+        }
     }
-    cout << "Select a role (admin/user): "; cin >> role;
-    if (role != "admin" && role != "user") {
-        cout << "Invalid role!" << endl;
-        return;
+
+    bool validRole = false;
+    while (!validRole)
+    {
+        centerText("Select a role (admin/user): ");
+        cin >> role;
+
+        if (role != "admin" && role != "user")
+        {
+            cout << endl;
+            centerText(redColor + "            Invalid role! Choose between USER and ADMIN" + resetColor);
+            printEndl(2);
+        }
+        else
+        {
+            validRole = true;
+        }
     }
+
     saveAccount(username, password, role);
-    cout << "SIGN UP successful!" << endl;
-    
-    if (role == "admin") {
-        adminPanel();
-    }
-    else {
-        userPanel();
-    }
+
+    cout << endl;
+    centerText(greenColor + "             SIGN UP successful!" + resetColor);
+
+    sleep_for(seconds(2));
+
+    system("cls");
+
+    displayTimeline();
 }

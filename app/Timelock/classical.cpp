@@ -19,10 +19,7 @@ void displayClassical()
     ""
     };
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     for (int i = 0; i < 11; i++)
     {
@@ -30,15 +27,10 @@ void displayClassical()
         cout << endl;
     }
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     centerText("Start exploring " + purpleColor + "Classical " + resetColor + "era events!");
+    
+    printEndl(2);
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
 }

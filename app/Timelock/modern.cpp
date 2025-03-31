@@ -1,4 +1,3 @@
-
 #include "modern.h"
 
 void displayModern()
@@ -8,7 +7,7 @@ void displayModern()
 
     string title[11] = {
     "",
-    "      .*****************..**************..**************..***************..**************..**************.",
+    "      .****************..**************..**************..***************..**************..***************.",
     "      *    _.      ._        ________        ________        .________.       _______         ._.   ._    *",
     "      *   |  \\    /  |      /  .__.  \\      |   __   \\       |  ______|      |   __  \\       |   \\ |  |   *",
     "      *   |   \\  /   |      |  |  |  |      |  |   |  |      |  |_____       |  |__|  |      |    \\|  |   *",
@@ -20,10 +19,7 @@ void displayModern()
     ""
     };
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     for (int i = 0; i < 11; i++)
     {
@@ -31,15 +27,10 @@ void displayModern()
         cout << endl;
     }
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
 
     centerText("Start exploring " + purpleColor + "Modern " + resetColor + "era events!");
 
-    for (int i = 0; i < 2; i++)
-    {
-        cout << endl;
-    }
+    printEndl(2);
+
 }

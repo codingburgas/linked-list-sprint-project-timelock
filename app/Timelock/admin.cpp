@@ -1,10 +1,7 @@
 #include "admin.h"
 #include "timeline.h"
-#include <iostream>
 
-using namespace std;
-
-int chose() {
+int choose() {
 
     cout << "Admin Panel:" << endl;
     cout << "1. View Eras" << endl;
@@ -51,7 +48,7 @@ int chose() {
 void adminPanel() {
     int choice;
     do {
-        choice = chose();
+        choice = choose();
     }
     while (choice != 5);
 }

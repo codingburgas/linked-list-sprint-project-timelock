@@ -2,17 +2,14 @@
 
 #pragma once
 
-#include <string>
-using namespace std;
-
-struct EraNode {
+struct ERANODE {
     int id;
     string name;
-    EraNode* next;
+    ERANODE* next;
 };
 
 void addEra(int id, string name);
 void editEra();
 void deleteEra();
-void displayTimeline(bool isAdmin = false);
+void displayTimeline();
 void displayEras();
