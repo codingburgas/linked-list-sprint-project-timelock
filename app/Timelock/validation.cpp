@@ -30,17 +30,16 @@ bool isPasswordCorrect(const string& username, const string& password)
     return false;
 }
 
-string getRole(const string& username) 
+string getCurrentUserRole()
 {
-    ACCOUNT* temp = head;
-
-    while (temp) 
+    ACCOUNT* current = head;
+    while (current != nullptr)
     {
-        if (temp->username == username) 
+        if (current->username == currentUser)
         {
-            return temp->role;
+            return current->role;
         }
-        temp = temp->next;
+        current = current->next;
     }
-    return "";
+    return "ROLE Not Found";
 }

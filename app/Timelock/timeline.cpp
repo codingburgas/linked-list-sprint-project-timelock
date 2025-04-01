@@ -5,18 +5,8 @@
 #include "earlyModern.h"
 #include "modern.h"
 
-
-ERANODE* headEra = nullptr;
-void testEraData() {
-    addEra(1, "Prehistoric era");
-    addEra(2, "Classical era");
-    addEra(3, "The Middle Age era");
-    addEra(4, "Early Modern era");
-    addEra(5, "Modern era");
-}
-
-
-string eras[5] = {
+string eras[5] = 
+{
     "1. Prehistoric era",
     "2. Classical era",
     "3. The Middle Age era",
@@ -24,30 +14,22 @@ string eras[5] = {
     "5. Modern era"
 };
 
-string resetColor = "\033[37m";   // White 
-string purpleColor = "\033[35m";  // Purple
-
-
-void displayEras(){
-    for (string str : eras) {
-        cout << str << endl;
-    }
-}
-
-
 void displayTimeline()
 {
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
     string title[11] = {
     "",
-    "      .**************..*********..****************..*************..*************..*********..*************..**************.",
+    "       .*************..*********..****************..*************..*************..*********..*************..**************.",
     "      *   .________.      .__.       _.      ._      .________.      .__.           .__.       ._.   ._       .________.   *",
     "      *   |___  ___|      |  |      |  \\    /  |     |  ______|      |  |           |  |      |   \\ |  |      |  ______|   *",
     "      *      |  |         |  |      |   \\  /   |     |  |_____       |  |           |  |      |    \\|  |      |  |_____    *",
     "      *      |  |         |  |      |    \\/    |     |  ______|      |  |           |  |      |  .     |      |  ______|   *",
     "      *      |  |         |  |      |  |\\  /|  |     |  |_____       |  |____.      |  |      |  |\\    |      |  |_____    *",
     "      *      |__|         |__|      |__| \\/ |__|     |________|      |_______|      |__|      |__| \\.__|      |________|   *",
-    "      *.              ..        ..                ..             ..             ..         ..             ..              .*",
-    "      **************  ********  ****************  *************  *************  *********  *************  **************",
+    "      *.             ..         ..                ..             ..             ..         ..             ..              .*",
+    "      *************  *********  ****************  *************  *************  *********  *************  **************",
     ""
     };
 
@@ -83,9 +65,9 @@ void displayTimeline()
         cout << eras[i] << "      ";
     }
 
-    printEndl(3);
-    printStrRepeat(" ", 2);
-    cout << "Choose an era to explore: ";
+    printEndl(4);
+
+    centerText("Choose an era to explore: ");
 
     int era;
     cin >> era;
@@ -114,65 +96,8 @@ void displayTimeline()
     {
         system("cls");
         displayModern();
-        
     }
 }
 
-void addEra(int id, string name) {
-    headEra = new ERANODE{ id, name, headEra };
-     
-    cout << "Era added successfully!" << endl;
-}
 
-void editEra() {
-    if (!headEra) { 
-        cout << "No eras available to edit!" << endl;
-        return;
-    }
 
-    int id;
-    cout << "Enter the ID of the Era to edit: ";
-    cin >> id;
-    cin.ignore();
-
-    ERANODE* temp = headEra;
-    while (temp) {
-        if (temp->id == id) {
-            cout << "Enter new name: ";
-            getline(cin, temp->name);
-            cout << "Era updated successfully!" << endl;
-            return;
-        }
-        temp = temp->next;
-    }
-    cout << "Era not found!" << endl;
-
-}
-
-void deleteEra() {
-    if (!headEra) {
-        cout << "No eras available to delete!" << endl;
-        return;
-    }
-
-    int id;
-    cout << "Enter the ID of the Era to delete: ";
-    cin >> id;
-
-    ERANODE* temp = headEra, * prev = nullptr;
-    while (temp && temp->id != id) {
-        prev = temp;
-        temp = temp->next;
-    }
-
-    if (!temp) {
-        cout << "Era not found!" << endl;
-        return;
-    }
-
-    if (!prev) headEra = temp->next;
-    else prev->next = temp->next;
-
-    delete temp;
-    cout << "Era deleted successfully!" << endl;
-}

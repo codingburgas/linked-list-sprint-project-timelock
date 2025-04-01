@@ -12,7 +12,7 @@ void displayLogin()
 
     const string title[11] = {
     "",
-    "               .**************..**************..***************..**********..**************.",
+    "               .**************..*************..***************..**********..**************. ",
     "               *   .__.            ________        ________         .__.       ._.    ._    *",
     "               *   |  |           /  .__.  \\      /   _____|        |  |       |   \\ |  |   *",
     "               *   |  |           |  |  |  |      |  |              |  |       |    \\|  |   *",
@@ -88,7 +88,7 @@ void login()
     }
 
     strcpy_s(currentUser, username.c_str());
-    string role = getRole(username);
+    string role = getCurrentUserRole();
 
     cout << endl;
     centerText(greenColor + "               Login successful! You are logged in as " + role + "." + resetColor);

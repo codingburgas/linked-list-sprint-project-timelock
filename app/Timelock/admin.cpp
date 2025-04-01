@@ -1,54 +1,30 @@
 #include "admin.h"
 #include "timeline.h"
 
-int choose() {
+void adminPanel() 
+{
+	printStrRepeat(" ", 2);
+	cout << "1. Search by year." << endl;
 
-    cout << "Admin Panel:" << endl;
-    cout << "1. View Eras" << endl;
-    cout << "2. Add Era" << endl;
-    cout << "3. Edit Era" << endl;
-    cout << "4. Delete Era" << endl;
-    cout << "5. Logout" << endl;
-    cout << "Enter your choice: ";
+	printStrRepeat(" ", 2);
+	cout << "2. Search by event." << endl;
 
-    int choice;
-    cin >> choice;
-    switch (choice) {
-    case 1:
-        displayEras();
-        break;
-    case 2: {
-        int id;
-        string name;
-        cout << "Enter Era ID: ";
-        cin >> id;
-        cin.ignore();
-        cout << "Enter Era Name: ";
-        getline(cin, name);
-        addEra(id, name);
-        cout << "Returning to Admin Panel..." << endl;
-        break;
-    }
-    case 3:
-        editEra();
-        break;
-    case 4:
-        deleteEra();
-        break;
-    case 5:
-        cout << "Logging out..." << endl;
-        break;
-    default:
-        cout << "Invalid choice!" << endl;
-    }
-    return choice;
-} 
+	printStrRepeat(" ", 2);
+	cout << "3. Add an event in the begining." << endl;
 
+	printStrRepeat(" ", 2);
+	cout << "4. Add an event at the end." << endl;
 
-void adminPanel() {
-    int choice;
-    do {
-        choice = choose();
-    }
-    while (choice != 5);
+	printStrRepeat(" ", 2);
+	cout << "5. Edit an event." << endl;
+
+	printStrRepeat(" ", 2);
+	cout << "6. Delete an event." << endl;
+
+	cout << endl;
+	printStrRepeat(" ", 2);
+	cout << "Choose an option: ";
+	int option;
+	cin >> option;
+
 }

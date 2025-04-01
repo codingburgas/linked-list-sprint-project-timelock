@@ -1,3 +1,4 @@
+
 #include "modern.h"
 
 void displayModern()
@@ -7,7 +8,7 @@ void displayModern()
 
     string title[11] = {
     "",
-    "      .****************..**************..**************..***************..**************..***************.",
+    "      .****************..**************..**************..***************..**************..**************.",
     "      *    _.      ._        ________        ________        .________.       _______         ._.   ._    *",
     "      *   |  \\    /  |      /  .__.  \\      |   __   \\       |  ______|      |   __  \\       |   \\ |  |   *",
     "      *   |   \\  /   |      |  |  |  |      |  |   |  |      |  |_____       |  |__|  |      |    \\|  |   *",
@@ -29,7 +30,7 @@ void displayModern()
 
     printEndl(2);
 
-    centerText("Start exploring " + purpleColor + "Modern " + resetColor + "era events!");
+    centerText("      Start exploring " + purpleColor + "Modern " + resetColor + "era events!");
 
     printEndl(2);
 
