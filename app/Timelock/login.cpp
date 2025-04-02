@@ -13,15 +13,15 @@ void displayLogin()
 
     const string title[11] = {
     "",
-    "               .**************..*************..***************..**********..**************. ",
-    "               *   .__.            ________        ________         .__.       ._.    ._    *",
-    "               *   |  |           /  .__.  \\      /   _____|        |  |       |   \\ |  |   *",
-    "               *   |  |           |  |  |  |      |  |              |  |       |    \\|  |   *",
-    "               *   |  |           |  |  |  |      |  |  .__.        |  |       |  .     |   *",
-    "               *   |  |____.      |  |__|  |      |  |__|  |        |  |       |  |\\    |   *",
-    "               *   |_______|      \\________/      \\________/        |__|       |__| \\.__|   *",
-    "               *.              ..             ..               ..          ..              .*",
-    "                **************  *************  ***************  **********  ************** ",
+    "              .**************..*************..***************..**********..**************. ",
+    "             *   .__.            ________        ________         .__.       ._.    ._    *",
+    "             *   |  |           /  .__.  \\      /   _____|        |  |       |   \\ |  |   *",
+    "             *   |  |           |  |  |  |      |  |              |  |       |    \\|  |   *",
+    "             *   |  |           |  |  |  |      |  |  .__.        |  |       |  .     |   *",
+    "             *   |  |____.      |  |__|  |      |  |__|  |        |  |       |  |\\    |   *",
+    "             *   |_______|      \\________/      \\________/        |__|       |__| \\.__|   *",
+    "             *.              ..             ..               ..          ..              .*",
+    "              **************  *************  ***************  **********  ************** ",
     ""
     };
 
@@ -32,6 +32,8 @@ void displayLogin()
         centerText(purpleColor + title[i] + resetColor);
         cout << endl;
     }
+
+    printEndl(2);
 
     printStrRepeat(" ", 8);
 
@@ -64,7 +66,7 @@ void login()
         if (!doesAccountExist(username))
         {
             cout << endl;
-            centerText(redColor + "               Username does not exist! Try again." + resetColor);
+            centerText(redColor + "                Username does not exist! Try again." + resetColor);
             printEndl(2);
         }
         else
@@ -82,7 +84,7 @@ void login()
         if (!isPasswordCorrect(username, password))
         {
             cout << endl;
-            centerText(redColor + "               Incorrect password! Try again." + resetColor);
+            centerText(redColor + "                Incorrect password! Try again." + resetColor);
             printEndl(2);
         }
         else
@@ -95,7 +97,7 @@ void login()
     string role = getCurrentUserRole();
 
     cout << endl;
-    centerText(greenColor + "               Login successful! You are logged in as " + role + "." + resetColor);
+    centerText(greenColor + "                  Login successful! You are logged in as " + role + "." + resetColor);
 
     sleep_for(seconds(2));
 

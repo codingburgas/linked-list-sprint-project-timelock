@@ -12,15 +12,15 @@ void displaySignUp()
 
     const string title[11] = {
     "",
-    " .*************..**********..*************..**************.                   .**************..**************.",
-    "  *     ______        .__.       ________       ._.    ._    *                 *   .__.  .__.       _______     *",
-    "  *    '  ____|       |  |      /   _____|      |   \\ |  |   *                 *   |  |  |  |      |   __  \\    *",
-    "  *   |  (__          |  |      |  |            |    \\|  |   *                 *   |  |  |  |      |  |__|  |   *",
-    "  *    '.___ `.       |  |      |  |  .__.      |  .     |   *                 *   |  |  |  |      |   ____/    *",
-    "  *    _____)  |      |  |      |  |__|  |      |  |\\    |   *                 *   |  |__|  |      |  |         *",
-    " *   |______.'       |__|      \\________/      |__| \\.__|   *                 *   \\________/      |__|         *",
-    "  *.             ..          ..             ..              .*                 *.              ..              .*",
-    "  *************  **********  *************  **************                     **************  **************",
+    "       .*************..**********..*************..**************.               .**************..**************.",
+    "       *     ______        .__.       ________       ._.    ._    *             *   .__.  .__.       _______     *",
+    "       *    '  ____|       |  |      /   _____|      |   \\ |  |   *             *   |  |  |  |      |   __  \\    *",
+    "       *   |  (__          |  |      |  |            |    \\|  |   *             *   |  |  |  |      |  |__|  |   *",
+    "       *    '.___ `.       |  |      |  |  .__.      |  .     |   *             *   |  |  |  |      |   ____/    *",
+    "       *    _____)  |      |  |      |  |__|  |      |  |\\    |   *             *   |  |__|  |      |  |         *",
+    "       *   |______.'       |__|      \\________/      |__| \\.__|   *             *   \\________/      |__|         *",
+    "       *.             ..          ..             ..              .*             *.              ..              .*",
+    "       *************  **********  *************  **************                 **************  **************",
     ""
     };
 
@@ -57,13 +57,13 @@ void signUp()
     bool validUsername = false;
     while (!validUsername)
     {
-        centerText("Select a USERNAME: ");
+        centerText("  Select a USERNAME: ");
         cin >> username;
 
         if (doesAccountExist(username))
         {
             cout << endl;
-            centerText(redColor + "          This username already exists! Try a new one!" + resetColor);
+            centerText(redColor + "            This username already exists! Try a new one!" + resetColor);
             printEndl(2);
         }
         else
@@ -75,16 +75,16 @@ void signUp()
     bool passwordsMatch = false;
     while (!passwordsMatch)
     {
-        centerText("Select a PASSWORD: ");
+        centerText("  Select a PASSWORD: ");
         cin >> password;
 
-        centerText("Confirm PASSWORD: ");
+        centerText("  Confirm PASSWORD: ");
         cin >> confirmPassword;
 
         if (password != confirmPassword)
         {
             cout << endl;
-            centerText(redColor + "           Passwords do not match! Try again!" + resetColor);
+            centerText(redColor + "             Passwords do not match! Try again!" + resetColor);
             printEndl(2);
         }
         else
@@ -96,13 +96,13 @@ void signUp()
     bool validRole = false;
     while (!validRole)
     {
-        centerText("Select a role (admin/user): ");
+        centerText("  Select a role (admin/user): ");
         cin >> role;
 
         if (role != "admin" && role != "user")
         {
             cout << endl;
-            centerText(redColor + "            Invalid role! Choose between USER and ADMIN" + resetColor);
+            centerText(redColor + "              Invalid role! Choose between USER and ADMIN" + resetColor);
             printEndl(2);
         }
         else
@@ -114,7 +114,7 @@ void signUp()
     saveAccount(username, password, role);
 
     cout << endl;
-    centerText(greenColor + "             SIGN UP successful!" + resetColor);
+    centerText(greenColor + "               SIGN UP successful!" + resetColor);
 
     sleep_for(seconds(2));
 

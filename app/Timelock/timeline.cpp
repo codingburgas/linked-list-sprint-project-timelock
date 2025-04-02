@@ -14,22 +14,33 @@ string eras[5] =
     "5. Modern era"
 };
 
+string years[5] =
+{
+    "3000 BCE",
+    "500 CE",
+    "1500 CE",
+    "1800 CE",
+    "Present"
+};
+
+
 void displayTimeline()
 {
+    string redColor = "\033[31m";     // Red
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
     string title[11] = {
     "",
-    "       .*************..*********..****************..*************..*************..*********..*************..**************.",
-    "      *   .________.      .__.       _.      ._      .________.      .__.           .__.       ._.   ._       .________.   *",
-    "      *   |___  ___|      |  |      |  \\    /  |     |  ______|      |  |           |  |      |   \\ |  |      |  ______|   *",
-    "      *      |  |         |  |      |   \\  /   |     |  |_____       |  |           |  |      |    \\|  |      |  |_____    *",
-    "      *      |  |         |  |      |    \\/    |     |  ______|      |  |           |  |      |  .     |      |  ______|   *",
-    "      *      |  |         |  |      |  |\\  /|  |     |  |_____       |  |____.      |  |      |  |\\    |      |  |_____    *",
-    "      *      |__|         |__|      |__| \\/ |__|     |________|      |_______|      |__|      |__| \\.__|      |________|   *",
-    "      *.             ..         ..                ..             ..             ..         ..             ..              .*",
-    "      *************  *********  ****************  *************  *************  *********  *************  **************",
+    "         .*************..*********..****************..*************..*************..*********..*************..**************.",
+    "         *   .________.      .__.       _.      ._      .________.      .__.           .__.       ._.   ._       .________.   *",
+    "         *   |___  ___|      |  |      |  \\    /  |     |  ______|      |  |           |  |      |   \\ |  |      |  ______|   *",
+    "         *      |  |         |  |      |   \\  /   |     |  |_____       |  |           |  |      |    \\|  |      |  |_____    *",
+    "         *      |  |         |  |      |    \\/    |     |  ______|      |  |           |  |      |  .     |      |  ______|   *",
+    "         *      |  |         |  |      |  |\\  /|  |     |  |_____       |  |____.      |  |      |  |\\    |      |  |_____    *",
+    "         *      |__|         |__|      |__| \\/ |__|     |________|      |_______|      |__|      |__| \\.__|      |________|   *",
+    "         *.             ..         ..                ..             ..             ..         ..             ..              .*",
+    "         *************  *********  ****************  *************  *************  *********  *************  **************",
     ""
     };
 
@@ -42,23 +53,33 @@ void displayTimeline()
     }
 
     printEndl(5);
-    printStrRepeat(" ", 10);
-    cout << "<<";
+
+    printStrRepeat(" ", 31);
+
+    for (int i = 0; i < 5; i++)
+    {
+        cout << years[i] << "              ";
+    }
+
+    cout << endl;
+
+    printStrRepeat(" ", 12);
+    cout << purpleColor << "<<";
 
     for (int i = 1; i < 29; i++)
     {
         if (i % 5 == 0)
         {
-            cout << "|";
+            cout << purpleColor << "|";
         }
         else
         {
-            cout << "-----";
+            cout << purpleColor << "-----";
         }        
     }
-    cout << "->>" << endl;
+    cout << purpleColor << "->>" << resetColor << endl;
 
-    printStrRepeat(" ", 16);
+    printStrRepeat(" ", 18);
 
     for (int i = 0; i < 5; i++)
     {
@@ -67,35 +88,40 @@ void displayTimeline()
 
     printEndl(4);
 
-    centerText("Choose an era to explore: ");
+    centerText("          Choose an " + purpleColor + "ERA" + resetColor + " to explore: ");
 
     int era;
     cin >> era;
   
-    if (era == 1)
+    while (era < 1 || era > 5) 
     {
+        cout << endl;
+        centerText(redColor + "                Invalid choice! Please enter a number between 1 and 5: " + resetColor);
+        cin >> era;
+    }
+
+    switch (era)
+    {
+    case 1:
         system("cls");
         displayPrehistoric();
-    }
-    else if (era == 2)
-    {
+        break;
+    case 2:
         system("cls");
         displayClassical();
-    }
-    else if (era == 3)
-    {
+        break;
+    case 3:
         system("cls");
         displayMiddleAge();
-    }
-    else if (era == 4)
-    {
+        break;
+    case 4:
         system("cls");
         displayEarlyModern();
-    }
-    else if (era == 5)
-    {
+        break;
+    case 5:
         system("cls");
         displayModern();
+        break;
     }
 }
 

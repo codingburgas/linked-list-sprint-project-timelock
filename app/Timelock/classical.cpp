@@ -6,6 +6,10 @@ void displayClassical()
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
+    cout << endl;
+    printStrRepeat(" ", 2);
+    cout << "PRESS " << purpleColor << "ESC" << resetColor << " TO GO BACK";
+
     string title[11] = {
     "",
     "       .*************..**************..**************..*************..*************..*********..**************..**************..*************.",
@@ -15,8 +19,8 @@ void displayClassical()
     "      *   |  |            |  |           |   __   |       '.___ `.       '.___ `.       |  |      |  |            |   __   |      |  |        *",
     "      *   |  |_____.      |  |____.      |  |  |  |       _____)  |      _____)  |      |  |      |  |_____.      |  |  |  |      |  |____.   *",
     "      *   |________|      |_______|      |__|  |__|      |______.'      |______.'       |__|      |________|      |__|  |__|      |_______|   *",
-    "      *.              ..             ..              ..             ..             ..         ..              ..              ..             .*",
-    "        **************  *************  **************  *************  *************  *********  **************  **************  *************  ",
+    "      *.             ..              ..              ..             ..             ..         ..              ..              ..             .*",
+    "        *************  **************  **************  *************  *************  *********  **************  **************  *************  ",
     ""
     };
 
@@ -28,9 +32,9 @@ void displayClassical()
         cout << endl;
     }
 
-    printEndl(2);
+    printEndl(3);
 
-    centerText("Start exploring " + purpleColor + "Classical " + resetColor + "era events!");
+    centerText("            Start exploring " + purpleColor + "Classical " + resetColor + "era events!");
     
     printEndl(4);
 

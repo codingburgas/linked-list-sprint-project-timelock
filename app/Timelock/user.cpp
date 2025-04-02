@@ -1,30 +1,55 @@
 #include "user.h"
 #include "timeline.h"
 
-
 void userPanel() 
 {
-	printStrRepeat(" ", 2);
-	cout << "1. Search by year." << endl;
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
 
-	printStrRepeat(" ", 2);
-	cout << "2. Search by event." << endl;
+	printStrRepeat(" ", 7);
+	cout << "1. View all events.";
 
-	printStrRepeat(" ", 2);
-	cout << "3. View all events" << endl;
+	printStrRepeat(" ", 5);
+	cout << "2. Search by year.";
 
-	printStrRepeat(" ", 2);
-	cout << "4. Launch quiz" << endl;
+	printStrRepeat(" ", 5);
+	cout << "3. Search by event.";
 
-	cout << endl;
-	printStrRepeat(" ", 2);
-	cout << "Choose an option: ";
+	printStrRepeat(" ", 5);
+	cout << "4. View all events.";
+
+	printStrRepeat(" ", 5);
+	cout << "5. Attempt quiz.";
+
+    printStrRepeat(" ", 5);
+    cout << "6. Open favourites.";
+
+	printEndl(3);
+    centerText(purpleColor + "            Choose an option! " + resetColor);
+
 	int option;
 	cin >> option;
-	switch (option) {
-	case 3:cout << "Event1\n" << "Event2\n" << "Event3";
-	}
-		
 
+    switch (option)
+    {
+    case 1:
+        system("cls");
+        break;
+    case 2:
+        system("cls");
+        break;
+    case 3:
+        system("cls");
+        break;
+    case 4:
+        system("cls");
+        break;
+    case 5:
+        system("cls");
+        break;
+    case 6:
+        system("cls");
+        break;
+    }
 	
 }
