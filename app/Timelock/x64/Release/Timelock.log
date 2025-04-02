@@ -1,0 +1,10 @@
+﻿  admin.cpp
+  user.cpp
+  Generating code
+  3 of 292 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Timelock.vcxproj -> C:\Users\Jujka\Documents\Timelock\linked-list-sprint-project-timelock\app\x64\Release\Timelock.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

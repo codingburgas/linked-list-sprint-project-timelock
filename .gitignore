@@ -11,6 +11,9 @@
 *.gch
 *.pch
 *.ipch
+*.iobj
+*.ipdb
+*.pdb
 
 # Compiled Dynamic libraries
 *.so
