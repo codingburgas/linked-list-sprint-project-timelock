@@ -4,6 +4,7 @@
 #include "admin.h"
 #include "user.h"
 #include "timeline.h"
+#include "startingScreen.h"
 
 void displayLogin()
 {
@@ -39,6 +40,7 @@ void displayLogin()
     printEndl(4);
 
     login();
+    
 }
 
 void login()
@@ -46,6 +48,8 @@ void login()
     string redColor = "\033[31m";     // Red
     string greenColor = "\033[32m";   // Green
     string resetColor = "\033[37m";   // White 
+
+
 
     loadAccounts();
 

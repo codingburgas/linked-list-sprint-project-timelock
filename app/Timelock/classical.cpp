@@ -1,4 +1,5 @@
 #include "classical.h"
+#include "timeline.h"
 
 void displayClassical()
 {
@@ -32,5 +33,17 @@ void displayClassical()
     centerText("Start exploring " + purpleColor + "Classical " + resetColor + "era events!");
     
     printEndl(4);
+
+    while (!_kbhit()) {
+
+    }
+
+
+    char ch = _getch();
+
+    if (ch == 27) {
+        system("cls");
+        displayTimeline();
+    }
 
 }

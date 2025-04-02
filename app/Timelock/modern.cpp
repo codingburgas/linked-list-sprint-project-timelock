@@ -1,5 +1,6 @@
 
 #include "modern.h"
+#include "timeline.h"
 
 void displayModern()
 {
@@ -34,4 +35,16 @@ void displayModern()
 
     printEndl(2);
 
+
+    while (!_kbhit()) {
+
+    }
+
+
+    char ch = _getch();
+
+    if (ch == 27) {
+        system("cls");
+        displayTimeline();
+    }
 }

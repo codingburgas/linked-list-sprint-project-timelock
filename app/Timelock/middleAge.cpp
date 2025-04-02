@@ -1,4 +1,5 @@
 #include "middleAge.h"
+#include "timeline.h"
 
 void displayMiddleAge()
 {
@@ -42,6 +43,19 @@ void displayMiddleAge()
     centerText("Start exploring " + purpleColor + "Middle Age " + resetColor + "era events!");
 
     printEndl(2);
+
+
+    while (!_kbhit()) {
+
+    }
+
+
+    char ch = _getch();
+
+    if (ch == 27) {
+        system("cls");
+        displayTimeline();
+    }
 }
 
 

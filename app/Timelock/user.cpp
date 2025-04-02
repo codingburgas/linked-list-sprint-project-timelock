@@ -21,4 +21,10 @@ void userPanel()
 	cout << "Choose an option: ";
 	int option;
 	cin >> option;
+	switch (option) {
+	case 3:cout << "Event1\n" << "Event2\n" << "Event3";
+	}
+		
+
+	
 }

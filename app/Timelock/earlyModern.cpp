@@ -1,4 +1,5 @@
 #include "earlyModern.h"
+#include "timeline.h"
 
 void displayEarlyModern()
 {
@@ -42,4 +43,17 @@ void displayEarlyModern()
     centerText("Start exploring " + purpleColor + "Early Modern " + resetColor + "era events!");
 
     printEndl(2);
+
+
+    while (!_kbhit()) {
+
+    }
+
+
+    char ch = _getch();
+
+    if (ch == 27) {
+        system("cls");
+        displayTimeline();
+    }
 }

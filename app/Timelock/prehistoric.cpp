@@ -3,10 +3,14 @@
 #include "admin.h"
 #include "user.h"
 
+#include "timeline.h"
+
 void displayPrehistoric() 
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
+
+    cout << "Press 'Esc' to go back";
 
     const string title[21] = {
     "",
@@ -56,6 +60,17 @@ void displayPrehistoric()
         userPanel();
     }
 
+    while (!_kbhit()) {
+
+    }
+
+
+    char ch = _getch();
+
+    if (ch == 27) {
+        system("cls");
+        displayTimeline();
+    }
 }
 
 
