@@ -2,7 +2,6 @@
 #include "validation.h"
 #include "admin.h"
 #include "user.h"
-
 #include "timeline.h"
 
 PREHISTORIC* loadPrehistoricInfo()
@@ -249,7 +248,7 @@ void displayPrehistoric()
     }
     else
     {
-        userPanel();
+        userPanel(1);
     }
 
     while (!_kbhit()) 

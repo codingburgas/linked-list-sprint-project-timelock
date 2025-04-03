@@ -1,5 +1,5 @@
 #pragma once
 #include "pch.h"
 
-void userPanel();
+void userPanel(int page);
 

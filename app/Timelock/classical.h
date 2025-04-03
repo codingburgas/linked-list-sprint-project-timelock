@@ -11,3 +11,4 @@ struct CLASSICAL
 void displayClassical();
 void displayClassicalInfo(CLASSICAL* head);
 CLASSICAL* loadClassicalInfo();
+void displayClassicalQuiz();

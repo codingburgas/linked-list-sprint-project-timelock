@@ -25,6 +25,7 @@ string years[5] =
 
 void displayTimeline()
 {
+    int page = 0;
     string redColor = "\033[31m";     // Red
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
@@ -103,39 +104,27 @@ void displayTimeline()
     {
     case 1:
         system("cls");
+       
         displayPrehistoric();
         break;
     case 2:
         system("cls");
-        if (progres >= 1) {
-            displayClassical();
-        }
-        else {
-            centerText(redColor + "                Classical era not unlocked! Complete Prehistorical era first! " + resetColor);
-            while (!_kbhit())
-            {
-
-            }
-
-            char ch = _getch();
-
-            if (ch == 27)
-            {
-                system("cls");
-                displayTimeline();
-            }
-        }
+        
+        displayClassical();
         break;
     case 3:
         system("cls");
+        
         displayMiddleAge();
         break;
     case 4:
         system("cls");
+        
         displayEarlyModern();
         break;
     case 5:
         system("cls");
+        
         displayModern();
         break;
     }

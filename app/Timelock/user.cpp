@@ -1,9 +1,12 @@
 #include "user.h"
 #include "timeline.h"
 #include "prehistoric.h"
+#include "classical.h"
 
-void userPanel() 
+
+void userPanel(int page) 
 {
+    
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
@@ -47,7 +50,19 @@ void userPanel()
         break;
     case 5:
         system("cls");
-        displayPrehistoricQuiz();
+        switch (page)
+        {
+        case 1:
+            displayPrehistoricQuiz();
+            break;
+        case 2:
+            displayClassicalQuiz();
+            break;
+        }
+    
+        
+
+
         break;
     case 6:
         system("cls");
