@@ -1,5 +1,6 @@
 #include "user.h"
 #include "timeline.h"
+#include "prehistoric.h"
 
 void userPanel() 
 {
@@ -46,6 +47,7 @@ void userPanel()
         break;
     case 5:
         system("cls");
+        displayPrehistoricQuiz();
         break;
     case 6:
         system("cls");

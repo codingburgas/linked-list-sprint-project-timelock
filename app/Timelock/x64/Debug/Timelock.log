@@ -1,9 +1,2 @@
-﻿  admin.cpp
-  login.cpp
-  prehistoric.cpp
-  signUp.cpp
-  timeline.cpp
-  Generating Code...
-  Timelock.vcxproj -> C:\Users\Jujka\Documents\Timelock\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+﻿  user.cpp
+  Timelock.vcxproj -> C:\Users\PC1\Desktop\timelock\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe

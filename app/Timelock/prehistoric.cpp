@@ -130,6 +130,61 @@ void deletePrehistoricFile()
     }
 }
 
+void displayPrehistoricQuiz() {
+    ifstream file("../data/prehistoric/prehistoricQuiz.txt");
+
+    if (!file) {
+        cout << "Error: Could not open prehistoric.txt" << endl;
+        return;
+    }
+    string resetColor = "\033[37m";   // White 
+    string greenColor = "\033[32m";  // Green
+    string blueColor = "\033[36m";  // Green
+    string redColor = "\033[31m";  // Red
+
+    char correctAnswers[] = { 'C', 'B', 'B', 'B', 'B' };
+    int counter = 0;
+    string line;
+    int index = 0;
+    bool passed = false;
+
+    while (getline(file, line)) {
+        printStrRepeat(" ", 2);
+        cout << line << endl;
+
+        if (line.find(':') != string::npos) {
+            char answer;
+            bool answerGiven = false;
+
+            while (!answerGiven) {
+                cin >> answer;
+                cout << endl;
+
+                if (toupper(answer) == correctAnswers[index]) {
+                    cout << "Correct answer\n";
+                    counter += 1;
+                    answerGiven = true;
+                }
+                else {
+                    cout << "Incorrect answer.\n";
+                    answerGiven = true;
+                }
+            }
+            index++;
+        }
+    }
+    if (counter >= 3) {
+        centerText("           Exam score: " + blueColor + to_string(counter) + "/5\n" + resetColor);
+        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!\n");
+        passed = true;
+    }
+    else {
+        centerText("           Exam score: " + blueColor + to_string(counter) + "/5\n" + resetColor);
+        centerText("            Exam " + redColor + "FAILED! " + resetColor + "You shall read more carefully and try again!\n");
+    }
+    file.close();
+}
+
 void displayPrehistoric() 
 {
     string resetColor = "\033[37m";   // White 

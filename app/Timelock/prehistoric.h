@@ -14,3 +14,4 @@ PREHISTORIC* loadPrehistoricInfo();
 void editPrehistoricInfo(PREHISTORIC* head);
 void savePrehistoricInfo(PREHISTORIC* head);
 void deletePrehistoricFile();
+void displayPrehistoricQuiz();
