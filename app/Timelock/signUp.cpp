@@ -50,9 +50,10 @@ void signUp()
     string greenColor = "\033[32m";   // Green
     string resetColor = "\033[37m";   // White 
 
-    loadAccounts();
+    loadAccounts(); 
 
     string username, password, confirmPassword, role;
+    int progress = 0; 
 
     bool validUsername = false;
     while (!validUsername)
@@ -111,7 +112,8 @@ void signUp()
         }
     }
 
-    saveAccount(username, password, role);
+    
+    saveAccount(username, password, role, progress);
 
     cout << endl;
     centerText(greenColor + "               SIGN UP successful!" + resetColor);

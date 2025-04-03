@@ -164,6 +164,7 @@ void displayPrehistoricQuiz() {
                     cout << "Correct answer\n";
                     counter += 1;
                     answerGiven = true;
+                    progres += 1;
                 }
                 else {
                     cout << "Incorrect answer.\n";
@@ -177,6 +178,7 @@ void displayPrehistoricQuiz() {
         centerText("           Exam score: " + blueColor + to_string(counter) + "/5\n" + resetColor);
         centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!\n");
         passed = true;
+        
     }
     else {
         centerText("           Exam score: " + blueColor + to_string(counter) + "/5\n" + resetColor);

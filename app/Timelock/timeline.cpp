@@ -107,7 +107,24 @@ void displayTimeline()
         break;
     case 2:
         system("cls");
-        displayClassical();
+        if (progres >= 1) {
+            displayClassical();
+        }
+        else {
+            centerText(redColor + "                Classical era not unlocked! Complete Prehistorical era first! " + resetColor);
+            while (!_kbhit())
+            {
+
+            }
+
+            char ch = _getch();
+
+            if (ch == 27)
+            {
+                system("cls");
+                displayTimeline();
+            }
+        }
         break;
     case 3:
         system("cls");

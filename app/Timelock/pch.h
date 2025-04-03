@@ -13,7 +13,7 @@ using std::this_thread::sleep_for;
 using std::chrono::seconds;
 
 #pragma once
-
+extern int progres;
 int getConsoleWidth();
 void centerText(string text);
 void printEndl(int num);

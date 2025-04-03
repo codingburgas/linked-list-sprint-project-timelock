@@ -1,5 +1,7 @@
 #include "pch.h"
 
+int progres;
+
 int getConsoleWidth() 
 {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
