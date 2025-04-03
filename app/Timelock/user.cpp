@@ -2,7 +2,7 @@
 #include "timeline.h"
 #include "prehistoric.h"
 #include "classical.h"
-
+#include "middleAge.h"
 
 void userPanel(int page) 
 {
@@ -58,6 +58,8 @@ void userPanel(int page)
         case 2:
             displayClassicalQuiz();
             break;
+        case 3:
+            displaymiddleAgeQuiz();
         }
     
         

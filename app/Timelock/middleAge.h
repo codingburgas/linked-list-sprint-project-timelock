@@ -11,3 +11,4 @@ struct MIDDLEAGE
 void displayMiddleAge();
 void displayMiddleAgeInfo(MIDDLEAGE* head);
 MIDDLEAGE* loadMiddleAgeInfo();
+void displaymiddleAgeQuiz();
