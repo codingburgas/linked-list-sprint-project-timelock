@@ -2,6 +2,13 @@
 
 #pragma once
 
+struct EARLYMODERN
+{
+    string data;
+    EARLYMODERN* next;
+};
+
 void displayEarlyModern();
-void displayEarlyModernInfo();
+void displayEarlyModernInfo(EARLYMODERN* head);
+EARLYMODERN* loadEarlyModernInfo();
 

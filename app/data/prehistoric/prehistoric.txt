@@ -1,1 +1,4 @@
-The Prehistory Era refers to the vast period of human existence before the development of writing systems. It spans millions of years, beginning with the emergence of the first hominins and ending when civilizations developed written records. Because there are no written sources from this time, knowledge about prehistory comes from archaeology, anthropology, and the study of fossils, tools, and cave paintings.
+The Prehistory Era refers to the vast period of human existence before the development of writing systems.It spans millions of years, 
+beginning with the emergence of the first hominins and ending when civilizations developed written records. Because there are no 
+written sources from this time, knowledge about prehistory comes from archaeology, anthropology, and the study of fossils, tools,
+and cave paintings.

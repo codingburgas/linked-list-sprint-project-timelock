@@ -1,23 +1,50 @@
 #include "classical.h"
 #include "timeline.h"
 
-void displayClassicalInfo()
+CLASSICAL* loadClassicalInfo()
 {
     ifstream file("../data/classical/classical.txt");
 
-    if (!file) {
+    if (!file)
+    {
         cout << "Error: Could not open classical.txt" << endl;
-        return;
+        return nullptr;
     }
 
+    CLASSICAL* head = nullptr;
+    CLASSICAL* tail = nullptr;
     string line;
+
     while (getline(file, line))
     {
-        printStrRepeat(" ", 2);
-        cout << line << endl;
+        CLASSICAL* newNode = new CLASSICAL{ line, nullptr };
+
+        if (!head)
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
     }
 
-    file.close(); // Close the file
+    file.close();
+    return head;
+}
+
+void displayClassicalInfo(CLASSICAL* head) {
+    CLASSICAL* current = head;
+
+    while (current)
+    {
+        centerText(current->data);
+        cout << endl;
+
+        current = current->next;
+    }
 }
 
 void displayClassical()
@@ -57,7 +84,12 @@ void displayClassical()
     
     printEndl(3);
 
-    displayClassicalInfo();
+
+    CLASSICAL* infoList = loadClassicalInfo();
+    if (infoList)
+    {
+        displayClassicalInfo(infoList);
+    }
 
     printEndl(4);
 

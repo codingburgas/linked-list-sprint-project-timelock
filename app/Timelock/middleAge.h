@@ -2,5 +2,12 @@
 
 #pragma once
 
+struct MIDDLEAGE
+{
+    string data;
+    MIDDLEAGE* next;
+};
+
 void displayMiddleAge();
-void displayMiddleAgeInfo();
+void displayMiddleAgeInfo(MIDDLEAGE* head);
+MIDDLEAGE* loadMiddleAgeInfo();

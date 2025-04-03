@@ -23,7 +23,6 @@ string years[5] =
     "Present"
 };
 
-
 void displayTimeline()
 {
     string redColor = "\033[31m";     // Red

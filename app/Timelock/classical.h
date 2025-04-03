@@ -2,5 +2,12 @@
 
 #pragma once
 
+struct CLASSICAL
+{
+    string data;
+    CLASSICAL* next;
+};
+
 void displayClassical();
-void displayClassicalInfo();
+void displayClassicalInfo(CLASSICAL* head);
+CLASSICAL* loadClassicalInfo();

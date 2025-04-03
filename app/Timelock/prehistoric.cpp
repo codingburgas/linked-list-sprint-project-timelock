@@ -5,23 +5,129 @@
 
 #include "timeline.h"
 
-void displayPrehistoricInfo() 
+PREHISTORIC* loadPrehistoricInfo()
 {
-    ifstream file("../data/prehistoric/prehistoric.txt"); 
+    ifstream file("../data/prehistoric/prehistoric.txt");
+
+    if (!file) 
+    {
+        cout << "Error: Could not open prehistoric.txt" << endl;
+        return nullptr;
+    }
+
+    PREHISTORIC* head = nullptr;
+    PREHISTORIC* tail = nullptr;
+    string line;
+
+    while (getline(file, line)) 
+    {
+        PREHISTORIC* newNode = new PREHISTORIC{ line, nullptr };
+
+        if (!head) 
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else 
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
+
+    file.close();
+    return head;
+}
+
+void displayPrehistoricInfo(PREHISTORIC* head) 
+{
+    PREHISTORIC* current = head;
+
+    while (current) 
+    {
+        centerText(current->data);
+        cout << endl;
+
+        current = current->next;
+    }
+}
+
+void editPrehistoricInfo(PREHISTORIC* head) 
+{
+    PREHISTORIC* current = head;
+    int lineNum = 1;
+    char ch;
+
+    while (current) 
+    {
+        cout << "[" << lineNum << "] " << current->data << endl;
+        current = current->next;
+        lineNum++;
+    }
+
+    cout << endl << "Enter the line number you want to edit: ";
+    int editLine;
+    cin >> editLine;
+    cin.ignore();
+
+    current = head;
+    lineNum = 1;
+
+    while (current) {
+        if (lineNum == editLine) 
+        {
+            cout << "Editing: " << current->data << endl;
+            cout << "Enter new text: ";
+            getline(cin, current->data);
+            break;
+        }
+        current = current->next;
+        lineNum++;
+    }
+
+    cout << endl << "Press 'S' to save changes or any other key to discard: ";
+    ch = _getch();
+
+    if (ch == 's' || ch == 'S') {
+        savePrehistoricInfo(head);
+        cout << endl << "Changes saved successfully!" << endl;
+    }
+    else {
+        cout << endl << "Changes discarded." << endl;
+    }
+}
+
+void savePrehistoricInfo(PREHISTORIC* head) 
+{
+    ofstream file("../data/prehistoric/prehistoric.txt");
 
     if (!file) {
-        cout << "Error: Could not open prehistoric.txt" << endl;
+        cout << "Error: Could not open prehistoric.txt for writing!" << endl;
         return;
     }
 
-    string line;
-    while (getline(file, line)) 
-    { 
-        printStrRepeat(" ", 2);  
-        cout << line << endl;
+    PREHISTORIC* current = head;
+    while (current) 
+    {
+        file << current->data << endl;
+        current = current->next;
     }
 
-    file.close(); // Close the file
+    file.close();
+}
+
+void deletePrehistoricFile()
+{
+    const char* filename = "../data/prehistoric/prehistoric.txt";
+
+    if (remove(filename) == 0)
+    {
+        cout << "The prehistoric data file has been successfully deleted!" << endl;
+    }
+    else
+    {
+        cout << "Error: Could not delete the file." << endl;
+    }
 }
 
 void displayPrehistoric() 
@@ -71,7 +177,11 @@ void displayPrehistoric()
 
     printEndl(3);
 
-    displayPrehistoricInfo();
+    PREHISTORIC* infoList = loadPrehistoricInfo();
+    if (infoList) 
+    {
+        displayPrehistoricInfo(infoList);
+    }
 
     printEndl(4);
 
@@ -98,6 +208,7 @@ void displayPrehistoric()
         displayTimeline();
     }
 }
+
 
 
 

@@ -1,23 +1,50 @@
 #include "modern.h"
 #include "timeline.h"
 
-void displayModernInfo()
+MODERN* loadModernInfo()
 {
     ifstream file("../data/modern/modern.txt");
 
-    if (!file) {
+    if (!file)
+    {
         cout << "Error: Could not open modern.txt" << endl;
-        return;
+        return nullptr;
     }
 
+    MODERN* head = nullptr;
+    MODERN* tail = nullptr;
     string line;
+
     while (getline(file, line))
     {
-        printStrRepeat(" ", 2);
-        cout << line << endl;
+        MODERN* newNode = new MODERN{ line, nullptr };
+
+        if (!head)
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
     }
 
-    file.close(); // Close the file
+    file.close();
+    return head;
+}
+
+void displayModernInfo(MODERN* head) {
+    MODERN* current = head;
+
+    while (current)
+    {
+        centerText(current->data);
+        cout << endl;
+
+        current = current->next;
+    }
 }
 
 void displayModern()
@@ -57,7 +84,12 @@ void displayModern()
 
     printEndl(3);
 
-    displayModernInfo();
+
+    MODERN* infoList = loadModernInfo();
+    if (infoList)
+    {
+        displayModernInfo(infoList);
+    }
 
     printEndl(4);
 

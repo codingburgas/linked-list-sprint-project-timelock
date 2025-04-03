@@ -135,7 +135,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="middleAge.cpp" />
     <ClCompile Include="modern.cpp" />
-    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="globFunc.cpp" />
     <ClCompile Include="prehistoric.cpp" />
     <ClCompile Include="signUp.cpp" />
     <ClCompile Include="startingScreen.cpp" />

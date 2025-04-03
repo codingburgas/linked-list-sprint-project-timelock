@@ -1,25 +1,51 @@
 #include "middleAge.h"
 #include "timeline.h"
 
-void displayMiddleAgeInfo()
+MIDDLEAGE* loadMiddleAgeInfo()
 {
     ifstream file("../data/middleAge/middleAge.txt");
 
-    if (!file) {
+    if (!file)
+    {
         cout << "Error: Could not open middleAge.txt" << endl;
-        return;
+        return nullptr;
     }
 
+    MIDDLEAGE* head = nullptr;
+    MIDDLEAGE* tail = nullptr;
     string line;
+
     while (getline(file, line))
     {
-        printStrRepeat(" ", 2);
-        cout << line << endl;
+        MIDDLEAGE* newNode = new MIDDLEAGE{ line, nullptr };
+
+        if (!head)
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
     }
 
-    file.close(); // Close the file
+    file.close();
+    return head;
 }
 
+void displayMiddleAgeInfo(MIDDLEAGE* head) {
+    MIDDLEAGE* current = head;
+
+    while (current)
+    {
+        centerText(current->data);
+        cout << endl;
+
+        current = current->next;
+    }
+}
 void displayMiddleAge()
 {
     string resetColor = "\033[37m";   // White 
@@ -67,7 +93,12 @@ void displayMiddleAge()
 
     printEndl(3);
 
-    displayMiddleAgeInfo();
+
+    MIDDLEAGE* infoList = loadMiddleAgeInfo();
+    if (infoList)
+    {
+        displayMiddleAgeInfo(infoList);
+    }
 
     printEndl(4);
 

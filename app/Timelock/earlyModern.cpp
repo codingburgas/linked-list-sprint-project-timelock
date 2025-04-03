@@ -1,23 +1,50 @@
 #include "earlyModern.h"
 #include "timeline.h"
 
-void displayEarlyModernInfo()
+EARLYMODERN* loadEarlyModernInfo()
 {
     ifstream file("../data/earlyModern/earlyModern.txt");
 
-    if (!file) {
+    if (!file)
+    {
         cout << "Error: Could not open earlyModern.txt" << endl;
-        return;
+        return nullptr;
     }
 
+    EARLYMODERN* head = nullptr;
+    EARLYMODERN* tail = nullptr;
     string line;
+
     while (getline(file, line))
     {
-        printStrRepeat(" ", 2);
-        cout << line << endl;
+        EARLYMODERN* newNode = new EARLYMODERN{ line, nullptr };
+
+        if (!head)
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
     }
 
-    file.close(); // Close the file
+    file.close();
+    return head;
+}
+
+void displayEarlyModernInfo(EARLYMODERN* head) {
+    EARLYMODERN* current = head;
+
+    while (current)
+    {
+        centerText(current->data);
+        cout << endl;
+
+        current = current->next;
+    }
 }
 
 void displayEarlyModern()
@@ -67,7 +94,12 @@ void displayEarlyModern()
 
     printEndl(3);
 
-    displayEarlyModernInfo();
+
+    EARLYMODERN* infoList = loadEarlyModernInfo();
+    if (infoList)
+    {
+        displayEarlyModernInfo(infoList);
+    } 
 
     printEndl(4);
 
