@@ -3,96 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\earlyModern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\middleAge.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\middleAge.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\modern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\user.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\user.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\middleAge.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\middleAge.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\classical.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\earlyModern.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\modern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\prehistoric.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\timeline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\timeline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\classical.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\user.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\user.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\prehistoric.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\globFunc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\globFunc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\validation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\validation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\modern.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\login.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\login.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\earlyModern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\accessData.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\accessData.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\accessData.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\accessData.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\signUp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\signUp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\timeline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\timeline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\startingScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\startingScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\earlyModern.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,191 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "prehistoric.h",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.h",
-              "RelativeDocumentMoniker": "Timelock\\prehistoric.h",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.h",
-              "RelativeToolTip": "Timelock\\prehistoric.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T12:22:12.668Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "prehistoric.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.cpp",
-              "RelativeDocumentMoniker": "Timelock\\prehistoric.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.cpp",
-              "RelativeToolTip": "Timelock\\prehistoric.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T11:21:27.727Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 3,
+              "Title": "earlyModern.cpp",
+              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.cpp",
+              "RelativeDocumentMoniker": "Timelock\\earlyModern.cpp",
+              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.cpp",
+              "RelativeToolTip": "Timelock\\earlyModern.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T20:18:41.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "modern.h",
               "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.h",
               "RelativeDocumentMoniker": "Timelock\\modern.h",
               "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.h",
               "RelativeToolTip": "Timelock\\modern.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T19:17:41.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "classical.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.cpp",
-              "RelativeDocumentMoniker": "Timelock\\classical.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.cpp",
-              "RelativeToolTip": "Timelock\\classical.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T16:36:01.38Z",
+              "WhenOpened": "2025-04-03T20:17:55.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "validation.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\validation.cpp",
-              "RelativeDocumentMoniker": "Timelock\\validation.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\validation.cpp",
-              "RelativeToolTip": "Timelock\\validation.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T16:02:52.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "timeline.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\timeline.cpp",
-              "RelativeDocumentMoniker": "Timelock\\timeline.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\timeline.cpp",
-              "RelativeToolTip": "Timelock\\timeline.cpp",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T15:54:57.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "pch.h",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\pch.h",
-              "RelativeDocumentMoniker": "Timelock\\pch.h",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\pch.h",
-              "RelativeToolTip": "Timelock\\pch.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T15:54:10.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "globFunc.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\globFunc.cpp",
-              "RelativeDocumentMoniker": "Timelock\\globFunc.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\globFunc.cpp",
-              "RelativeToolTip": "Timelock\\globFunc.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T15:52:59.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "login.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\login.cpp",
-              "RelativeDocumentMoniker": "Timelock\\login.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\login.cpp",
-              "RelativeToolTip": "Timelock\\login.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T15:50:35.848Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "user.cpp",
               "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\user.cpp",
               "RelativeDocumentMoniker": "Timelock\\user.cpp",
               "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\user.cpp",
               "RelativeToolTip": "Timelock\\user.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEAAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-03T15:34:00.764Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "middleAge.h",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\middleAge.h",
-              "RelativeDocumentMoniker": "Timelock\\middleAge.h",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\middleAge.h",
-              "RelativeToolTip": "Timelock\\middleAge.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T19:55:19.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "earlyModern.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.cpp",
-              "RelativeDocumentMoniker": "Timelock\\earlyModern.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.cpp",
-              "RelativeToolTip": "Timelock\\earlyModern.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T20:02:08.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "middleAge.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\middleAge.cpp",
-              "RelativeDocumentMoniker": "Timelock\\middleAge.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\middleAge.cpp",
-              "RelativeToolTip": "Timelock\\middleAge.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T19:50:47.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "modern.cpp",
               "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.cpp",
               "RelativeDocumentMoniker": "Timelock\\modern.cpp",
               "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.cpp",
               "RelativeToolTip": "Timelock\\modern.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-03T20:02:14.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "earlyModern.h",
               "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\earlyModern.h",
               "RelativeDocumentMoniker": "Timelock\\earlyModern.h",
@@ -296,102 +100,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-03T20:03:17.751Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "user.h",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\user.h",
-              "RelativeDocumentMoniker": "Timelock\\user.h",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\user.h",
-              "RelativeToolTip": "Timelock\\user.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T19:30:07.734Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "startingScreen.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\startingScreen.cpp",
-              "RelativeDocumentMoniker": "Timelock\\startingScreen.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\startingScreen.cpp",
-              "RelativeToolTip": "Timelock\\startingScreen.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T16:56:44.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\main.cpp",
-              "RelativeDocumentMoniker": "Timelock\\main.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\main.cpp",
-              "RelativeToolTip": "Timelock\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T19:38:29.402Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "classical.h",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.h",
-              "RelativeDocumentMoniker": "Timelock\\classical.h",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.h",
-              "RelativeToolTip": "Timelock\\classical.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T17:02:54.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "signUp.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\signUp.cpp",
-              "RelativeDocumentMoniker": "Timelock\\signUp.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\signUp.cpp",
-              "RelativeToolTip": "Timelock\\signUp.cpp",
-              "ViewState": "AgIAAF0AAAAAAAAAAADwv3MAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T16:03:06.351Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "accessData.h",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\accessData.h",
-              "RelativeDocumentMoniker": "Timelock\\accessData.h",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\accessData.h",
-              "RelativeToolTip": "Timelock\\accessData.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T16:17:19.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "accessData.cpp",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\accessData.cpp",
-              "RelativeDocumentMoniker": "Timelock\\accessData.cpp",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\accessData.cpp",
-              "RelativeToolTip": "Timelock\\accessData.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAC8AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T16:15:51.727Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "timeline.h",
-              "DocumentMoniker": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\timeline.h",
-              "RelativeDocumentMoniker": "Timelock\\timeline.h",
-              "ToolTip": "C:\\Users\\PC1\\Desktop\\timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\timeline.h",
-              "RelativeToolTip": "Timelock\\timeline.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T17:00:27.173Z"
             }
           ]
         }

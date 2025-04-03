@@ -4,6 +4,7 @@
 #include "classical.h"
 #include "middleAge.h"
 #include "earlyModern.h"
+#include "modern.h"
 
 void userPanel(int page) 
 {
@@ -61,13 +62,14 @@ void userPanel(int page)
             break;
         case 3:
             displaymiddleAgeQuiz();
+            break;
         case 4:
             displayearlyModernQuiz();
+            break;
+        case 5:
+            displayModernQuiz();
+            break;
         }
-    
-        
-
-
         break;
     case 6:
         system("cls");

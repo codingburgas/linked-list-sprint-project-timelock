@@ -11,3 +11,4 @@ struct MODERN
 void displayModern();
 void displayModernInfo(MODERN* head);
 MODERN* loadModernInfo();
+void displayModernQuiz();
