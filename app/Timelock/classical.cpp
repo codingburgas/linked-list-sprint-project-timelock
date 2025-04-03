@@ -54,7 +54,7 @@ void displayClassicalQuiz() {
     ifstream file("../data/classical/classicalEraQuiz.txt");
 
     if (!file) {
-        cout << "Error: Could not open prehistoric.txt" << endl;
+        cout << "Error: Could not open classicalEraQuiz.txt" << endl;
         return;
     }
     string resetColor = "\033[37m";   // White 

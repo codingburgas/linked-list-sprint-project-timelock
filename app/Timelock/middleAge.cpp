@@ -54,7 +54,7 @@ void displaymiddleAgeQuiz() {
     ifstream file("../data/middleAge/middleAgeQuiz.txt");
 
     if (!file) {
-        cout << "Error: Could not open prehistoric.txt" << endl;
+        cout << "Error: Could not open middleAgeQuiz.txt" << endl;
         return;
     }
     string resetColor = "\033[37m";   // White 

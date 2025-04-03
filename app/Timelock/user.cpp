@@ -3,6 +3,7 @@
 #include "prehistoric.h"
 #include "classical.h"
 #include "middleAge.h"
+#include "earlyModern.h"
 
 void userPanel(int page) 
 {
@@ -60,6 +61,8 @@ void userPanel(int page)
             break;
         case 3:
             displaymiddleAgeQuiz();
+        case 4:
+            displayearlyModernQuiz();
         }
     
         
