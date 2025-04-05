@@ -1,10 +1,4 @@
-﻿  classical.cpp
-  earlyModern.cpp
-  middleAge.cpp
-  modern.cpp
-  prehistoric.cpp
+﻿  prehistoric.cpp
+  timeline.cpp
   Generating Code...
-  LINK : C:\Users\Jujka\Documents\Timelock\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe not found or not built by the last incremental link; performing full link
-  Timelock.vcxproj -> C:\Users\Jujka\Documents\Timelock\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+  Timelock.vcxproj -> C:\Users\PC1\Desktop\timelock\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe

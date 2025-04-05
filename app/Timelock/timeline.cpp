@@ -109,7 +109,7 @@ void displayTimeline()
         break;
     case 2:
         system("cls");
-        
+      
         displayClassical();
         break;
     case 3:

@@ -8,6 +8,7 @@ struct PREHISTORIC
     PREHISTORIC* next;
 };
 
+
 void displayPrehistoric();
 void displayPrehistoricInfo(PREHISTORIC* head);
 PREHISTORIC* loadPrehistoricInfo();

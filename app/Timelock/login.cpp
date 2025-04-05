@@ -52,8 +52,10 @@ void login()
     string resetColor = "\033[37m";   // White 
 
 
-
+    
     loadAccounts();
+    
+    
 
     string username, password;
 
@@ -98,7 +100,7 @@ void login()
 
     cout << endl;
     centerText(greenColor + "                  Login successful! You are logged in as " + role + "." + resetColor);
-    
+    loadUserProgress();
     sleep_for(seconds(1));
 
     system("cls"); 

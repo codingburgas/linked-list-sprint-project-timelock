@@ -1,9 +1,7 @@
-﻿
-jak,jak,admin,4
-ves,ves,admin,4
+
+test,test,user,0
+luch,luch,user,5
 jaks,jaks,user,0
-luch,luch,user,0
-Ja,jj,admin,4
-luc,luc,user,0
-luk,luk,user,0
-test,test,user,1
+ves,ves,admin,4
+jak,jak,admin,4
+

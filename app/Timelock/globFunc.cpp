@@ -44,7 +44,7 @@ void displayQuizTitle()
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
-
+    cout << progres;
     string quiz[11] = 
     {
          "",
@@ -99,3 +99,22 @@ void displayEventsTitle()
     }
     printEndl(2);
 }
+
+void appendNode(QUIZNODE*& head, const string& line) {
+    QUIZNODE* newNode = new QUIZNODE{ line, nullptr };
+    if (!head) head = newNode;
+    else {
+        QUIZNODE* temp = head;
+        while (temp->next) temp = temp->next;
+        temp->next = newNode;
+    }
+}
+
+void deleteList(QUIZNODE* head) {
+    while (head) {
+        QUIZNODE* temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
