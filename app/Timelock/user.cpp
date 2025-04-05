@@ -52,6 +52,7 @@ void userPanel(int page)
         break;
     case 5:
         system("cls");
+        displayQuizTitle();
         switch (page)
         {
         case 1:

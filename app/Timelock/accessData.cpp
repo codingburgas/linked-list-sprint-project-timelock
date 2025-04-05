@@ -32,7 +32,7 @@ void loadAccounts()
 void saveAccount(const string& username, const string& password, const string& role,int progress)
 {
     ofstream file("../data/accounts.csv", ios::app);
-    file << username << "," << password << "," << role <<","<<progress << "\n";
+    file << username << "," << password << "," << role <<","<<progress << endl;
     file.close();
 
     ACCOUNT* newAcc = new ACCOUNT{ username, password, role, progress,head };

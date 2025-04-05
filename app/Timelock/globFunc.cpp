@@ -40,4 +40,36 @@ void printStrRepeat(string str, int num)
     }
 }
 
+void displayQuizTitle()
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
+    string quiz[11] = 
+    {
+         "",
+         "          .**************..*************..*********..*************.",
+         "          *    ________       .__.  .__.      .__.       ______     *",
+         "          *   /  .__.  \\      |  |  |  |      |  |      |___   |    *",
+         "          *   |  |  |  |      |  |  |  |      |  |         /  /     *",
+         "          *   |  | _|_ |      |  |  |  |      |  |        /  /      *",
+         "          *   |  |_\\  \\|      |  |__|  |      |  |       /  /___    *",
+         "          *   \\_____\\__\\      \\________/      |__|      |_______|   *",
+         "          *.             ..              ..         ..             .*",
+         "          **************  *************  *********  *************",
+         ""
+    };
+
+    printEndl(2);
+
+    for (int i = 0; i < 11; i++)
+    {
+        centerText(purpleColor + quiz[i] + resetColor);
+        cout << endl;
+    }
+
+    printEndl(3);
+
+}
+
 

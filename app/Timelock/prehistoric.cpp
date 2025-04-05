@@ -72,7 +72,8 @@ void editPrehistoricInfo(PREHISTORIC* head)
     current = head;
     lineNum = 1;
 
-    while (current) {
+    while (current) 
+    {
         if (lineNum == editLine) 
         {
             cout << "Editing: " << current->data << endl;
@@ -87,11 +88,13 @@ void editPrehistoricInfo(PREHISTORIC* head)
     cout << endl << "Press 'S' to save changes or any other key to discard: ";
     ch = _getch();
 
-    if (ch == 's' || ch == 'S') {
+    if (ch == 's' || ch == 'S') 
+    {
         savePrehistoricInfo(head);
         cout << endl << "Changes saved successfully!" << endl;
     }
-    else {
+    else
+    {
         cout << endl << "Changes discarded." << endl;
     }
 }
@@ -100,7 +103,8 @@ void savePrehistoricInfo(PREHISTORIC* head)
 {
     ofstream file("../data/prehistoric/prehistoric.txt");
 
-    if (!file) {
+    if (!file) 
+    {
         cout << "Error: Could not open prehistoric.txt for writing!" << endl;
         return;
     }
@@ -129,16 +133,18 @@ void deletePrehistoricFile()
     }
 }
 
-void displayPrehistoricQuiz() {
+void displayPrehistoricQuiz() 
+{
     ifstream file("../data/prehistoric/prehistoricQuiz.txt");
 
-    if (!file) {
+    if (!file) 
+    {
         cout << "Error: Could not open prehistoric.txt" << endl;
         return;
     }
     string resetColor = "\033[37m";   // White 
     string greenColor = "\033[32m";  // Green
-    string blueColor = "\033[36m";  // Green
+    string purpleColor = "\033[35m";  // Purple
     string redColor = "\033[31m";  // Red
 
     char correctAnswers[] = { 'C', 'B', 'B', 'B', 'B' };
@@ -147,11 +153,13 @@ void displayPrehistoricQuiz() {
     int index = 0;
     bool passed = false;
 
-    while (getline(file, line)) {
+    while (getline(file, line)) 
+    {
         printStrRepeat(" ", 2);
         cout << line << endl;
 
-        if (line.find(':') != string::npos) {
+        if (line.find(':') != string::npos) 
+        {
             char answer;
             bool answerGiven = false;
 
@@ -159,29 +167,39 @@ void displayPrehistoricQuiz() {
                 cin >> answer;
                 cout << endl;
 
-                if (toupper(answer) == correctAnswers[index]) {
-                    cout << "Correct answer\n";
+                if (toupper(answer) == correctAnswers[index]) 
+                {
+                    cout << "Correct answer";
+                    cout << endl;
                     counter += 1;
                     answerGiven = true;
                     progres += 1;
                 }
-                else {
-                    cout << "Incorrect answer.\n";
+                else 
+                {
+                    cout << "Incorrect answer.";
+                    cout << endl;
                     answerGiven = true;
                 }
             }
             index++;
         }
     }
-    if (counter >= 3) {
-        centerText("           Exam score: " + blueColor + to_string(counter) + "/5\n" + resetColor);
-        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!\n");
+    if (counter >= 3) 
+    {
+        centerText("           Exam score: " + purpleColor + to_string(counter) + "/5" + resetColor);
+        cout << endl;
+        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!");
+        cout << endl;
         passed = true;
         
     }
-    else {
-        centerText("           Exam score: " + blueColor + to_string(counter) + "/5\n" + resetColor);
-        centerText("            Exam " + redColor + "FAILED! " + resetColor + "You shall read more carefully and try again!\n");
+    else 
+    {
+        centerText("           Exam score: " + purpleColor + to_string(counter) + "/5" + resetColor);
+        cout << endl;
+        centerText("            Exam " + redColor + "FAILED! " + resetColor + "You shall read more carefully and try again!");
+        cout << endl;
     }
     file.close();
 }
