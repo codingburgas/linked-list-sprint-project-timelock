@@ -3,8 +3,9 @@
 #include "validation.h"
 #include "admin.h"
 #include "user.h"
+#include "events.h"
 
-CLASSICAL* loadClassicalInfo()
+INFONODE* loadClassicalInfo()
 {
     ifstream file("../data/classical/classical.txt");
 
@@ -14,13 +15,13 @@ CLASSICAL* loadClassicalInfo()
         return nullptr;
     }
 
-    CLASSICAL* head = nullptr;
-    CLASSICAL* tail = nullptr;
+    INFONODE* head = nullptr;
+    INFONODE* tail = nullptr;
     string line;
 
     while (getline(file, line))
     {
-        CLASSICAL* newNode = new CLASSICAL{ line, nullptr };
+        INFONODE* newNode = new INFONODE{ line, nullptr };
 
         if (!head)
         {
@@ -38,9 +39,9 @@ CLASSICAL* loadClassicalInfo()
     return head;
 }
 
-void displayClassicalInfo(CLASSICAL* head) 
+void displayClassicalInfo(INFONODE* head)
 {
-    CLASSICAL* current = head;
+    INFONODE* current = head;
 
     while (current)
     {
@@ -60,13 +61,13 @@ void displayClassicalEvents()
 
     printEndl(3);
 
-    CLASSICAL* infoList = loadClassicalInfo();
+    INFONODE* infoList = loadClassicalInfo();
     if (infoList)
     {
         displayClassicalInfo(infoList);
     }
 
-    printEndl(5);
+    printEndl(4);
 
     string ClassicalEvents[4] = { "The Greco - Persian Wars", "The Peloponnesian War", "The Roman Revolution", "The Decline and Fall of the Roman Empire"};
 
@@ -83,16 +84,17 @@ void displayClassicalEvents()
         }
     }
 
-    printEndl(3);
-    centerText(purpleColor + "            Choose an event to explore! " + resetColor);
-    int event;
-    cin >> event;
+    printEndl(4);
+
+    displayClassicalEventsInfo();
 }
 
-void displayClassicalQuiz(){
+void displayClassicalQuiz()
+{
 
     ifstream file("../data/classical/classicalEraQuiz.txt");
-    if (!file) {
+    if (!file) 
+    {
         cout << "Error: Could not open classicalEraQuiz.txt" << endl;
         return;
     }
@@ -111,17 +113,21 @@ void displayClassicalQuiz(){
     file.close();
 
     QUIZNODE* current = head;
-    while (current) {
+    while (current) 
+    {
         printStrRepeat(" ", 2);
         cout << current->line << endl;
 
-        if (current->line.find(':') != string::npos) {
+        if (current->line.find(':') != string::npos) 
+        {
             char answer;
             bool answered = false;
-            while (!answered) {
+            while (!answered) 
+            {
                 cin >> answer;
                 cout << endl;
-                if (toupper(answer) == correctAnswers[index]) {
+                if (toupper(answer) == correctAnswers[index]) 
+                {
                     printEndl(2);
                     centerText("          " + greenColor + "Correct answer! " + resetColor);
                     printEndl(2);
@@ -129,7 +135,8 @@ void displayClassicalQuiz(){
 
 
                 }
-                else {
+                else 
+                {
                     printEndl(2);
                     centerText("          " + redColor + "Incorrect answer! " + resetColor);
                     printEndl(2);
@@ -149,7 +156,7 @@ void displayClassicalQuiz(){
 
     if (counter >= 3)
     {
-        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!");
+        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continue to the next era!");
         if (progres == 1)
         {
             progres += 1;

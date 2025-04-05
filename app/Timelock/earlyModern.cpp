@@ -3,8 +3,9 @@
 #include "validation.h"
 #include "admin.h"
 #include "user.h"
+#include "events.h"
 
-EARLYMODERN* loadEarlyModernInfo()
+INFONODE* loadEarlyModernInfo()
 {
     ifstream file("../data/earlyModern/earlyModern.txt");
 
@@ -14,13 +15,13 @@ EARLYMODERN* loadEarlyModernInfo()
         return nullptr;
     }
 
-    EARLYMODERN* head = nullptr;
-    EARLYMODERN* tail = nullptr;
+    INFONODE* head = nullptr;
+    INFONODE* tail = nullptr;
     string line;
 
     while (getline(file, line))
     {
-        EARLYMODERN* newNode = new EARLYMODERN{ line, nullptr };
+        INFONODE* newNode = new INFONODE{ line, nullptr };
 
         if (!head)
         {
@@ -38,9 +39,9 @@ EARLYMODERN* loadEarlyModernInfo()
     return head;
 }
 
-void displayEarlyModernInfo(EARLYMODERN* head) 
+void displayEarlyModernInfo(INFONODE* head)
 {
-    EARLYMODERN* current = head;
+    INFONODE* current = head;
 
     while (current)
     {
@@ -60,7 +61,7 @@ void displayearlyModernEvents()
 
     printEndl(3);
 
-    EARLYMODERN* infoList = loadEarlyModernInfo();
+    INFONODE* infoList = loadEarlyModernInfo();
     if (infoList)
     {
         displayEarlyModernInfo(infoList);
@@ -145,7 +146,7 @@ void displayearlyModernQuiz()
 
     if (counter >= 3)
     {
-        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!");
+        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continue to the next era!");
         if (progres == 3)
         {
             progres += 1;

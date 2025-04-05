@@ -2,14 +2,8 @@
 
 #pragma once
 
-struct CLASSICAL
-{
-    string data;
-    CLASSICAL* next;
-};
-
 void displayClassical();
-void displayClassicalInfo(CLASSICAL* head);
-CLASSICAL* loadClassicalInfo();
+void displayClassicalInfo(INFONODE* head);
+INFONODE* loadClassicalInfo();
 void displayClassicalQuiz();
 void displayClassicalEvents();

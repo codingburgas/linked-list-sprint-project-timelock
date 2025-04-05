@@ -2,15 +2,9 @@
 
 #pragma once
 
-struct EARLYMODERN
-{
-    string data;
-    EARLYMODERN* next;
-};
-
 void displayEarlyModern();
-void displayEarlyModernInfo(EARLYMODERN* head);
-EARLYMODERN* loadEarlyModernInfo();
+void displayEarlyModernInfo(INFONODE* head);
+INFONODE* loadEarlyModernInfo();
 void displayearlyModernQuiz();
 void displayearlyModernEvents();
 

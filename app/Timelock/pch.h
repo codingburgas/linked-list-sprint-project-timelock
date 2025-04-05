@@ -15,20 +15,32 @@ using std::chrono::seconds;
 
 #pragma once
 
-struct QUIZNODE {
+struct INFONODE
+{
+    string data;
+    INFONODE* next;
+};
+
+struct QUIZNODE 
+{
     string line;
     QUIZNODE* next;
 };
 
-void appendNode(QUIZNODE*& head, const string& line);
-void deleteList(QUIZNODE* head);
-
 extern int progres;
+
 int getConsoleWidth();
+
 void centerText(string text);
 void printEndl(int num);
 void printStrRepeat(string str, int num);
 void displayQuizTitle();
 void displayEventsTitle();
 
+void appendNode(QUIZNODE*& head, const string& line);
+void deleteList(QUIZNODE* head);
+
+INFONODE* loadInfoFromFile(const string& filepath);
+void displayInfo(INFONODE* head);
+void deleteInfoList(INFONODE* head);
 

@@ -2,14 +2,8 @@
 
 #pragma once
 
-struct MODERN
-{
-    string data;
-    MODERN* next;
-};
-
 void displayModern();
-void displayModernInfo(MODERN* head);
-MODERN* loadModernInfo();
+void displayModernInfo(INFONODE* head);
+INFONODE* loadModernInfo();
 void displayModernQuiz();
 void displayModernEvents();

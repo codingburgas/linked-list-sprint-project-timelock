@@ -3,8 +3,9 @@
 #include "user.h"
 #include "admin.h"
 #include "validation.h"
+#include "events.h"
 
-MIDDLEAGE* loadMiddleAgeInfo()
+INFONODE* loadMiddleAgeInfo()
 {
     ifstream file("../data/middleAge/middleAge.txt");
 
@@ -14,13 +15,13 @@ MIDDLEAGE* loadMiddleAgeInfo()
         return nullptr;
     }
 
-    MIDDLEAGE* head = nullptr;
-    MIDDLEAGE* tail = nullptr;
+    INFONODE* head = nullptr;
+    INFONODE* tail = nullptr;
     string line;
 
     while (getline(file, line))
     {
-        MIDDLEAGE* newNode = new MIDDLEAGE{ line, nullptr };
+        INFONODE* newNode = new INFONODE{ line, nullptr };
 
         if (!head)
         {
@@ -38,9 +39,9 @@ MIDDLEAGE* loadMiddleAgeInfo()
     return head;
 }
 
-void displayMiddleAgeInfo(MIDDLEAGE* head) 
+void displayMiddleAgeInfo(INFONODE* head)
 {
-    MIDDLEAGE* current = head;
+    INFONODE* current = head;
 
     while (current)
     {
@@ -60,7 +61,7 @@ void displaymiddleAgeEvents()
 
     printEndl(3);
 
-    MIDDLEAGE* infoList = loadMiddleAgeInfo();
+    INFONODE* infoList = loadMiddleAgeInfo();
     if (infoList)
     {
         displayMiddleAgeInfo(infoList);
@@ -145,7 +146,7 @@ void displaymiddleAgeQuiz()
 
     if (counter >= 3)
     {
-        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!");
+        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continue to the next era!");
         if (progres == 2)
         {
             progres += 1;

@@ -36,7 +36,7 @@ void loadAccounts()
 void saveAccount(const string& username, const string& password, const string& role,int progress)
 {
     ofstream file("../data/accounts.csv", ios::app);
-    file << username << "," << password << "," << role <<","<<progress << endl;
+    file << username << "," << password << "," << role << "," << progress << endl;
     file.close();
 
     ACCOUNT* newAcc = new ACCOUNT{ username, password, role, progress,head };
@@ -57,8 +57,7 @@ void loadUserProgress()
 }
 
 void saveUserProgress()
-{
-    
+{ 
     ACCOUNT* temp = head;
     while (temp != nullptr)
     {
@@ -94,7 +93,6 @@ void saveUserProgress()
     }
     inFile.close();
 
-    
     ofstream outFile("../data/accounts.csv", ios::trunc);  
     for (int i = 0; i < lines.size(); i++)
     {

@@ -3,8 +3,9 @@
 #include "validation.h"
 #include "admin.h"
 #include "user.h"
+#include "events.h"
 
-MODERN* loadModernInfo()
+INFONODE* loadModernInfo()
 {
     ifstream file("../data/modern/modern.txt");
 
@@ -14,13 +15,13 @@ MODERN* loadModernInfo()
         return nullptr;
     }
 
-    MODERN* head = nullptr;
-    MODERN* tail = nullptr;
+    INFONODE* head = nullptr;
+    INFONODE* tail = nullptr;
     string line;
 
     while (getline(file, line))
     {
-        MODERN* newNode = new MODERN{ line, nullptr };
+        INFONODE* newNode = new INFONODE{ line, nullptr };
 
         if (!head)
         {
@@ -38,9 +39,9 @@ MODERN* loadModernInfo()
     return head;
 }
 
-void displayModernInfo(MODERN* head) 
+void displayModernInfo(INFONODE* head)
 {
-    MODERN* current = head;
+    INFONODE* current = head;
 
     while (current)
     {
@@ -60,7 +61,7 @@ void displayModernEvents()
 
     printEndl(3);
 
-    MODERN* infoList = loadModernInfo();
+    INFONODE* infoList = loadModernInfo();
     if (infoList)
     {
         displayModernInfo(infoList);

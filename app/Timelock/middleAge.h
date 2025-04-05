@@ -2,14 +2,8 @@
 
 #pragma once
 
-struct MIDDLEAGE
-{
-    string data;
-    MIDDLEAGE* next;
-};
-
 void displayMiddleAge();
-void displayMiddleAgeInfo(MIDDLEAGE* head);
-MIDDLEAGE* loadMiddleAgeInfo();
+void displayMiddleAgeInfo(INFONODE* head);
+INFONODE* loadMiddleAgeInfo();
 void displaymiddleAgeQuiz();
 void displaymiddleAgeEvents();

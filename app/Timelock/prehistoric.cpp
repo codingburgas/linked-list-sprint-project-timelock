@@ -3,8 +3,9 @@
 #include "admin.h"
 #include "user.h"
 #include "timeline.h"
+#include "events.h"
 
-PREHISTORIC* loadPrehistoricInfo()
+INFONODE* loadPrehistoricInfo()
 {
     ifstream file("../data/prehistoric/prehistoric.txt");
 
@@ -14,13 +15,13 @@ PREHISTORIC* loadPrehistoricInfo()
         return nullptr;
     }
 
-    PREHISTORIC* head = nullptr;
-    PREHISTORIC* tail = nullptr;
+    INFONODE* head = nullptr;
+    INFONODE* tail = nullptr;
     string line;
 
     while (getline(file, line)) 
     {
-        PREHISTORIC* newNode = new PREHISTORIC{ line, nullptr };
+        INFONODE* newNode = new INFONODE{ line, nullptr };
 
         if (!head) 
         {
@@ -38,9 +39,9 @@ PREHISTORIC* loadPrehistoricInfo()
     return head;
 }
 
-void displayPrehistoricInfo(PREHISTORIC* head) 
+void displayPrehistoricInfo(INFONODE* head)
 {
-    PREHISTORIC* current = head;
+    INFONODE* current = head;
 
     while (current) 
     {
@@ -60,13 +61,13 @@ void displayPrehistoricEvents()
 
         printEndl(3);
 
-        PREHISTORIC* infoList = loadPrehistoricInfo();
+        INFONODE* infoList = loadPrehistoricInfo();
         if (infoList)
         {
             displayPrehistoricInfo(infoList);
         }
 
-        printEndl(5);
+        printEndl(4);
 
         string PrehistoricEvents[3] = { "Stone Age", "Bronze Age", "Iron Age" };
 
@@ -78,10 +79,9 @@ void displayPrehistoricEvents()
             printStrRepeat(" ", 9);
         }
 
-        printEndl(3);
-        centerText(purpleColor + "            Choose an event to explore! " + resetColor);
-        int event;
-        cin >> event;
+        printEndl(4);
+
+        displayPrehistoricEventsInfo();
 }
 
 
@@ -144,7 +144,7 @@ void displayPrehistoricQuiz() {
 
     if (counter >= 3) 
     {
-        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!");
+        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continue to the next era!");
         if (progres == 0)
         {
             progres += 1;
