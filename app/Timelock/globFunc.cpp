@@ -44,7 +44,6 @@ void displayQuizTitle()
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
-    cout << progres;
     string quiz[11] = 
     {
          "",

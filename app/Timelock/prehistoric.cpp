@@ -145,8 +145,15 @@ void displayPrehistoricQuiz() {
     if (counter >= 3) 
     {
         centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!");
-        progres += 1;
-        saveUserProgress();
+        if (progres == 0)
+        {
+            progres += 1;
+            saveUserProgress();
+        }
+        else
+        {
+
+        }
     }
     else
     {

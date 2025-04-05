@@ -84,76 +84,85 @@ void displayearlyModernEvents()
     cin >> event; 
 }
 
-void displayearlyModernQuiz() 
+void displayearlyModernQuiz()
 {
-    ifstream file("../data/earlyModern/earlyModernQuiz.txt");
 
-    if (!file) 
-    {
+    ifstream file("../data/earlyModern/earlyModernQuiz.txt");
+    if (!file) {
         cout << "Error: Could not open earlyModernQuiz.txt" << endl;
         return;
     }
-    string resetColor = "\033[37m";   // White 
-    string greenColor = "\033[32m";  // Green
-    string purpleColor = "\033[35m";  // Purple
-    string redColor = "\033[31m";  // Red
+
+    string resetColor = "\033[37m";
+    string greenColor = "\033[32m";
+    string purpleColor = "\033[35m";
+    string redColor = "\033[31m";
 
     char correctAnswers[] = { 'B', 'C', 'B', 'C', 'B' };
-    int counter = 0;
+    int counter = 0, index = 0;
+
+    QUIZNODE* head = nullptr;
     string line;
-    int index = 0;
-    bool passed = false;
+    while (getline(file, line)) appendNode(head, line);
+    file.close();
 
-    while (getline(file, line)) 
-    {
+    QUIZNODE* current = head;
+    while (current) {
         printStrRepeat(" ", 2);
-        cout << line << endl;
+        cout << current->line << endl;
 
-        if (line.find(':') != string::npos) 
-        {
+        if (current->line.find(':') != string::npos) {
             char answer;
-            bool answerGiven = false;
-
-            while (!answerGiven) 
-            {
+            bool answered = false;
+            while (!answered) {
                 cin >> answer;
                 cout << endl;
+                if (toupper(answer) == correctAnswers[index]) {
+                    printEndl(2);
+                    centerText("          " + greenColor + "Correct answer! " + resetColor);
+                    printEndl(2);
+                    counter++;
 
-                if (toupper(answer) == correctAnswers[index]) 
-                {
-                    cout << "Correct answer";
-                    cout << endl;
-                    counter += 1;
-                    answerGiven = true;
-                    progres += 1;
+
                 }
-                else 
-                {
-                    cout << "Incorrect answer.";
-                    cout << endl;
-                    answerGiven = true;
+                else {
+                    printEndl(2);
+                    centerText("          " + redColor + "Incorrect answer! " + resetColor);
+                    printEndl(2);
+                    centerText("          Correct answer was:" + purpleColor + correctAnswers[index] + resetColor);
+                    printEndl(2);
+
                 }
+                answered = true;
+                index++;
             }
-            index++;
+        }
+        current = current->next;
+    }
+
+
+    centerText("           Exam score: " + purpleColor + to_string(counter) + "/5" + resetColor); cout << endl;
+
+    if (counter >= 3)
+    {
+        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!");
+        if (progres == 3)
+        {
+            progres += 1;
+            saveUserProgress();
+        }
+        else
+        {
+
         }
     }
-    if (counter >= 3) 
+    else
     {
-        centerText("           Exam score: " + purpleColor + to_string(counter) + "/5" + resetColor);
-        cout << endl;
-        centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continuo to the next era!");
-        cout << endl;
-        passed = true;
-
-    }
-    else 
-    {
-        centerText("           Exam score: " + purpleColor + to_string(counter) + "/5" + resetColor);
-        cout << endl;
         centerText("            Exam " + redColor + "FAILED! " + resetColor + "You shall read more carefully and try again!");
         cout << endl;
     }
-    file.close();
+
+    deleteList(head);
 }
 
 
