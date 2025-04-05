@@ -51,6 +51,39 @@ void displayModernInfo(MODERN* head)
     }
 }
 
+void displayModernEvents()
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
+    centerText("             Start exploring " + purpleColor + "Modern " + resetColor + "era!");
+
+    printEndl(3);
+
+    MODERN* infoList = loadModernInfo();
+    if (infoList)
+    {
+        displayModernInfo(infoList);
+    }
+
+    printEndl(5);
+
+    string ModernEvents[5] = { "Industrial Revolution", "World War I", "Great Depression", "World War II", "Cold War" };
+
+    printStrRepeat(" ", 13);
+
+    for (int i = 0; i < 5; i++)
+    {
+        cout << i + 1 << ". " << ModernEvents[i];
+        printStrRepeat(" ", 9);
+    }
+
+    printEndl(3);
+    centerText(purpleColor + "            Choose an event to explore! " + resetColor);
+    int event;
+    cin >> event;
+}
+
 void displayModernQuiz() 
 {
     ifstream file("../data/modern/ModernQuiz.txt");
@@ -157,23 +190,10 @@ void displayModern()
 
     printEndl(3);
 
-    centerText("                Start exploring " + purpleColor + "Modern " + resetColor + "era events!");
-
-    printEndl(3);
-
-
-    MODERN* infoList = loadModernInfo();
-    if (infoList)
-    {
-        displayModernInfo(infoList);
-    }
-
-    printEndl(4);
-
     string role = getCurrentUserRole();
     if (role == "admin")
     {
-        adminPanel();
+        adminPanel(5);
     }
     else
     {

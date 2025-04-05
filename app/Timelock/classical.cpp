@@ -51,6 +51,45 @@ void displayClassicalInfo(CLASSICAL* head)
     }
 }
 
+void displayClassicalEvents()
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
+    centerText("            Start exploring " + purpleColor + "Classical " + resetColor + "era!");
+
+    printEndl(3);
+
+    CLASSICAL* infoList = loadClassicalInfo();
+    if (infoList)
+    {
+        displayClassicalInfo(infoList);
+    }
+
+    printEndl(5);
+
+    string ClassicalEvents[4] = { "The Greco - Persian Wars", "The Peloponnesian War", "The Roman Revolution", "The Decline and Fall of the Roman Empire"};
+
+    printStrRepeat(" ", 28);
+
+    for (int i = 0; i < 4; i++)
+    {
+        cout << i + 1 << ". " << ClassicalEvents[i];
+        printStrRepeat(" ", 10);
+        if (i == 2)
+        {
+            printEndl(3);
+            printStrRepeat(" ", 52);
+        }
+    }
+
+    printEndl(3);
+    centerText(purpleColor + "            Choose an event to explore! " + resetColor);
+    int event;
+    cin >> event;
+}
+
+
 void displayClassicalQuiz() 
 {
     ifstream file("../data/classical/classicalEraQuiz.txt");
@@ -157,23 +196,10 @@ void displayClassical()
 
     printEndl(3);
 
-    centerText("            Start exploring " + purpleColor + "Classical " + resetColor + "era events!");
-    
-    printEndl(3);
-
-
-    CLASSICAL* infoList = loadClassicalInfo();
-    if (infoList)
-    {
-        displayClassicalInfo(infoList);
-    }
-
-    printEndl(4);
-
     string role = getCurrentUserRole();
     if (role == "admin")
     {
-        adminPanel();
+        adminPanel(2);
     }
     else
     {
@@ -192,5 +218,4 @@ void displayClassical()
         system("cls");
         displayTimeline();
     }
-
 }

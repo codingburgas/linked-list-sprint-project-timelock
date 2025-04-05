@@ -118,7 +118,7 @@ void signUp()
     cout << endl;
     centerText(greenColor + "               SIGN UP successful!" + resetColor);
 
-    sleep_for(seconds(2));
+    sleep_for(seconds(1));
 
     system("cls");
 

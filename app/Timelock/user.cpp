@@ -40,6 +40,25 @@ void userPanel(int page)
     {
     case 1:
         system("cls");
+        displayEventsTitle();
+        switch (page)
+        {
+        case 1:
+            displayPrehistoricEvents();
+            break;
+        case 2:
+            displayClassicalEvents();
+            break;
+        case 3:
+            displaymiddleAgeEvents();
+            break;
+        case 4:
+            displayearlyModernEvents();
+            break;
+        case 5:
+            displayModernEvents();
+            break;
+        }
         break;
     case 2:
         system("cls");

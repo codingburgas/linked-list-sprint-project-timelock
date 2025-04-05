@@ -3,4 +3,4 @@
 
 #pragma once
 
-void adminPanel();
+void adminPanel(int page);

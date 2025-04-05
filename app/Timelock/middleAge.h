@@ -12,3 +12,4 @@ void displayMiddleAge();
 void displayMiddleAgeInfo(MIDDLEAGE* head);
 MIDDLEAGE* loadMiddleAgeInfo();
 void displaymiddleAgeQuiz();
+void displaymiddleAgeEvents();

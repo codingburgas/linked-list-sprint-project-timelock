@@ -12,3 +12,4 @@ void displayModern();
 void displayModernInfo(MODERN* head);
 MODERN* loadModernInfo();
 void displayModernQuiz();
+void displayModernEvents();

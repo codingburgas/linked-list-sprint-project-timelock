@@ -51,6 +51,40 @@ void displayMiddleAgeInfo(MIDDLEAGE* head)
     }
 }
 
+void displaymiddleAgeEvents()
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
+    centerText("            Start exploring " + purpleColor + "Middle Age " + resetColor + "era!");
+
+    printEndl(3);
+
+    MIDDLEAGE* infoList = loadMiddleAgeInfo();
+    if (infoList)
+    {
+        displayMiddleAgeInfo(infoList);
+    }
+
+    printEndl(4);
+
+    string MissdleAgeEvents[4] = { "Viking Age", "Battle of Hastings", "Hundred Years' War", "Black Death" };
+
+    printStrRepeat(" ", 25);
+
+    for (int i = 0; i < 4; i++)
+    {
+        cout << i + 1 << ". " << MissdleAgeEvents[i];
+        printStrRepeat(" ", 10);
+    }
+
+    printEndl(3);
+    centerText(purpleColor + "            Choose an event to explore! " + resetColor);
+    int event;
+    cin >> event;
+}
+
+
 void displaymiddleAgeQuiz() 
 {
     ifstream file("../data/middleAge/middleAgeQuiz.txt");
@@ -166,23 +200,10 @@ void displayMiddleAge()
 
     printEndl(3);
 
-    centerText("               Start exploring " + purpleColor + "Middle Age " + resetColor + "era events!");
-
-    printEndl(3);
-
-
-    MIDDLEAGE* infoList = loadMiddleAgeInfo();
-    if (infoList)
-    {
-        displayMiddleAgeInfo(infoList);
-    }
-
-    printEndl(4);
-
     string role = getCurrentUserRole();
     if (role == "admin")
     {
-        adminPanel();
+        adminPanel(3);
     }
     else
     {
@@ -202,8 +223,3 @@ void displayMiddleAge()
         displayTimeline();
     }
 }
-
-
-
-
-

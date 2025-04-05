@@ -12,3 +12,4 @@ void displayClassical();
 void displayClassicalInfo(CLASSICAL* head);
 CLASSICAL* loadClassicalInfo();
 void displayClassicalQuiz();
+void displayClassicalEvents();

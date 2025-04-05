@@ -51,87 +51,39 @@ void displayPrehistoricInfo(PREHISTORIC* head)
     }
 }
 
-void editPrehistoricInfo(PREHISTORIC* head) 
+void displayPrehistoricEvents()
 {
-    PREHISTORIC* current = head;
-    int lineNum = 1;
-    char ch;
+        string resetColor = "\033[37m";   // White 
+        string purpleColor = "\033[35m";  // Purple
 
-    while (current) 
-    {
-        cout << "[" << lineNum << "] " << current->data << endl;
-        current = current->next;
-        lineNum++;
-    }
+        centerText("            Start exploring " + purpleColor + "Prehistoric " + resetColor + "era!");
 
-    cout << endl << "Enter the line number you want to edit: ";
-    int editLine;
-    cin >> editLine;
-    cin.ignore();
+        printEndl(3);
 
-    current = head;
-    lineNum = 1;
-
-    while (current) 
-    {
-        if (lineNum == editLine) 
+        PREHISTORIC* infoList = loadPrehistoricInfo();
+        if (infoList)
         {
-            cout << "Editing: " << current->data << endl;
-            cout << "Enter new text: ";
-            getline(cin, current->data);
-            break;
+            displayPrehistoricInfo(infoList);
         }
-        current = current->next;
-        lineNum++;
-    }
 
-    cout << endl << "Press 'S' to save changes or any other key to discard: ";
-    ch = _getch();
+        printEndl(5);
 
-    if (ch == 's' || ch == 'S') 
-    {
-        savePrehistoricInfo(head);
-        cout << endl << "Changes saved successfully!" << endl;
-    }
-    else
-    {
-        cout << endl << "Changes discarded." << endl;
-    }
+        string PrehistoricEvents[3] = { "Stone Age", "Bronze Age", "Iron Age" };
+
+        printStrRepeat(" ", 48);
+
+        for (int i = 0; i < 3; i++)
+        {
+            cout << i + 1 << ". " << PrehistoricEvents[i];
+            printStrRepeat(" ", 9);
+        }
+
+        printEndl(3);
+        centerText(purpleColor + "            Choose an event to explore! " + resetColor);
+        int event;
+        cin >> event;
 }
 
-void savePrehistoricInfo(PREHISTORIC* head) 
-{
-    ofstream file("../data/prehistoric/prehistoric.txt");
-
-    if (!file) 
-    {
-        cout << "Error: Could not open prehistoric.txt for writing!" << endl;
-        return;
-    }
-
-    PREHISTORIC* current = head;
-    while (current) 
-    {
-        file << current->data << endl;
-        current = current->next;
-    }
-
-    file.close();
-}
-
-void deletePrehistoricFile()
-{
-    const char* filename = "../data/prehistoric/prehistoric.txt";
-
-    if (remove(filename) == 0)
-    {
-        cout << "The prehistoric data file has been successfully deleted!" << endl;
-    }
-    else
-    {
-        cout << "Error: Could not delete the file." << endl;
-    }
-}
 
 void displayPrehistoricQuiz() 
 {
@@ -142,6 +94,7 @@ void displayPrehistoricQuiz()
         cout << "Error: Could not open prehistoric.txt" << endl;
         return;
     }
+
     string resetColor = "\033[37m";   // White 
     string greenColor = "\033[32m";  // Green
     string purpleColor = "\033[35m";  // Purple
@@ -247,22 +200,10 @@ void displayPrehistoric()
 
     printEndl(3);
 
-    centerText("            Start exploring " + purpleColor + "Prehistoric " + resetColor+ "era events!");
-
-    printEndl(3);
-
-    PREHISTORIC* infoList = loadPrehistoricInfo();
-    if (infoList) 
-    {
-        displayPrehistoricInfo(infoList);
-    }
-
-    printEndl(4);
-
     string role = getCurrentUserRole();
     if (role == "admin")
     {
-        adminPanel();
+        adminPanel(1);
     }
     else
     {
@@ -282,9 +223,3 @@ void displayPrehistoric()
         displayTimeline();
     }
 }
-
-
-
-
-
-

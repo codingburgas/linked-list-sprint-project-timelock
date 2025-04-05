@@ -99,7 +99,7 @@ void login()
     cout << endl;
     centerText(greenColor + "                  Login successful! You are logged in as " + role + "." + resetColor);
     
-    sleep_for(seconds(2));
+    sleep_for(seconds(1));
 
     system("cls"); 
 

@@ -1,7 +1,12 @@
 #include "admin.h"
+#include "timeline.h"
 #include "prehistoric.h"
+#include "classical.h"
+#include "middleAge.h"
+#include "earlyModern.h"
+#include "modern.h"
 
-void adminPanel()
+void adminPanel(int page)
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
@@ -43,6 +48,25 @@ void adminPanel()
     case 1:
     {
         system("cls");
+        displayEventsTitle();
+        switch (page)
+        {
+        case 1:
+            displayPrehistoricEvents();
+            break;
+        case 2:
+            displayClassicalEvents();
+            break;
+        case 3:
+            displaymiddleAgeEvents();
+            break;
+        case 4:
+            displayearlyModernEvents();
+            break;
+        case 5:
+            displayModernEvents();
+            break;
+        }
         break;
     }
     case 2:
@@ -58,35 +82,11 @@ void adminPanel()
         system("cls");
         break;
     case 6:
-    {
         system("cls");
-        PREHISTORIC* infoList = loadPrehistoricInfo(); // Now inside its own scope
-        if (infoList)
-        {
-            displayPrehistoricInfo(infoList);
-            cout << endl << "Press 'E' to edit information or any key to return." << endl;
-            char choice = _getch();
-
-            if (choice == 'e' || choice == 'E')
-            {
-                editPrehistoricInfo(infoList);
-            }
-        }
         break;
-    }
     case 7:
-    {
         system("cls");
-        cout << "Are you sure you want to delete all prehistoric data? (Yes/No): ";
-        char confirmation = _getch();
-
-        if (confirmation == 'Yes' || confirmation == 'yes')
-        {
-            deletePrehistoricFile();
-        }
         break;
-    }
-
     case 8:
         system("cls");
         break;

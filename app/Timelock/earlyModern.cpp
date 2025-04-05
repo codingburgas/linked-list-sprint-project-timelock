@@ -51,6 +51,39 @@ void displayEarlyModernInfo(EARLYMODERN* head)
     }
 }
 
+void displayearlyModernEvents()
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
+    centerText("            Start exploring " + purpleColor + "Early Modern " + resetColor + "era!");
+
+    printEndl(3);
+
+    EARLYMODERN* infoList = loadEarlyModernInfo();
+    if (infoList)
+    {
+        displayEarlyModernInfo(infoList);
+    }
+
+    printEndl(5);
+
+    string EarlyModernEvents[3] = { "Thirty Years' War", "Treaty of Utrecht ends War of Spanish Succession", "Turks defeated outside Vienna" };
+
+    printStrRepeat(" ", 16);
+
+    for (int i = 0; i < 3; i++)
+    {
+        cout << i + 1 << ". " << EarlyModernEvents[i];
+        printStrRepeat(" ", 9);
+    }
+
+    printEndl(3);
+    centerText(purpleColor + "            Choose an event to explore! " + resetColor);
+    int event;
+    cin >> event; 
+}
+
 void displayearlyModernQuiz() 
 {
     ifstream file("../data/earlyModern/earlyModernQuiz.txt");
@@ -167,23 +200,10 @@ void displayEarlyModern()
 
     printEndl(3);
 
-    centerText("                Start exploring " + purpleColor + "Early Modern " + resetColor + "era events!");
-
-    printEndl(3);
-
-
-    EARLYMODERN* infoList = loadEarlyModernInfo();
-    if (infoList)
-    {
-        displayEarlyModernInfo(infoList);
-    } 
-
-    printEndl(4);
-
     string role = getCurrentUserRole();
     if (role == "admin")
     {
-        adminPanel();
+        adminPanel(4);
     }
     else
     {

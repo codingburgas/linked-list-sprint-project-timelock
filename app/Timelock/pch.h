@@ -19,3 +19,5 @@ void centerText(string text);
 void printEndl(int num);
 void printStrRepeat(string str, int num);
 void displayQuizTitle();
+void displayEventsTitle();
+
