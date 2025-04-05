@@ -108,25 +108,73 @@ void displayTimeline()
         displayPrehistoric();
         break;
     case 2:
-        system("cls");
-      
-        displayClassical();
-        break;
+        if (progres >= 1) 
+        {
+            system("cls");
+
+            displayClassical();
+            break;
+        }
+        else
+        {
+            printEndl(2);
+            centerText(redColor + "                Invalid choice! Complete Prehistoric Era first! " + resetColor);
+            sleep_for(seconds(1));
+            system("cls");
+            displayTimeline();
+            break;
+        }
     case 3:
-        system("cls");
-        
-        displayMiddleAge();
-        break;
+        if (progres >= 2)
+        {
+            system("cls");
+
+            displayMiddleAge();
+            break;
+        }
+        else
+        {
+            printEndl(2);
+            centerText(redColor + "                Invalid choice! Complete Classical Era first! " + resetColor);
+            sleep_for(seconds(1));
+            system("cls");
+            displayTimeline();
+            break;
+        }
     case 4:
-        system("cls");
-        
-        displayEarlyModern();
-        break;
+        if (progres >= 3)
+        {
+            system("cls");
+
+            displayEarlyModern();
+            break;
+        }
+        else
+        {
+            printEndl(2);
+            centerText(redColor + "                Invalid choice! Complete Middle Age Era first! " + resetColor);
+            sleep_for(seconds(1));
+            system("cls");
+            displayTimeline();
+            break;
+        }
     case 5:
-        system("cls");
-        
-        displayModern();
-        break;
+        if (progres == 4)
+        {
+            system("cls");
+
+            displayModern();
+            break;
+        }
+        else
+        {
+            printEndl(2);
+            centerText(redColor + "                Invalid choice! Complete Early Modern Era first! " + resetColor);
+            sleep_for(seconds(1));
+            system("cls");
+            displayTimeline();
+            break;
+        }
     }
 }
 
