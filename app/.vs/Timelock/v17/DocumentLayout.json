@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\events.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\prehistoric.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\globFunc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\globFunc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\classical.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|solutionrelative:Timelock\\modern.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F4D543F-B14C-4B44-B9BC-4AA5C3C65816}|Timelock\\Timelock.vcxproj|C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\events.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,41 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "globFunc.cpp",
-              "DocumentMoniker": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\globFunc.cpp",
-              "RelativeDocumentMoniker": "Timelock\\globFunc.cpp",
-              "ToolTip": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\globFunc.cpp",
-              "RelativeToolTip": "Timelock\\globFunc.cpp",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAhwKgAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-05T23:04:00.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "prehistoric.cpp",
-              "DocumentMoniker": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.cpp",
-              "RelativeDocumentMoniker": "Timelock\\prehistoric.cpp",
-              "ToolTip": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\prehistoric.cpp",
-              "RelativeToolTip": "Timelock\\prehistoric.cpp",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAEUAAAATAAAA",
+              "Title": "modern.cpp",
+              "DocumentMoniker": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.cpp",
+              "RelativeDocumentMoniker": "Timelock\\modern.cpp",
+              "ToolTip": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\modern.cpp",
+              "RelativeToolTip": "Timelock\\modern.cpp",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEcAAAB0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-05T22:59:09.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "classical.cpp",
-              "DocumentMoniker": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.cpp",
-              "RelativeDocumentMoniker": "Timelock\\classical.cpp",
-              "ToolTip": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\classical.cpp",
-              "RelativeToolTip": "Timelock\\classical.cpp",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEUAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-05T22:38:30.68Z",
+              "WhenOpened": "2025-04-06T11:20:34.361Z",
               "EditorCaption": ""
             },
             {
@@ -83,20 +49,20 @@
               "RelativeDocumentMoniker": "Timelock\\events.cpp",
               "ToolTip": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\events.cpp",
               "RelativeToolTip": "Timelock\\events.cpp",
-              "ViewState": "AQIAANEAAAAAAAAAAAAAAOkAAAAkAAAA",
+              "ViewState": "AQIAAKMCAAAAAAAAAADwv7kCAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-05T21:40:15.572Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "events.h",
               "DocumentMoniker": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\events.h",
               "RelativeDocumentMoniker": "Timelock\\events.h",
               "ToolTip": "C:\\Users\\Jujka\\Documents\\Timelock\\linked-list-sprint-project-timelock\\app\\Timelock\\events.h",
               "RelativeToolTip": "Timelock\\events.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-05T21:40:02.094Z",
               "EditorCaption": ""

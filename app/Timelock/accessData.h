@@ -2,7 +2,8 @@
 
 #pragma once
 
-struct ACCOUNT {
+struct ACCOUNT 
+{
     string username;
     string password;
     string role;

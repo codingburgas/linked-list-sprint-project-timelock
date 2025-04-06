@@ -113,7 +113,8 @@ void appendNode(QUIZNODE*& head, const string& line)
 
 void deleteList(QUIZNODE* head) 
 {
-    while (head) {
+    while (head) 
+    {
         QUIZNODE* temp = head;
         head = head->next;
         delete temp;
@@ -124,7 +125,8 @@ INFONODE* loadInfoFromFile(const string& filepath)
 {
     ifstream file(filepath);
 
-    if (!file) {
+    if (!file) 
+    {
         cout << "Error: Could not open " << filepath << endl;
         return nullptr;
     }

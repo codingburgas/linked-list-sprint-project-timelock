@@ -11,7 +11,8 @@ void displayLogin()
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
-    const string title[11] = {
+    const string title[11] =
+    {
     "",
     "              .**************..*************..***************..**********..**************. ",
     "             *   .__.            ________        ________         .__.       ._.    ._    *",

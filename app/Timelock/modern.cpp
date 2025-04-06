@@ -79,10 +79,8 @@ void displayModernEvents()
         printStrRepeat(" ", 9);
     }
 
-    printEndl(3);
-    centerText(purpleColor + "            Choose an event to explore! " + resetColor);
-    int event;
-    cin >> event;
+    printEndl(4);
+    displayModernEventsInfo();
 }
 
 
@@ -90,7 +88,8 @@ void displayModernQuiz()
 {
 
     ifstream file("../data/modern/ModernQuiz.txt");
-    if (!file) {
+    if (!file)
+    {
         cout << "Error: Could not open ModernQuiz.txt" << endl;
         return;
     }
@@ -109,17 +108,21 @@ void displayModernQuiz()
     file.close();
 
     QUIZNODE* current = head;
-    while (current) {
+    while (current) 
+    {
         printStrRepeat(" ", 2);
         cout << current->line << endl;
 
-        if (current->line.find(':') != string::npos) {
+        if (current->line.find(':') != string::npos)
+        {
             char answer;
             bool answered = false;
-            while (!answered) {
+            while (!answered)
+            {
                 cin >> answer;
                 cout << endl;
-                if (toupper(answer) == correctAnswers[index]) {
+                if (toupper(answer) == correctAnswers[index])
+                {
                     printEndl(2);
                     centerText("          " + greenColor + "Correct answer! " + resetColor);
                     printEndl(2);
@@ -127,7 +130,8 @@ void displayModernQuiz()
 
 
                 }
-                else {
+                else 
+                {
                     printEndl(2);
                     centerText("          " + redColor + "Incorrect answer! " + resetColor);
                     printEndl(2);
@@ -209,7 +213,8 @@ void displayModern()
 
     char ch = _getch();
 
-    if (ch == 27) {
+    if (ch == 27) 
+    {
         system("cls");
         displayTimeline();
     }
