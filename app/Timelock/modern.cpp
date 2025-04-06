@@ -65,6 +65,7 @@ void displayModernEvents()
     if (infoList)
     {
         displayModernInfo(infoList);
+        deleteInfoList(infoList);
     }
 
     printEndl(5);
@@ -80,7 +81,6 @@ void displayModernEvents()
     }
 
     printEndl(4);
-    displayModernEventsInfo();
 }
 
 

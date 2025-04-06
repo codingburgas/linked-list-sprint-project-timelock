@@ -65,6 +65,7 @@ void displayClassicalEvents()
     if (infoList)
     {
         displayClassicalInfo(infoList);
+        deleteInfoList(infoList);
     }
 
     printEndl(4);
@@ -83,10 +84,7 @@ void displayClassicalEvents()
             printStrRepeat(" ", 52);
         }
     }
-
     printEndl(4);
-
-    displayClassicalEventsInfo();
 }
 
 void displayClassicalQuiz()

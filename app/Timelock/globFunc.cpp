@@ -180,3 +180,82 @@ void deleteInfoList(INFONODE* head)
         delete temp;
     }
 }
+
+void editEventFile(const string& filepath)
+{
+
+    string redColor = "\033[31m";     // Red
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+    string greenColor = "\033[32m";   // Green
+
+    INFONODE* head = loadInfoFromFile(filepath);
+
+    if (!head)
+    {
+        centerText(redColor + "File could not be loaded." + resetColor);
+        cout << endl;
+        return;
+    }
+
+    printEndl(2);
+    centerText(purpleColor + "      Current content of the file: " + resetColor);
+    cout << endl;
+    displayInfo(head);
+
+    deleteInfoList(head);
+
+    cout << endl;
+    centerText(purpleColor + "          Editing mode: " + resetColor + "Type the new content for the file.");
+    cout << endl;
+    centerText("          Type " + purpleColor + "'END' " + resetColor + "on a new line when you're done.");
+    printEndl(2);
+
+    INFONODE* newHead = nullptr;
+    INFONODE* tail = nullptr;
+    string line;
+
+    cin.ignore(); 
+    while (true)
+    {
+        getline(cin, line);
+        if (line == "END") break;
+
+        INFONODE* newNode = new INFONODE{ line, nullptr };
+
+        if (!newHead)
+        {
+            newHead = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
+
+    ofstream file(filepath);
+    if (!file)
+    {
+        printEndl(2);
+        centerText(redColor + "Could not open file to save changes." + resetColor);
+        cout << endl;
+        deleteInfoList(newHead);
+        return;
+    }
+
+    INFONODE* current = newHead;
+    while (current)
+    {
+        file << current->data << endl;
+        current = current->next;
+    }
+
+    file.close();
+    printEndl(2);
+    centerText(greenColor +  "      File updated successfully!" + resetColor);
+    printEndl(2);
+
+    deleteInfoList(newHead);
+}

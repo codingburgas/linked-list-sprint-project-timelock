@@ -65,6 +65,7 @@ void displayearlyModernEvents()
     if (infoList)
     {
         displayEarlyModernInfo(infoList);
+        deleteInfoList(infoList);
     }
 
     printEndl(5);
@@ -80,7 +81,6 @@ void displayearlyModernEvents()
     }
 
     printEndl(4);
-    displayEarlyModernEventsInfo();
 }
 
 void displayearlyModernQuiz()

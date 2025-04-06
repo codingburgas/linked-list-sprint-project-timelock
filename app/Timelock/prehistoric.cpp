@@ -65,6 +65,7 @@ void displayPrehistoricEvents()
         if (infoList)
         {
             displayPrehistoricInfo(infoList);
+            deleteInfoList(infoList);
         }
 
         printEndl(4);
@@ -80,8 +81,6 @@ void displayPrehistoricEvents()
         }
 
         printEndl(4);
-
-        displayPrehistoricEventsInfo();
 }
 
 

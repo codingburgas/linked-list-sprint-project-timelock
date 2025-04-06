@@ -44,3 +44,6 @@ INFONODE* loadInfoFromFile(const string& filepath);
 void displayInfo(INFONODE* head);
 void deleteInfoList(INFONODE* head);
 
+void editEventFile(const string& filepath);
+
+

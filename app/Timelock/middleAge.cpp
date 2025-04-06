@@ -65,6 +65,7 @@ void displaymiddleAgeEvents()
     if (infoList)
     {
         displayMiddleAgeInfo(infoList);
+        deleteInfoList(infoList);
     }
 
     printEndl(4);
@@ -80,7 +81,6 @@ void displaymiddleAgeEvents()
     }
 
     printEndl(4);
-    displayMiddleAgeEventsInfo();
 }
 
 void displaymiddleAgeQuiz() 
