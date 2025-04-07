@@ -8,6 +8,8 @@
 #include <limits>  
 #include <conio.h> 
 #include <vector>
+#include <algorithm>
+#include <dirent.h>
 
 using namespace std;
 using std::this_thread::sleep_for;
@@ -25,6 +27,12 @@ struct QUIZNODE
 {
     string line;
     QUIZNODE* next;
+};
+
+struct SEARCH {
+    string fileName;
+    string content;
+    SEARCH* next;
 };
 
 extern int progres;

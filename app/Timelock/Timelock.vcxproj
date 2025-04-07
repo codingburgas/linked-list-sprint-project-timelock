@@ -140,6 +140,7 @@
     <ClCompile Include="modern.cpp" />
     <ClCompile Include="globFunc.cpp" />
     <ClCompile Include="prehistoric.cpp" />
+    <ClCompile Include="search.cpp" />
     <ClCompile Include="signUp.cpp" />
     <ClCompile Include="startingScreen.cpp" />
     <ClCompile Include="timeline.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="middleAge.h" />
     <ClInclude Include="modern.h" />
     <ClInclude Include="prehistoric.h" />
+    <ClInclude Include="search.h" />
     <ClInclude Include="signUp.h" />
     <ClInclude Include="startingScreen.h" />
     <ClInclude Include="pch.h" />

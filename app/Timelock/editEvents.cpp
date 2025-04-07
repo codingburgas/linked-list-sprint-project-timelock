@@ -48,6 +48,7 @@ void editPrehistoricEvents()
         char ch = _getch();
         if (ch == 27)  
         {
+            
             system("cls");
             displayTimeline();  
             return;

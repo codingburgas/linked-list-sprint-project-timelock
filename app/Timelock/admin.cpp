@@ -8,6 +8,7 @@
 #include "events.h"
 #include "editEvents.h"
 #include "deleteEvents.h"
+#include "search.h"
 
 void adminPanel(int page)
 {
@@ -49,7 +50,6 @@ void adminPanel(int page)
     switch (option)
     {
     case 1:
-    {
         system("cls");
         displayEventsTitle();
         switch (page)
@@ -76,21 +76,29 @@ void adminPanel(int page)
             break;
         }
         break;
-    }
+
     case 2:
         system("cls");
         displaySearchTitle();
+        searchByDate(page);
         break;
+
     case 3:
         system("cls");
         displaySearchTitle();
+        searchByEvent(page);
         break;
+
     case 4:
         system("cls");
+        // addEventAtBeginning(page); 
         break;
+
     case 5:
         system("cls");
+        // addEventAtEnd(page); 
         break;
+
     case 6:
         system("cls");
         displayEventsTitle();
@@ -118,6 +126,7 @@ void adminPanel(int page)
             break;
         }
         break;
+
     case 7:
         system("cls");
         displayEventsTitle();
@@ -145,8 +154,10 @@ void adminPanel(int page)
             break;
         }
         break;
+
     case 8:
         system("cls");
+        //openFavourites(page);
         break;
     }
 }

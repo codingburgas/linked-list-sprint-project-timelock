@@ -6,10 +6,10 @@
 #include "earlyModern.h"
 #include "modern.h"
 #include "events.h"
+#include "search.h"
 
-void userPanel(int page) 
+void userPanel(int page)
 {
-    
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
@@ -26,18 +26,19 @@ void userPanel(int page)
     cout << "4. Attempt quiz.";
 
     printStrRepeat(" ", 8);
-    cout << "5. Open favourites.";
+    cout << "5. Open favourites."; // TODO: Add favourites functionality
 
-	printEndl(3);
+    printEndl(3);
     centerText(purpleColor + "            Choose an option! " + resetColor);
 
-	int option;
-	cin >> option;
+    int option;
+    cin >> option;
+
+    system("cls");
 
     switch (option)
     {
     case 1:
-        system("cls");
         displayEventsTitle();
         switch (page)
         {
@@ -64,15 +65,14 @@ void userPanel(int page)
         }
         break;
     case 2:
-        system("cls");
         displaySearchTitle();
+        searchByDate(page); 
         break;
     case 3:
-        system("cls");
         displaySearchTitle();
+        searchByEvent(page); 
         break;
     case 4:
-        system("cls");
         displayQuizTitle();
         switch (page)
         {
@@ -94,8 +94,12 @@ void userPanel(int page)
         }
         break;
     case 5:
-        system("cls");
+        // TODO: Implement favourites later
+        // system("cls");
+        // displayFavourites(page);
+        break;
+    default:
+        cout << "\nInvalid option. Returning to timeline.\n";
         break;
     }
-	
 }
