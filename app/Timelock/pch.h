@@ -45,5 +45,5 @@ void displayInfo(INFONODE* head);
 void deleteInfoList(INFONODE* head);
 
 void editEventFile(const string& filepath);
-
+void deleteEventFile(const string& filepath);
 

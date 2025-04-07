@@ -1,5 +1,4 @@
-﻿  globFunc.cpp
-C:\Users\Jujka\Documents\Timelock\linked-list-sprint-project-timelock\app\Timelock\globFunc.cpp(19,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  deleteEvents.cpp
   Timelock.vcxproj -> C:\Users\Jujka\Documents\Timelock\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

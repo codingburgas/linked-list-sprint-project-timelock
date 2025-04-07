@@ -199,7 +199,7 @@ void editEventFile(const string& filepath)
     }
 
     printEndl(2);
-    centerText(purpleColor + "      Current content of the file: " + resetColor);
+    centerText(purpleColor + "            Current content of the file: " + resetColor);
     cout << endl;
     displayInfo(head);
 
@@ -254,8 +254,57 @@ void editEventFile(const string& filepath)
 
     file.close();
     printEndl(2);
-    centerText(greenColor +  "      File updated successfully!" + resetColor);
+    centerText(greenColor +  "           File updated successfully!" + resetColor);
     printEndl(2);
 
     deleteInfoList(newHead);
+}
+
+void deleteEventFile(const string& filepath)
+{
+    string redColor = "\033[31m";     // Red
+    string resetColor = "\033[37m";   // White 
+    string greenColor = "\033[32m";   // Green
+    string purpleColor = "\033[35m";  // Purple
+
+    printEndl(2);
+    centerText(purpleColor + "            Current content of the file: " + resetColor);
+    cout << endl;
+
+    INFONODE* head = loadInfoFromFile(filepath);
+
+    if (!head)
+    {
+        centerText(redColor + "         File could not be loaded or doesn't exist." + resetColor);
+        cout << endl;
+        return;
+    }
+
+    displayInfo(head);
+
+    char confirm;
+    centerText(purpleColor + "              Are you sure you want to delete this file? (Y/N): " + resetColor);
+    cin >> confirm;
+
+    if (confirm == 'Y' || confirm == 'y')
+    {
+        if (remove(filepath.c_str()) == 0)
+        {
+            printEndl(2);
+            centerText(greenColor + "               File deleted successfully!" + resetColor);
+        }
+        else
+        {
+            printEndl(2);
+            centerText(redColor + "         Failed to delete the file." + resetColor);
+        }
+    }
+    else
+    {
+        printEndl(2);
+        centerText(redColor + "               File deletion cancelled." + resetColor);
+    }
+
+    printEndl(2);
+    deleteInfoList(head);
 }

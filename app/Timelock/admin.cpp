@@ -5,8 +5,9 @@
 #include "middleAge.h"
 #include "earlyModern.h"
 #include "modern.h"
-#include "editEvents.h"
 #include "events.h"
+#include "editEvents.h"
+#include "deleteEvents.h"
 
 void adminPanel(int page)
 {
@@ -117,6 +118,30 @@ void adminPanel(int page)
         break;
     case 7:
         system("cls");
+        displayEventsTitle();
+        switch (page)
+        {
+        case 1:
+            displayPrehistoricEvents();
+            deletePrehistoricEvents();
+            break;
+        case 2:
+            displayClassicalEvents();
+            deleteClassicalEvents();
+            break;
+        case 3:
+            displaymiddleAgeEvents();
+            deleteMiddleAgeEvents();
+            break;
+        case 4:
+            displayearlyModernEvents();
+            deleteEarlyModernEvents();
+            break;
+        case 5:
+            displayModernEvents();
+            deleteModernEvents();
+            break;
+        }
         break;
     case 8:
         system("cls");
