@@ -99,7 +99,7 @@ void displayModernQuiz()
     string purpleColor = "\033[35m";
     string redColor = "\033[31m";
 
-    char correctAnswers[] = { 'C', 'B', 'D', 'C', 'B' };
+    char correctAnswers[] = { 'C', 'B', 'D', 'C', 'B','B','B'};
     int counter = 0, index = 0;
 
     QUIZNODE* head = nullptr;
@@ -147,9 +147,9 @@ void displayModernQuiz()
     }
 
 
-    centerText("           Exam score: " + purpleColor + to_string(counter) + "/5" + resetColor); cout << endl;
+    centerText("           Exam score: " + purpleColor + to_string(counter) + "/7" + resetColor); cout << endl;
 
-    if (counter >= 3)
+    if (counter >= 5)
     {
         centerText("            Exam " + greenColor + "PASSED! " + resetColor + "Congrats on passing the last quiz!");
         
@@ -216,6 +216,6 @@ void displayModern()
     if (ch == 27) 
     {
         system("cls");
-        displayTimeline();
+        displayModern();
     }
 }

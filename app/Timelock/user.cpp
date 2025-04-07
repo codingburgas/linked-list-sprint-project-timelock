@@ -5,6 +5,7 @@
 #include "middleAge.h"
 #include "earlyModern.h"
 #include "modern.h"
+#include "events.h"
 
 void userPanel(int page) 
 {
@@ -42,18 +43,23 @@ void userPanel(int page)
         {
         case 1:
             displayPrehistoricEvents();
+            displayPrehistoricEventsInfo();
             break;
         case 2:
             displayClassicalEvents();
+            displayClassicalEventsInfo();
             break;
         case 3:
             displaymiddleAgeEvents();
+            displayMiddleAgeEventsInfo();
             break;
         case 4:
             displayearlyModernEvents();
+            displayEarlyModernEventsInfo();
             break;
         case 5:
             displayModernEvents();
+            displayModernEventsInfo();
             break;
         }
         break;

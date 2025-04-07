@@ -98,7 +98,7 @@ void displayPrehistoricQuiz()
     string purpleColor = "\033[35m";
     string redColor = "\033[31m";
 
-    char correctAnswers[] = { 'C', 'B', 'B', 'B', 'B' };
+    char correctAnswers[] = { 'C', 'B', 'B', 'B', 'B','C','C' };
     int counter = 0, index = 0;
 
     QUIZNODE* head = nullptr;
@@ -146,9 +146,9 @@ void displayPrehistoricQuiz()
     }
 
     
-    centerText("           Exam score: " + purpleColor + to_string(counter) + "/5" + resetColor); cout << endl;
+    centerText("           Exam score: " + purpleColor + to_string(counter) + "/7" + resetColor); cout << endl;
 
-    if (counter >= 3) 
+    if (counter >= 5) 
     {
         centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continue to the next era!");
         if (progres == 0)
@@ -236,7 +236,7 @@ void displayPrehistoric()
     {
         
         system("cls");
-        displayTimeline();
+        displayPrehistoric();
         
     }
 }

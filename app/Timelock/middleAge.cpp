@@ -98,7 +98,7 @@ void displaymiddleAgeQuiz()
     string purpleColor = "\033[35m";
     string redColor = "\033[31m";
 
-    char correctAnswers[] = { 'B', 'C', 'B', 'C', 'D' };
+    char correctAnswers[] = { 'B', 'C', 'B', 'C', 'D','D','C'};
     int counter = 0, index = 0;
 
     QUIZNODE* head = nullptr;
@@ -146,9 +146,9 @@ void displaymiddleAgeQuiz()
     }
 
 
-    centerText("           Exam score: " + purpleColor + to_string(counter) + "/5" + resetColor); cout << endl;
+    centerText("           Exam score: " + purpleColor + to_string(counter) + "/7" + resetColor); cout << endl;
 
-    if (counter >= 3)
+    if (counter >= 5)
     {
         centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continue to the next era!");
         if (progres == 2)
@@ -235,6 +235,6 @@ void displayMiddleAge()
     if (ch == 27) 
     {
         system("cls");
-        displayTimeline();
+        displayMiddleAge();
     }
 }
