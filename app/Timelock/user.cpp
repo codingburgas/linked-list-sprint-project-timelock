@@ -65,9 +65,6 @@ void userPanel(int page)
         break;
     case 4:
         system("cls");
-        break;
-    case 5:
-        system("cls");
         displayQuizTitle();
         switch (page)
         {
@@ -88,7 +85,7 @@ void userPanel(int page)
             break;
         }
         break;
-    case 6:
+    case 5:
         system("cls");
         break;
     }

@@ -1,5 +1,10 @@
 #include "editEvents.h"
 #include "timeline.h"
+#include "prehistoric.h"
+#include "classical.h"
+#include "middleAge.h"
+#include "earlyModern.h"
+#include "modern.h"
 
 void editPrehistoricEvents()
 {
@@ -54,7 +59,7 @@ void editPrehistoricEvents()
         else
         {
             system("cls");
-            displayTimeline();  
+            displayPrehistoric();
             return;
         }
     }
@@ -106,7 +111,7 @@ void editClassicalEvents()
         if (ch == 27)  
         {
             system("cls");
-            displayTimeline();
+            displayClassical();
             return;
         }
         else if (ch == 'Y' || ch == 'y')
@@ -116,7 +121,7 @@ void editClassicalEvents()
         else
         {
             system("cls");
-            displayTimeline();  
+            displayClassical();
             return;
         }
     }
@@ -168,7 +173,7 @@ void editMiddleAgeEvents()
         if (ch == 27)  
         {
             system("cls");
-            displayTimeline(); 
+            displayMiddleAge();
             return;
         }
         else if (ch == 'Y' || ch == 'y')
@@ -178,7 +183,7 @@ void editMiddleAgeEvents()
         else
         {
             system("cls");
-            displayTimeline();  
+            displayMiddleAge();
             return;
         }
     }
@@ -227,7 +232,7 @@ void editEarlyModernEvents()
         if (ch == 27) 
         {
             system("cls");
-            displayTimeline();  
+            displayEarlyModern();
             return;
         }
         else if (ch == 'Y' || ch == 'y')
@@ -237,7 +242,7 @@ void editEarlyModernEvents()
         else
         {
             system("cls");
-            displayTimeline(); 
+            displayEarlyModern();
             return;
         }
     }
@@ -292,7 +297,7 @@ void editModernEvents()
         if (ch == 27)  
         {
             system("cls");
-            displayTimeline(); 
+            displayModern();
             return;
         }
         else if (ch == 'Y' || ch == 'y')
@@ -302,7 +307,7 @@ void editModernEvents()
         else
         {
             system("cls");
-            displayTimeline(); 
+            displayModern();
             return;
         }
     }

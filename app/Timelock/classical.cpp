@@ -124,21 +124,21 @@ void displayClassicalQuiz()
             {
                 cin >> answer;
                 cout << endl;
-                if (toupper(answer) == correctAnswers[index]) 
+                if (toupper(answer) == correctAnswers[index])
                 {
                     printEndl(2);
-                    centerText("          " + greenColor + "Correct answer! " + resetColor);
+                    centerText("              " + greenColor + "Correct answer! " + resetColor);
                     printEndl(2);
                     counter++;
 
 
                 }
-                else 
+                else
                 {
                     printEndl(2);
-                    centerText("          " + redColor + "Incorrect answer! " + resetColor);
+                    centerText("              " + redColor + "Incorrect answer! " + resetColor);
                     printEndl(2);
-                    centerText("          Correct answer was:" + purpleColor + correctAnswers[index] + resetColor);
+                    centerText("             Correct answer was: " + greenColor + correctAnswers[index] + resetColor);
                     printEndl(2);
 
                 }

@@ -44,6 +44,11 @@ void displayQuizTitle()
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
+
+    cout << endl;
+    printStrRepeat(" ", 2);
+    cout << "PRESS " << purpleColor << "ESC" << resetColor << " TO GO BACK";
+
     string quiz[11] = 
     {
          "",
@@ -73,6 +78,10 @@ void displayEventsTitle()
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
+
+    cout << endl;
+    printStrRepeat(" ", 2);
+    cout << "PRESS " << purpleColor << "ESC" << resetColor << " TO GO BACK";
 
     string events[11] =
     {
