@@ -108,6 +108,36 @@ void displayEventsTitle()
     printEndl(2);
 }
 
+void displaySearchTitle()
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
+    string search[11] =
+    {
+         "",
+         "             .**************..**************..**************..**************..*************..**************.",
+         "             *     ______        .________.      .________.       _______       .________.      .__.  .__.   *",
+         "             *    '  ____|       |  ______|      |   __   |      |   __  \\      |  ______|      |  |  |  |   *",
+         "             *   |  (__          |  |_____       |  |__|  |      |  |__|  |     |  |            |  |__|  |   *",
+         "             *    '.___ `.       |  ______|      |   __   |      |   _   /      |  |            |   __   |   *",
+         "             *    _____)  |      |  |_____       |  |  |  |      |  |\\  \\       |  |_____.      |  |  |  |   *",
+         "             *   |______.'       |________|      |__|  |__|      |__| \\__\\      |________|      |__|  |__|   *",
+         "             *.              ..              ..              ..              ..             ..              .*",
+         "             **************  **************  **************  **************  *************  **************",
+         ""
+    };
+
+    printEndl(2);
+
+    for (int i = 0; i < 11; i++)
+    {
+        centerText(purpleColor + search[i] + resetColor);
+        cout << endl;
+    }
+    printEndl(2);
+}
+
 void appendNode(QUIZNODE*& head, const string& line) 
 {
     QUIZNODE* newNode = new QUIZNODE{ line, nullptr };

@@ -79,9 +79,11 @@ void adminPanel(int page)
     }
     case 2:
         system("cls");
+        displaySearchTitle();
         break;
     case 3:
         system("cls");
+        displaySearchTitle();
         break;
     case 4:
         system("cls");

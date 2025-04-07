@@ -65,9 +65,11 @@ void userPanel(int page)
         break;
     case 2:
         system("cls");
+        displaySearchTitle();
         break;
     case 3:
         system("cls");
+        displaySearchTitle();
         break;
     case 4:
         system("cls");

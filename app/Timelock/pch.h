@@ -36,6 +36,7 @@ void printEndl(int num);
 void printStrRepeat(string str, int num);
 void displayQuizTitle();
 void displayEventsTitle();
+void displaySearchTitle();
 
 void appendNode(QUIZNODE*& head, const string& line);
 void deleteList(QUIZNODE* head);
