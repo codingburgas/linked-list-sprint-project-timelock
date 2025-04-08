@@ -6,6 +6,7 @@
 #include "earlyModern.h"
 #include "modern.h"
 
+// Edit events from the Prehistoric era
 void editPrehistoricEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -40,22 +41,21 @@ void editPrehistoricEvents()
         centerText(purpleColor + "          Do you want to edit another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
+
         }
 
         char ch = _getch();
-        if (ch == 27)  
+        if (ch == 27)
         {
-            
             system("cls");
-            displayTimeline();  
+            displayTimeline();
             return;
         }
         else if (ch == 'Y' || ch == 'y')
         {
-            continue;  
+            continue;
         }
         else
         {
@@ -66,6 +66,7 @@ void editPrehistoricEvents()
     }
 }
 
+// Edit events from the Classical era
 void editClassicalEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -103,13 +104,13 @@ void editClassicalEvents()
         centerText(purpleColor + "          Do you want to edit another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
-        }  
+
+        }
 
         char ch = _getch();
-        if (ch == 27)  
+        if (ch == 27)
         {
             system("cls");
             displayClassical();
@@ -117,7 +118,7 @@ void editClassicalEvents()
         }
         else if (ch == 'Y' || ch == 'y')
         {
-            continue; 
+            continue;
         }
         else
         {
@@ -128,6 +129,7 @@ void editClassicalEvents()
     }
 }
 
+// Edit events from the Middle Ages era
 void editMiddleAgeEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -165,13 +167,13 @@ void editMiddleAgeEvents()
         centerText(purpleColor + "          Do you want to edit another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
-        }  
+
+        }
 
         char ch = _getch();
-        if (ch == 27)  
+        if (ch == 27)
         {
             system("cls");
             displayMiddleAge();
@@ -179,7 +181,7 @@ void editMiddleAgeEvents()
         }
         else if (ch == 'Y' || ch == 'y')
         {
-            continue; 
+            continue;
         }
         else
         {
@@ -190,6 +192,7 @@ void editMiddleAgeEvents()
     }
 }
 
+// Edit events from the Early Modern era
 void editEarlyModernEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -224,13 +227,13 @@ void editEarlyModernEvents()
         centerText(purpleColor + "          Do you want to edit another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
-        }  
+
+        }
 
         char ch = _getch();
-        if (ch == 27) 
+        if (ch == 27)
         {
             system("cls");
             displayEarlyModern();
@@ -238,7 +241,7 @@ void editEarlyModernEvents()
         }
         else if (ch == 'Y' || ch == 'y')
         {
-            continue; 
+            continue;
         }
         else
         {
@@ -249,6 +252,7 @@ void editEarlyModernEvents()
     }
 }
 
+// Edit events from the Modern era
 void editModernEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -289,13 +293,13 @@ void editModernEvents()
         centerText(purpleColor + "          Do you want to edit another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
 
-        }  
+        }
 
         char ch = _getch();
-        if (ch == 27)  
+        if (ch == 27)
         {
             system("cls");
             displayModern();
@@ -303,7 +307,7 @@ void editModernEvents()
         }
         else if (ch == 'Y' || ch == 'y')
         {
-            continue;  
+            continue;
         }
         else
         {

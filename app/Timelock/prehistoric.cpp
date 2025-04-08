@@ -5,11 +5,12 @@
 #include "timeline.h"
 #include "events.h"
 
+// Load information about the Prehistoric era from a file
 INFONODE* loadPrehistoricInfo()
 {
     ifstream file("../data/prehistoric/prehistoric.txt");
 
-    if (!file) 
+    if (!file)
     {
         cout << "Error: Could not open prehistoric.txt" << endl;
         return nullptr;
@@ -19,16 +20,16 @@ INFONODE* loadPrehistoricInfo()
     INFONODE* tail = nullptr;
     string line;
 
-    while (getline(file, line)) 
+    while (getline(file, line))
     {
         INFONODE* newNode = new INFONODE{ line, nullptr };
 
-        if (!head) 
+        if (!head)
         {
             head = newNode;
             tail = newNode;
         }
-        else 
+        else
         {
             tail->next = newNode;
             tail = newNode;
@@ -39,11 +40,12 @@ INFONODE* loadPrehistoricInfo()
     return head;
 }
 
+// Display information about the Prehistoric era
 void displayPrehistoricInfo(INFONODE* head)
 {
     INFONODE* current = head;
 
-    while (current) 
+    while (current)
     {
         centerText(current->data);
         cout << endl;
@@ -52,42 +54,43 @@ void displayPrehistoricInfo(INFONODE* head)
     }
 }
 
+// Display events from the Prehistoric era
 void displayPrehistoricEvents()
 {
-        string resetColor = "\033[37m";   // White 
-        string purpleColor = "\033[35m";  // Purple
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
 
-        centerText("            Start exploring " + purpleColor + "Prehistoric " + resetColor + "era!");
+    centerText("            Start exploring " + purpleColor + "Prehistoric " + resetColor + "era!");
 
-        printEndl(3);
+    printEndl(3);
 
-        INFONODE* infoList = loadPrehistoricInfo();
-        if (infoList)
-        {
-            displayPrehistoricInfo(infoList);
-            deleteInfoList(infoList);
-        }
+    INFONODE* infoList = loadPrehistoricInfo();
+    if (infoList)
+    {
+        displayPrehistoricInfo(infoList);
+        deleteInfoList(infoList);
+    }
 
-        printEndl(4);
+    printEndl(4);
 
-        string PrehistoricEvents[3] = { "Stone Age", "Bronze Age", "Iron Age" };
+    string PrehistoricEvents[3] = { "Stone Age", "Bronze Age", "Iron Age" };
 
-        printStrRepeat(" ", 48);
+    printStrRepeat(" ", 48);
 
-        for (int i = 0; i < 3; i++)
-        {
-            cout << i + 1 << ". " << PrehistoricEvents[i];
-            printStrRepeat(" ", 9);
-        }
+    for (int i = 0; i < 3; i++)
+    {
+        cout << i + 1 << ". " << PrehistoricEvents[i];
+        printStrRepeat(" ", 9);
+    }
 
-        printEndl(4);
+    printEndl(4);
 }
 
-
-void displayPrehistoricQuiz() 
+// Display a quiz about the Prehistoric era
+void displayPrehistoricQuiz()
 {
     ifstream file("../data/prehistoric/prehistoricQuiz.txt");
-    if (!file) 
+    if (!file)
     {
         cout << "Error: Could not open prehistoric.txt" << endl;
         return;
@@ -107,7 +110,7 @@ void displayPrehistoricQuiz()
     file.close();
 
     QUIZNODE* current = head;
-    while (current) 
+    while (current)
     {
         printStrRepeat(" ", 2);
         cout << current->line << endl;
@@ -116,27 +119,24 @@ void displayPrehistoricQuiz()
         {
             char answer;
             bool answered = false;
-            while (!answered) 
+            while (!answered)
             {
                 cin >> answer;
                 cout << endl;
-                if (toupper(answer) == correctAnswers[index]) 
+                if (toupper(answer) == correctAnswers[index])
                 {
                     printEndl(2);
                     centerText("              " + greenColor + "Correct answer! " + resetColor);
                     printEndl(2);
                     counter++;
-                    
-                    
                 }
-                else 
+                else
                 {
                     printEndl(2);
-                    centerText("              " + redColor + "Incorrect answer! "+ resetColor);
+                    centerText("              " + redColor + "Incorrect answer! " + resetColor);
                     printEndl(2);
-                    centerText("             Correct answer was: " + greenColor + correctAnswers[index] + resetColor); 
+                    centerText("             Correct answer was: " + greenColor + correctAnswers[index] + resetColor);
                     printEndl(2);
-                    
                 }
                 answered = true;
                 index++;
@@ -145,10 +145,9 @@ void displayPrehistoricQuiz()
         current = current->next;
     }
 
-    
     centerText("           Exam score: " + purpleColor + to_string(counter) + "/7" + resetColor); cout << endl;
 
-    if (counter >= 5) 
+    if (counter >= 5)
     {
         centerText("            Exam " + greenColor + "PASSED! " + resetColor + "You can continue to the next era!");
         if (progres == 0)
@@ -156,23 +155,18 @@ void displayPrehistoricQuiz()
             progres += 1;
             saveUserProgress();
         }
-        else
-        {
-
-        }
     }
     else
     {
         centerText("            Exam " + redColor + "FAILED! " + resetColor + "You shall read more carefully and try again!");
         cout << endl;
-
     }
-   
+
     deleteList(head);
 }
 
-
-void displayPrehistoric() 
+// Display the Prehistoric era section and handle user interactions
+void displayPrehistoric()
 {
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
@@ -225,18 +219,16 @@ void displayPrehistoric()
         userPanel(1);
     }
 
-    while (!_kbhit()) 
+    while (!_kbhit())
     {
 
     }
 
     char ch = _getch();
 
-    if (ch == 27) 
+    if (ch == 27)
     {
-        
         system("cls");
         displayPrehistoric();
-        
     }
 }

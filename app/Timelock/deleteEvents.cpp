@@ -1,6 +1,7 @@
 #include "deleteEvents.h"
 #include "timeline.h"
 
+// Delete events from the Prehistoric era
 void deletePrehistoricEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -35,9 +36,9 @@ void deletePrehistoricEvents()
         centerText(purpleColor + "              Do you want to delete another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
+
         }
 
         char ch = _getch();
@@ -60,6 +61,7 @@ void deletePrehistoricEvents()
     }
 }
 
+// Delete events from the Classical era
 void deleteClassicalEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -97,9 +99,9 @@ void deleteClassicalEvents()
         centerText(purpleColor + "              Do you want to delete another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
+
         }
 
         char ch = _getch();
@@ -122,6 +124,7 @@ void deleteClassicalEvents()
     }
 }
 
+// Delete events from the Middle Ages era
 void deleteMiddleAgeEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -159,9 +162,9 @@ void deleteMiddleAgeEvents()
         centerText(purpleColor + "              Do you want to delete another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
+
         }
 
         char ch = _getch();
@@ -184,6 +187,7 @@ void deleteMiddleAgeEvents()
     }
 }
 
+// Delete events from the Early Modern era
 void deleteEarlyModernEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -218,9 +222,9 @@ void deleteEarlyModernEvents()
         centerText(purpleColor + "              Do you want to delete another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
+
         }
 
         char ch = _getch();
@@ -243,6 +247,7 @@ void deleteEarlyModernEvents()
     }
 }
 
+// Delete events from the Modern era
 void deleteModernEvents()
 {
     string redColor = "\033[31m";     // Red
@@ -283,9 +288,9 @@ void deleteModernEvents()
         centerText(purpleColor + "              Do you want to delete another event? (Y/N)" + resetColor);
         printEndl(3);
 
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
+
         }
 
         char ch = _getch();

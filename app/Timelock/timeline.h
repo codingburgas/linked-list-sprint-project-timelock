@@ -2,4 +2,5 @@
 
 #pragma once
 
+// Timeline function
 void displayTimeline();

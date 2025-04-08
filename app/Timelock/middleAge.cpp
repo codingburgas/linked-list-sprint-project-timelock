@@ -5,6 +5,7 @@
 #include "validation.h"
 #include "events.h"
 
+// Load information about the Middle Ages from a file
 INFONODE* loadMiddleAgeInfo()
 {
     ifstream file("../data/middleAge/middleAge.txt");
@@ -39,6 +40,7 @@ INFONODE* loadMiddleAgeInfo()
     return head;
 }
 
+// Display information about the Middle Ages
 void displayMiddleAgeInfo(INFONODE* head)
 {
     INFONODE* current = head;
@@ -52,6 +54,7 @@ void displayMiddleAgeInfo(INFONODE* head)
     }
 }
 
+// Display events from the Middle Ages
 void displaymiddleAgeEvents()
 {
     string resetColor = "\033[37m";   // White 
@@ -83,11 +86,11 @@ void displaymiddleAgeEvents()
     printEndl(4);
 }
 
-void displaymiddleAgeQuiz() 
+// Display a quiz about the Middle Ages
+void displaymiddleAgeQuiz()
 {
-
     ifstream file("../data/middleAge/middleAgeQuiz.txt");
-    if (!file) 
+    if (!file)
     {
         cout << "Error: Could not open middleAgeQuiz.txt" << endl;
         return;
@@ -98,7 +101,7 @@ void displaymiddleAgeQuiz()
     string purpleColor = "\033[35m";
     string redColor = "\033[31m";
 
-    char correctAnswers[] = { 'B', 'C', 'B', 'C', 'D','D','C'};
+    char correctAnswers[] = { 'B', 'C', 'B', 'C', 'D','D','C' };
     int counter = 0, index = 0;
 
     QUIZNODE* head = nullptr;
@@ -107,16 +110,16 @@ void displaymiddleAgeQuiz()
     file.close();
 
     QUIZNODE* current = head;
-    while (current) 
+    while (current)
     {
         printStrRepeat(" ", 2);
         cout << current->line << endl;
 
-        if (current->line.find(':') != string::npos) 
+        if (current->line.find(':') != string::npos)
         {
             char answer;
             bool answered = false;
-            while (!answered) 
+            while (!answered)
             {
                 cin >> answer;
                 cout << endl;
@@ -126,8 +129,6 @@ void displaymiddleAgeQuiz()
                     centerText("              " + greenColor + "Correct answer! " + resetColor);
                     printEndl(2);
                     counter++;
-
-
                 }
                 else
                 {
@@ -136,7 +137,6 @@ void displaymiddleAgeQuiz()
                     printEndl(2);
                     centerText("             Correct answer was: " + greenColor + correctAnswers[index] + resetColor);
                     printEndl(2);
-
                 }
                 answered = true;
                 index++;
@@ -144,7 +144,6 @@ void displaymiddleAgeQuiz()
         }
         current = current->next;
     }
-
 
     centerText("           Exam score: " + purpleColor + to_string(counter) + "/7" + resetColor); cout << endl;
 
@@ -156,22 +155,17 @@ void displaymiddleAgeQuiz()
             progres += 1;
             saveUserProgress();
         }
-        else
-        {
-
-        }
-
     }
     else
     {
         centerText("            Exam " + redColor + "FAILED! " + resetColor + "You shall read more carefully and try again!");
         cout << endl;
-
     }
 
     deleteList(head);
 }
 
+// Display the Middle Ages section and handle user interactions
 void displayMiddleAge()
 {
     string resetColor = "\033[37m";   // White 
@@ -225,14 +219,14 @@ void displayMiddleAge()
         userPanel(3);
     }
 
-    while (!_kbhit()) 
+    while (!_kbhit())
     {
 
     }
 
     char ch = _getch();
 
-    if (ch == 27) 
+    if (ch == 27)
     {
         system("cls");
         displayMiddleAge();

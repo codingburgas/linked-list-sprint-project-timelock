@@ -1,9 +1,8 @@
 #include "startingScreen.h"
 
-
+// Display the starting screen with options to sign up or log in
 void displayStartingScreen()
 {
-
     string resetColor = "\033[37m";   // White 
     string purpleColor = "\033[35m";  // Purple
 
@@ -44,6 +43,7 @@ void displayStartingScreen()
     printEndl(2);
 }
 
+// Handle the user's choice to sign up or log in
 void chooseAnswer()
 {
     string redColor = "\033[31m";     // Red

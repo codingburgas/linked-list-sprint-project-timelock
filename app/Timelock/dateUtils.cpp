@@ -2,9 +2,10 @@
 #include "pch.h"
 using namespace std;
 
-int extractYear(const string& text) 
+// Extract the first year found in the given text
+int extractYear(const string& text)
 {
-    for (size_t i = 0; i < text.length(); i++) 
+    for (size_t i = 0; i < text.length(); i++)
     {
         if (isdigit(text[i]))
         {
@@ -20,6 +21,7 @@ int extractYear(const string& text)
     return -1;
 }
 
+// Find the earliest or latest year in the files within the specified folder
 int findExtremeYear(const string& folderPath, bool findMin)
 {
     string searchPath = folderPath + "\\*.txt";
@@ -37,7 +39,6 @@ int findExtremeYear(const string& folderPath, bool findMin)
     do
     {
         string fileName = findFileData.cFileName;
-
 
         string lowerFileName = fileName;
         transform(lowerFileName.begin(), lowerFileName.end(), lowerFileName.begin(), ::tolower);
@@ -77,6 +78,7 @@ int findExtremeYear(const string& folderPath, bool findMin)
     return found ? extremeYear : -1;
 }
 
+// Check if the given year is the earliest year in the specified folder
 bool isEarliestYear(int year, const string& folderPath)
 {
     int minYear = findExtremeYear(folderPath, true);
@@ -87,6 +89,7 @@ bool isEarliestYear(int year, const string& folderPath)
     return false;
 }
 
+// Check if the given year is the latest year in the specified folder
 bool isLatestYear(int year, const string& folderPath)
 {
     int maxYear = findExtremeYear(folderPath, false);
@@ -96,4 +99,3 @@ bool isLatestYear(int year, const string& folderPath)
     }
     return false;
 }
-

@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "startingScreen.h"
 
+// Start the app
 int main()
 {
     HWND console = GetConsoleWindow();

@@ -1,6 +1,7 @@
 #include "search.h"
 #include "timeline.h"
 
+// Load events from files in the specified folder
 SEARCH* loadEventsFromFolder(const string& folderPath)
 {
     SEARCH* head = nullptr;
@@ -58,6 +59,7 @@ SEARCH* loadEventsFromFolder(const string& folderPath)
     return head;
 }
 
+// Search for events by year in the specified folder
 void searchByDate(const string& folderPath)
 {
     string redColor = "\033[31m";
@@ -90,7 +92,7 @@ void searchByDate(const string& folderPath)
                 while (getline(stream, line))
                 {
                     centerText(line);
-                    printEndl(1); 
+                    printEndl(1);
                 }
                 found = true;
             }
@@ -114,7 +116,7 @@ void searchByDate(const string& folderPath)
         while (!_kbhit()) {}
         ch = _getch();
 
-        if (ch == 27 || ch == 'n' || ch == 'N') 
+        if (ch == 27 || ch == 'n' || ch == 'N')
         {
             system("cls");
             displayTimeline();
@@ -123,6 +125,7 @@ void searchByDate(const string& folderPath)
     }
 }
 
+// Search for events by keyword in the specified folder
 void searchByEvent(const string& folderPath)
 {
     string redColor = "\033[31m";
@@ -134,7 +137,7 @@ void searchByEvent(const string& folderPath)
         SEARCH* head = loadEventsFromFolder(folderPath);
         if (!head) return;
 
-        cin.ignore(); 
+        cin.ignore();
         string keyword;
         printEndl(2);
         centerText("    Enter event keyword: ");
@@ -160,7 +163,7 @@ void searchByEvent(const string& folderPath)
                 while (getline(stream, line))
                 {
                     centerText(line);
-                    printEndl(1); 
+                    printEndl(1);
                 }
                 found = true;
             }
@@ -181,9 +184,9 @@ void searchByEvent(const string& folderPath)
         }
 
         char ch;
-        while (!_kbhit()) 
+        while (!_kbhit())
         {
-        
+
         }
         ch = _getch();
 
@@ -195,74 +198,75 @@ void searchByEvent(const string& folderPath)
         }
     }
 }
-  
 
+// Search for events by year in the specified era
 void searchByDate(int page)
 {
     string folderPath;
     switch (page) {
     case 1:
-    { 
+    {
         folderPath = "../data/prehistoric";
         break;
     }
     case 2:
-    { 
+    {
         folderPath = "../data/classical";
         break;
     }
-    case 3: 
-    { 
+    case 3:
+    {
         folderPath = "../data/middleAge";
-        break; 
+        break;
     }
-    case 4: 
+    case 4:
     {
         folderPath = "../data/earlyModern";
         break;
     }
     case 5:
-    { 
+    {
         folderPath = "../data/modern";
         break;
     }
     default:
-    { 
+    {
         return;
     }
     }
     searchByDate(folderPath);
 }
 
+// Search for events by keyword in the specified era
 void searchByEvent(int page)
 {
     string folderPath;
     switch (page)
     {
-    case 1: 
-    { 
+    case 1:
+    {
         folderPath = "../data/prehistoric";
-        break; 
+        break;
     }
-    case 2: 
-    { 
+    case 2:
+    {
         folderPath = "../data/classical";
         break;
     }
     case 3:
-    { 
+    {
         folderPath = "../data/middleAge";
         break;
     }
     case 4:
-    { 
+    {
         folderPath = "../data/earlyModern";
         break;
     }
     case 5:
-    { 
+    {
         folderPath = "../data/modern";
-        break; 
+        break;
     }
     default:
     {

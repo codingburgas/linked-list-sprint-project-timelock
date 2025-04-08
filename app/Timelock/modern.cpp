@@ -5,6 +5,7 @@
 #include "user.h"
 #include "events.h"
 
+// Load information about the Modern era from a file
 INFONODE* loadModernInfo()
 {
     ifstream file("../data/modern/modern.txt");
@@ -39,6 +40,7 @@ INFONODE* loadModernInfo()
     return head;
 }
 
+// Display information about the Modern era
 void displayModernInfo(INFONODE* head)
 {
     INFONODE* current = head;
@@ -52,6 +54,7 @@ void displayModernInfo(INFONODE* head)
     }
 }
 
+// Display events from the Modern era
 void displayModernEvents()
 {
     string resetColor = "\033[37m";   // White 
@@ -83,10 +86,9 @@ void displayModernEvents()
     printEndl(4);
 }
 
-
+// Display a quiz about the Modern era
 void displayModernQuiz()
 {
-
     ifstream file("../data/modern/ModernQuiz.txt");
     if (!file)
     {
@@ -99,7 +101,7 @@ void displayModernQuiz()
     string purpleColor = "\033[35m";
     string redColor = "\033[31m";
 
-    char correctAnswers[] = { 'C', 'B', 'D', 'C', 'B','B','B'};
+    char correctAnswers[] = { 'C', 'B', 'D', 'C', 'B','B','B' };
     int counter = 0, index = 0;
 
     QUIZNODE* head = nullptr;
@@ -108,7 +110,7 @@ void displayModernQuiz()
     file.close();
 
     QUIZNODE* current = head;
-    while (current) 
+    while (current)
     {
         printStrRepeat(" ", 2);
         cout << current->line << endl;
@@ -127,8 +129,6 @@ void displayModernQuiz()
                     centerText("              " + greenColor + "Correct answer! " + resetColor);
                     printEndl(2);
                     counter++;
-
-
                 }
                 else
                 {
@@ -137,7 +137,6 @@ void displayModernQuiz()
                     printEndl(2);
                     centerText("             Correct answer was: " + greenColor + correctAnswers[index] + resetColor);
                     printEndl(2);
-
                 }
                 answered = true;
                 index++;
@@ -146,13 +145,11 @@ void displayModernQuiz()
         current = current->next;
     }
 
-
     centerText("           Exam score: " + purpleColor + to_string(counter) + "/7" + resetColor); cout << endl;
 
     if (counter >= 5)
     {
         centerText("            Exam " + greenColor + "PASSED! " + resetColor + "Congrats on passing the last quiz!");
-        
     }
     else
     {
@@ -163,6 +160,7 @@ void displayModernQuiz()
     deleteList(head);
 }
 
+// Display the Modern era section and handle user interactions
 void displayModern()
 {
     string resetColor = "\033[37m";   // White 
@@ -170,7 +168,7 @@ void displayModern()
 
     cout << endl;
     printStrRepeat(" ", 2);
-    cout << "PRESS " << purpleColor << "ESC" << resetColor << " TO GO BACK";
+    cout << "PRESS " << purpleColor << "ESC" << resetColor + " TO GO BACK";
 
     string title[11] = {
     "",
@@ -206,14 +204,14 @@ void displayModern()
         userPanel(5);
     }
 
-    while (!_kbhit()) 
+    while (!_kbhit())
     {
 
     }
 
     char ch = _getch();
 
-    if (ch == 27) 
+    if (ch == 27)
     {
         system("cls");
         displayModern();

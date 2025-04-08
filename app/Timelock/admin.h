@@ -3,4 +3,5 @@
 
 #pragma once
 
+// Admin panel
 void adminPanel(int page);

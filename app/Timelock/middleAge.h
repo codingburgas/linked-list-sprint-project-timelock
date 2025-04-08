@@ -2,6 +2,7 @@
 
 #pragma once
 
+// Middle Age era functions
 void displayMiddleAge();
 void displayMiddleAgeInfo(INFONODE* head);
 INFONODE* loadMiddleAgeInfo();

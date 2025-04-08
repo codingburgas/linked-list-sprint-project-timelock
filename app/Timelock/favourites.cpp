@@ -2,6 +2,7 @@
 #include "accessData.h"
 #include "events.h"
 
+// Save an article to the favourites list
 void saveFavourite(const string& era, const string& title, INFONODE* list) {
     string redColor = "\033[31m";
     string greenColor = "\033[32m";
@@ -35,7 +36,7 @@ void saveFavourite(const string& era, const string& title, INFONODE* list) {
         centerText(greenColor + "           Article saved to favourites!" + resetColor);
         printEndl(3);
     }
-    else 
+    else
     {
         printEndl(2);
         centerText(redColor + "         Unable to save favourite." + resetColor);
@@ -43,6 +44,7 @@ void saveFavourite(const string& era, const string& title, INFONODE* list) {
     }
 }
 
+// Ask the user if they want to add an article to favourites
 void askToAddToFavourites(const string& era, INFONODE* node) {
     string purpleColor = "\033[35m";
     string resetColor = "\033[37m";
@@ -59,9 +61,9 @@ void askToAddToFavourites(const string& era, INFONODE* node) {
         saveFavourite(era, title, node);
     }
     printEndl(2);
-
 }
 
+// Display all favourites from a specific era
 void displayFavouritesByEra(const string& era) {
     string purpleColor = "\033[35m";
     string resetColor = "\033[37m";
@@ -138,23 +140,12 @@ void displayFavouritesByEra(const string& era) {
                 centerText("              Favourite from: " + resetColor + favEra + purpleColor + "       Title: " + resetColor + lastTitle);
                 cout << endl;
                 centerText(purpleColor + "      =======================================" + resetColor);
-                displayInfo(head);
-                deleteInfoList(head);
+                printEndl(2);
                 head = newNode;
                 tail = newNode;
             }
             lastTitle = title;
         }
-    }
-
-    if (found && head) {
-        centerText(purpleColor + "     =======================================");
-        cout << endl;
-        centerText("              Favourite from: " + resetColor + era + purpleColor + "       Title: " + resetColor + lastTitle);
-        cout << endl;
-        centerText(purpleColor + "      =======================================" + resetColor);
-        displayInfo(head);
-        deleteInfoList(head);
     }
 
     if (!found) {

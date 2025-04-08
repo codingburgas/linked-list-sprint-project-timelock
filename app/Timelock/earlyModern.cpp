@@ -5,6 +5,7 @@
 #include "user.h"
 #include "events.h"
 
+// Load information about the Early Modern era from a file
 INFONODE* loadEarlyModernInfo()
 {
     ifstream file("../data/earlyModern/earlyModern.txt");
@@ -39,6 +40,7 @@ INFONODE* loadEarlyModernInfo()
     return head;
 }
 
+// Display information about the Early Modern era
 void displayEarlyModernInfo(INFONODE* head)
 {
     INFONODE* current = head;
@@ -52,6 +54,7 @@ void displayEarlyModernInfo(INFONODE* head)
     }
 }
 
+// Display events from the Early Modern era
 void displayearlyModernEvents()
 {
     string resetColor = "\033[37m";   // White 
@@ -83,9 +86,9 @@ void displayearlyModernEvents()
     printEndl(4);
 }
 
+// Display a quiz about the Early Modern era
 void displayearlyModernQuiz()
 {
-
     ifstream file("../data/earlyModern/earlyModernQuiz.txt");
     if (!file)
     {
@@ -98,7 +101,7 @@ void displayearlyModernQuiz()
     string purpleColor = "\033[35m";
     string redColor = "\033[31m";
 
-    char correctAnswers[] = { 'B', 'C', 'B', 'C', 'B','C','B'};
+    char correctAnswers[] = { 'B', 'C', 'B', 'C', 'B','C','B' };
     int counter = 0, index = 0;
 
     QUIZNODE* head = nullptr;
@@ -116,7 +119,7 @@ void displayearlyModernQuiz()
         {
             char answer;
             bool answered = false;
-            while (!answered) 
+            while (!answered)
             {
                 cin >> answer;
                 cout << endl;
@@ -126,8 +129,6 @@ void displayearlyModernQuiz()
                     centerText("              " + greenColor + "Correct answer! " + resetColor);
                     printEndl(2);
                     counter++;
-
-
                 }
                 else
                 {
@@ -136,7 +137,6 @@ void displayearlyModernQuiz()
                     printEndl(2);
                     centerText("             Correct answer was: " + greenColor + correctAnswers[index] + resetColor);
                     printEndl(2);
-
                 }
                 answered = true;
                 index++;
@@ -144,7 +144,6 @@ void displayearlyModernQuiz()
         }
         current = current->next;
     }
-
 
     centerText("           Exam score: " + purpleColor + to_string(counter) + "/7" + resetColor); cout << endl;
 
@@ -156,10 +155,6 @@ void displayearlyModernQuiz()
             progres += 1;
             saveUserProgress();
         }
-        else
-        {
-
-        }
     }
     else
     {
@@ -170,7 +165,7 @@ void displayearlyModernQuiz()
     deleteList(head);
 }
 
-
+// Display the Early Modern era section and handle user interactions
 void displayEarlyModern()
 {
     string resetColor = "\033[37m";   // White 
@@ -224,14 +219,14 @@ void displayEarlyModern()
         userPanel(4);
     }
 
-    while (!_kbhit()) 
+    while (!_kbhit())
     {
 
     }
 
     char ch = _getch();
 
-    if (ch == 27) 
+    if (ch == 27)
     {
         system("cls");
         displayEarlyModern();

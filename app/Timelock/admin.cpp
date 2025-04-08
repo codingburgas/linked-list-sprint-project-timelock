@@ -13,6 +13,7 @@
 #include "favourites.h"
 #include "accessData.h"
 
+// Display the admin panel with various options
 void adminPanel(int page)
 {
     string resetColor = "\033[37m";   // White 

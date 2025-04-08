@@ -5,5 +5,6 @@
 
 #pragma once
 
+// Starting screen functions
 void displayStartingScreen();
 void chooseAnswer();

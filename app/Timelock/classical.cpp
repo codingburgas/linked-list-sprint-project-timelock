@@ -5,6 +5,7 @@
 #include "user.h"
 #include "events.h"
 
+// Load information about the Classical era from a file
 INFONODE* loadClassicalInfo()
 {
     ifstream file("../data/classical/classical.txt");
@@ -39,6 +40,7 @@ INFONODE* loadClassicalInfo()
     return head;
 }
 
+// Display information about the Classical era
 void displayClassicalInfo(INFONODE* head)
 {
     INFONODE* current = head;
@@ -52,6 +54,7 @@ void displayClassicalInfo(INFONODE* head)
     }
 }
 
+// Display events from the Classical era
 void displayClassicalEvents()
 {
     string resetColor = "\033[37m";   // White 
@@ -70,7 +73,7 @@ void displayClassicalEvents()
 
     printEndl(4);
 
-    string ClassicalEvents[4] = { "The Greco - Persian Wars", "The Peloponnesian War", "The Roman Revolution", "The Decline and Fall of the Roman Empire"};
+    string ClassicalEvents[4] = { "The Greco - Persian Wars", "The Peloponnesian War", "The Roman Revolution", "The Decline and Fall of the Roman Empire" };
 
     printStrRepeat(" ", 28);
 
@@ -87,11 +90,11 @@ void displayClassicalEvents()
     printEndl(4);
 }
 
+// Display a quiz about the Classical era
 void displayClassicalQuiz()
 {
-
     ifstream file("../data/classical/classicalEraQuiz.txt");
-    if (!file) 
+    if (!file)
     {
         cout << "Error: Could not open classicalEraQuiz.txt" << endl;
         return;
@@ -102,7 +105,7 @@ void displayClassicalQuiz()
     string purpleColor = "\033[35m";
     string redColor = "\033[31m";
 
-    char correctAnswers[] = { 'C', 'C', 'B', 'C', 'B','C','C'};
+    char correctAnswers[] = { 'C', 'C', 'B', 'C', 'B','C','C' };
     int counter = 0, index = 0;
 
     QUIZNODE* head = nullptr;
@@ -111,16 +114,16 @@ void displayClassicalQuiz()
     file.close();
 
     QUIZNODE* current = head;
-    while (current) 
+    while (current)
     {
         printStrRepeat(" ", 2);
         cout << current->line << endl;
 
-        if (current->line.find(':') != string::npos) 
+        if (current->line.find(':') != string::npos)
         {
             char answer;
             bool answered = false;
-            while (!answered) 
+            while (!answered)
             {
                 cin >> answer;
                 cout << endl;
@@ -130,8 +133,6 @@ void displayClassicalQuiz()
                     centerText("              " + greenColor + "Correct answer! " + resetColor);
                     printEndl(2);
                     counter++;
-
-
                 }
                 else
                 {
@@ -140,7 +141,6 @@ void displayClassicalQuiz()
                     printEndl(2);
                     centerText("             Correct answer was: " + greenColor + correctAnswers[index] + resetColor);
                     printEndl(2);
-
                 }
                 answered = true;
                 index++;
@@ -148,7 +148,6 @@ void displayClassicalQuiz()
         }
         current = current->next;
     }
-
 
     centerText("           Exam score: " + purpleColor + to_string(counter) + "/7" + resetColor); cout << endl;
 
@@ -160,22 +159,17 @@ void displayClassicalQuiz()
             progres += 1;
             saveUserProgress();
         }
-        else
-        {
-
-        }
-        
     }
     else
     {
         centerText("            Exam " + redColor + "FAILED! " + resetColor + "You shall read more carefully and try again!");
         cout << endl;
-
     }
 
     deleteList(head);
 }
 
+// Display the Classical era section and handle user interactions
 void displayClassical()
 {
     int page = 2;
@@ -220,14 +214,14 @@ void displayClassical()
         userPanel(2);
     }
 
-    while (!_kbhit()) 
+    while (!_kbhit())
     {
 
     }
 
     char ch = _getch();
 
-    if (ch == 27) 
+    if (ch == 27)
     {
         system("cls");
         displayClassical();

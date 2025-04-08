@@ -5,6 +5,7 @@
 #include "user.h"
 #include "timeline.h"
 
+// Display the sign-up screen with a title
 void displaySignUp()
 {
     string resetColor = "\033[37m";   // White 
@@ -36,24 +37,24 @@ void displaySignUp()
 
     printStrRepeat(" ", 10);
 
-    centerText(resetColor + "Start " + purpleColor + "SIGNING UP" + resetColor + ". Please fill the questions bellow." + resetColor);
-    
+    centerText(resetColor + "Start " + purpleColor + "SIGNING UP" + resetColor + ". Please fill the questions below." + resetColor);
+
     printEndl(4);
 
     signUp();
 }
 
-
+// Handle the sign-up process
 void signUp()
 {
     string redColor = "\033[31m";     // Red
     string greenColor = "\033[32m";   // Green
     string resetColor = "\033[37m";   // White 
 
-    loadAccounts(); 
+    loadAccounts();
 
     string username, password, confirmPassword, role;
-    int progress = 0; 
+    int progress = 0;
 
     bool validUsername = false;
     while (!validUsername)
@@ -108,7 +109,7 @@ void signUp()
         }
         else
         {
-            if (role == "admin") 
+            if (role == "admin")
             {
                 role = "pending";
             }

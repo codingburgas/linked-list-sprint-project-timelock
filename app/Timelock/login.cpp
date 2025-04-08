@@ -6,6 +6,7 @@
 #include "timeline.h"
 #include "startingScreen.h"
 
+// Display the login screen with a title
 void displayLogin()
 {
     string resetColor = "\033[37m";   // White 
@@ -43,17 +44,16 @@ void displayLogin()
     printEndl(4);
 
     login();
-    
 }
 
+// Handle the login process
 void login()
 {
     string redColor = "\033[31m";     // Red
     string greenColor = "\033[32m";   // Green
     string resetColor = "\033[37m";   // White 
-    
+
     loadAccounts();
-   
 
     string username, password;
 
@@ -100,12 +100,12 @@ void login()
     centerText(greenColor + "                  Login successful! You are logged in as " + role + "." + resetColor);
     if (role == "pending") {
         printEndl(2);
-        centerText(greenColor + "                  For now, you have user rigts!" + resetColor);
+        centerText(greenColor + "                  For now, you have user rights!" + resetColor);
     }
     loadUserProgress();
     sleep_for(milliseconds(1500));
 
-    system("cls"); 
+    system("cls");
 
     displayTimeline();
 }

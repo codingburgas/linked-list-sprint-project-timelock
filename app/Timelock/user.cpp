@@ -9,6 +9,7 @@
 #include "search.h"
 #include "favourites.h"
 
+// Display the user panel with various options
 void userPanel(int page)
 {
     string resetColor = "\033[37m";   // White 
@@ -27,7 +28,7 @@ void userPanel(int page)
     cout << "4. Attempt quiz.";
 
     printStrRepeat(" ", 8);
-    cout << "5. Open favourites."; 
+    cout << "5. Open favourites.";
 
     printEndl(3);
     centerText(purpleColor + "            Choose an option! " + resetColor);
@@ -67,11 +68,11 @@ void userPanel(int page)
         break;
     case 2:
         displaySearchTitle();
-        searchByDate(page); 
+        searchByDate(page);
         break;
     case 3:
         displaySearchTitle();
-        searchByEvent(page); 
+        searchByEvent(page);
         break;
     case 4:
         displayQuizTitle();

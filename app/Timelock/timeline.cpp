@@ -5,7 +5,8 @@
 #include "earlyModern.h"
 #include "modern.h"
 
-string eras[5] = 
+// Array of era names
+string eras[5] =
 {
     "1. Prehistoric era",
     "2. Classical era",
@@ -14,6 +15,7 @@ string eras[5] =
     "5. Modern era"
 };
 
+// Array of corresponding years
 string years[5] =
 {
     "3000 BCE",
@@ -23,6 +25,7 @@ string years[5] =
     "Present"
 };
 
+// Display the timeline and prompt the user to choose an era
 void displayTimeline()
 {
     int page = 0;
@@ -75,7 +78,7 @@ void displayTimeline()
         else
         {
             cout << purpleColor << "-----";
-        }        
+        }
     }
     cout << purpleColor << "->>" << resetColor << endl;
 
@@ -92,8 +95,8 @@ void displayTimeline()
 
     int era;
     cin >> era;
-  
-    while (era < 1 || era > 5) 
+
+    while (era < 1 || era > 5)
     {
         cout << endl;
         centerText(redColor + "                Invalid choice! Please enter a number between 1 and 5: " + resetColor);
@@ -104,14 +107,12 @@ void displayTimeline()
     {
     case 1:
         system("cls");
-       
         displayPrehistoric();
         break;
     case 2:
-        if (progres >= 1) 
+        if (progres >= 1)
         {
             system("cls");
-
             displayClassical();
             break;
         }
@@ -128,7 +129,6 @@ void displayTimeline()
         if (progres >= 2)
         {
             system("cls");
-
             displayMiddleAge();
             break;
         }
@@ -145,7 +145,6 @@ void displayTimeline()
         if (progres >= 3)
         {
             system("cls");
-
             displayEarlyModern();
             break;
         }
@@ -162,7 +161,6 @@ void displayTimeline()
         if (progres == 4)
         {
             system("cls");
-
             displayModern();
             break;
         }
@@ -177,6 +175,3 @@ void displayTimeline()
         }
     }
 }
-
-
-

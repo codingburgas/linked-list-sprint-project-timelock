@@ -2,6 +2,7 @@
 
 #pragma once
 
+// Delete events functions
 void deletePrehistoricEvents();
 void deleteClassicalEvents();
 void deleteMiddleAgeEvents();

@@ -1,6 +1,7 @@
 #include "events.h"
 #include "favourites.h"
 
+// Display events' info
 void displayPrehistoricEventsInfo()
 {
     string redColor = "\033[31m";     // Red
@@ -126,6 +127,7 @@ void displayPrehistoricEventsInfo()
     }
 }
 
+// Display events' info
 void displayClassicalEventsInfo()
 {
     string redColor = "\033[31m";     // Red
@@ -276,6 +278,7 @@ void displayClassicalEventsInfo()
     }
 }
 
+// Display events' info
 void displayMiddleAgeEventsInfo()
 {
     string redColor = "\033[31m";     // Red
@@ -425,6 +428,7 @@ void displayMiddleAgeEventsInfo()
     }
 }
 
+// Display events' info
 void displayEarlyModernEventsInfo()
 {
     string redColor = "\033[31m";     // Red
@@ -549,6 +553,7 @@ void displayEarlyModernEventsInfo()
     }
 }
 
+// Display events' info
 void displayModernEventsInfo()
 {
     string redColor = "\033[31m";     // Red

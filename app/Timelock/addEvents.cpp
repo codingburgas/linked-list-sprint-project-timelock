@@ -1,9 +1,10 @@
 #include "addEvents.h"
 #include "dateUtils.h"
 
+// Get the file path for the specified era based on the page number
 string getEraPath(int page)
 {
-    switch (page) 
+    switch (page)
     {
     case 1: return "../data/prehistoric";
     case 2: return "../data/classical";
@@ -14,16 +15,17 @@ string getEraPath(int page)
     }
 }
 
+// Display the title for adding an event
 void displayAddTitle()
 {
     string resetColor = "\033[37m";   // White 
-    string purpleColor = "\033[35m";  // Purple
+    string purpleColor = "\033[35m"; // Purple
 
     cout << endl;
     printStrRepeat(" ", 2);
     cout << "PRESS " << purpleColor << "ESC" << resetColor << " TO GO BACK";
 
-    string quiz[11] =
+    string add[11] =
     {
          "",
          "          .**************..**************..***************.",
@@ -42,70 +44,95 @@ void displayAddTitle()
 
     for (int i = 0; i < 11; i++)
     {
-        centerText(purpleColor + quiz[i] + resetColor);
+        centerText(purpleColor + add[i] + resetColor);
         cout << endl;
     }
     printEndl(3);
 }
 
-void createEventFile(const string& folderPath, const string& title, const string& date, const string& description) {
+// Create a new event file with the given details
+void createEventFile(const string& folderPath, const string& title, const string& date, const string& description)
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m"; // Purple
+    string greenColor = "\033[32m";  // Green
+    string redColor = "\033[31m";   // Red
+
     string filename = folderPath + "/" + title + ".txt";
     ofstream out(filename);
-    if (!out) 
+    if (!out)
     {
-        cout << "Failed to create file." << endl;
+        centerText(redColor + "Failed to create file." + resetColor);
+        cout << endl;
         return;
     }
 
-    out << "Title: " << title << endl;
-    out << "Date: " << date << endl;
-    out << "Description: " << description << endl;
-    out.close();
-    cout << "Event added successfully: " << filename << endl;
+    centerText(purpleColor + "        Title: " + resetColor + title);
+    printEndl(2);
+    centerText(purpleColor + "        Date: " + resetColor + date);
+    printEndl(2);
+    centerText(purpleColor + "        Description: " + resetColor + description);
+    printEndl(2);
+    centerText(greenColor + "        Event added successfully: " + resetColor + filename);
+    printEndl(2);
 }
-void addEventGeneric(int page, bool atBeginning) 
+
+// Add a new event to the specified era, either at the beginning or end
+void addEventGeneric(int page, bool atBeginning)
 {
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m"; // Purple
+
     cin.ignore();
     string title, date, description;
-    cout << "Enter event title: ";
+    centerText(purpleColor + "         Enter event title: " + resetColor);
     getline(cin, title);
-    cout << "Enter event year: ";
+    printEndl(2);
+    centerText(purpleColor + "        Enter event year: " + resetColor);
     getline(cin, date);
-    cout << "Enter event description: ";
+    printEndl(2);
+    centerText(purpleColor + "            Enter event description: " + resetColor);
     getline(cin, description);
+    printEndl(2);
 
     string folderPath = getEraPath(page);
     int eventYear = stoi(date);
 
-    
-    if (isEarliestYear(eventYear, folderPath)) 
+    if (isEarliestYear(eventYear, folderPath))
     {
-        cout << "This is the earliest event in this era!" << endl;
+        centerText(purpleColor + "          This is the earliest event in this era!" + resetColor);
+        printEndl(2);
     }
     else if (isLatestYear(eventYear, folderPath))
     {
-        cout << "This is the latest event in this era!" << endl;
+        centerText(purpleColor + "          This is the latest event in this era!" + resetColor);
+        printEndl(2);
     }
     else
     {
-        if (atBeginning) 
+        if (atBeginning)
         {
-            cout << "This event is NOT the earliest in this era." << endl;
+            centerText(purpleColor + "          This event is NOT the earliest in this era." + resetColor);
+            printEndl(2);
         }
         else
         {
-            cout << "This event is NOT the latest in this era." << endl;
+            centerText(purpleColor + "          This event is NOT the latest in this era." + resetColor);
+            printEndl(2);
         }
     }
 
     createEventFile(folderPath, title, date, description);
 }
+
+// Add a new event at the beginning of the specified era
 void addEventAtBeginning(int page)
 {
     addEventGeneric(page, true);
 }
 
-void addEventAtEnd(int page) 
+// Add a new event at the end of the specified era
+void addEventAtEnd(int page)
 {
     addEventGeneric(page, false);
 }

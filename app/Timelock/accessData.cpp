@@ -3,13 +3,13 @@
 ACCOUNT* head = nullptr;
 char currentUser[25] = "";
 
+// Load all accounts from a CSV file into a linked list
 void loadAccounts()
 {
     ifstream file("../data/accounts.csv");
     string line, username, password, role, progressStr;
     int progress;
 
-    
     head = nullptr;
 
     while (getline(file, line))
@@ -25,23 +25,24 @@ void loadAccounts()
         else
             progress = stoi(progressStr);
 
-        
         ACCOUNT* newAcc = new ACCOUNT{ username, password, role, progress, head };
         head = newAcc;
     }
     file.close();
 }
 
-
-void saveAccount(const string& username, const string& password, const string& role,int progress)
+// Save a new account to the CSV file and update the linked list
+void saveAccount(const string& username, const string& password, const string& role, int progress)
 {
     ofstream file("../data/accounts.csv", ios::app);
     file << username << "," << password << "," << role << "," << progress << endl;
     file.close();
 
-    ACCOUNT* newAcc = new ACCOUNT{ username, password, role, progress,head };
+    ACCOUNT* newAcc = new ACCOUNT{ username, password, role, progress, head };
     head = newAcc;
 }
+
+// Load the progress of the current user from the linked list
 void loadUserProgress()
 {
     ACCOUNT* temp = head;
@@ -49,27 +50,27 @@ void loadUserProgress()
     {
         if (temp->username == currentUser)
         {
-            progres = temp->progress;  
+            progres = temp->progress;
             break;
         }
         temp = temp->next;
     }
 }
 
+// Save the progress of the current user to the CSV file and update the linked list
 void saveUserProgress()
-{ 
+{
     ACCOUNT* temp = head;
     while (temp != nullptr)
     {
         if (temp->username == currentUser)
         {
-            temp->progress = progres;  
+            temp->progress = progres;
             break;
         }
         temp = temp->next;
     }
 
-    
     ifstream inFile("../data/accounts.csv");
     vector<string> lines;
     string line;
@@ -85,7 +86,6 @@ void saveUserProgress()
 
         if (username == currentUser)
         {
-            
             line = username + "," + password + "," + role + "," + to_string(progres);
         }
 
@@ -93,7 +93,7 @@ void saveUserProgress()
     }
     inFile.close();
 
-    ofstream outFile("../data/accounts.csv", ios::trunc);  
+    ofstream outFile("../data/accounts.csv", ios::trunc);
     for (int i = 0; i < lines.size(); i++)
     {
         outFile << lines[i] << endl;
@@ -101,6 +101,7 @@ void saveUserProgress()
     outFile.close();
 }
 
+// Approve pending admin accounts based on user input
 void approveAdmin()
 {
     string resetColor = "\033[37m";   // White 
@@ -134,7 +135,6 @@ void approveAdmin()
     bool foundPending = false;
     vector<string> updatedLines;
 
-
     ifstream inFile("../data/accounts.csv");
     string line;
 
@@ -146,7 +146,6 @@ void approveAdmin()
         getline(ss, password, ',');
         getline(ss, role, ',');
         getline(ss, progressStr, ',');
-
 
         if (role == "pending")
         {
@@ -170,12 +169,11 @@ void approveAdmin()
             }
             else
             {
-                centerText(redColor + "            "  + username + "'s request rejected!" + resetColor);
+                centerText(redColor + "            " + username + "'s request rejected!" + resetColor);
                 cout << endl;
                 role = "user";
             }
         }
-
 
         updatedLines.push_back(username + "," + password + "," + role + "," + progressStr);
     }
@@ -189,13 +187,10 @@ void approveAdmin()
         return;
     }
 
-
     ofstream outFile("../data/accounts.csv", ios::trunc);
     for (const string& updatedLine : updatedLines)
     {
         outFile << updatedLine << endl;
     }
     outFile.close();
-
-
 }

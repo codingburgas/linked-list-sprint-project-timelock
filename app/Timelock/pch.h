@@ -18,6 +18,7 @@ using std::chrono::seconds;
 
 #pragma once
 
+// Structs
 struct INFONODE
 {
     string data;
@@ -45,8 +46,10 @@ struct FAVOURITE {
     FAVOURITE* next;
 };
 
+// Extern variable
 extern int progres;
 
+// Generally used functions
 int getConsoleWidth();
 
 void centerText(string text);
