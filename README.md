@@ -1,65 +1,80 @@
 <br>
-<h1 align="center"> 📑 TIMELOCK 📑 </h1>
-<br>
+<h1 align="center">📑 TimeLock 📑 </h1>
+
 <img align="left" src="./app/assets/logoTransparent.png">
 <br>
- 
- <div align="center">
-    <p>✨ Simplify historical events | 🕰 Organize timelines efficiently | 📜 See the past in a clearer way!</p>
-</div>
-
----
-
-# 📋 About
-Our app makes it easier to explore and organize historical events, helping you quickly navigate through different eras, 
-save time with efficient event management, and see connections between key moments in history.
-
-
-# 🛠️ Installation
-1. 📥 Clone the project using the "Code" button:
-   git clone https://github.com/codingburgas/linked-list-sprint-project-timelock.git
 <br>
-2. 📂 Open Timelock.sIn <br><br>
-3. ⚙️ Configure the project.
-
-
-# 🛠️💻 Languages, Frameworks, and Tools 
-## Design
 <br>
-<div align="left">
-  <img width="40" height="40" src="https://cdn-icons-png.flaticon.com/256/5968/5968705.png" alt="Figma's logo">
-</div>
+<p>👋 Hello, we are TimeLock!</p>
+<p>Our app makes it easier to explore and organize historical events, helping you quickly navigate through different eras, save time with efficient event management, and see connections between key moments in history.</p>
+<br>
+<br>
+<br>
+<h2 align="left">🚀🗂 Languages </h2>
+<p align="left">
+<a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"></a>
+</p>
+ <br>
+ <br>
 
-## Tools for development
-<div align="left">
-  <img width="40" height="40" src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++">
-  <img width="40" height="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/2060px-Visual_Studio_Icon_2019.svg.png" alt="VS logo">
-</div>
-
-
-## Programs for documents
-<div align="left">
-  <img width="40" height="40" src="https://static.vecteezy.com/system/resources/previews/017/396/802/non_2x/microsoft-word-mobile-apps-icon-free-png.png" alt="Word logo">
-  <img width="40" height="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" alt="Power point logo">
-  <img width="40" height="40" src="https://www.shutterstock.com/image-vector/modern-flat-design-logo-xls-600nw-2058695381.jpg" alt="Excel logo">
-</div>
+<h2 align="left">🔧 Used Tools </h2>
+<p align="left">
+<a href="https://visualstudio.microsoft.com/vs/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/2060px-Visual_Studio_Icon_2019.svg.png" alt="Visual Studio logo" width=40px/></a>
+<a href="https://teams.microsoft.com/_?culture=en-us&country=us#/conversations/19:b01cf915e57b430ea93ab780c4f6b6dc@thread.v2?ctx=chat"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png" alt="Teams logo" width=48px></a>
+<a href="https://git-scm.com/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" heigh=48px width=48px></a>
+<a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=50px></a>
+<a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" alt="MS PowerPoint logo" width=53px>
+<a href="https://freelogopng.com/image/607"><img src="https://freelogopng.com/images/all_img/1656733637logo-canva-png.png" alt="Canva logo"  width=44px></a>
+<a href="https://www.microsoft.com/en-us/microsoft-365/excel"><img src="https://static.vecteezy.com/system/resources/thumbnails/027/179/363/small/microsoft-excel-icon-logo-symbol-free-png.png" alt="Excel logo" width=47px></a>
+<br>
  
-# 📁 Documents
+<h2 align="left">📄📎 Documents</h2><br>
 <ul>
-    <li><a href="./app/Documentation/TimelockDocumentation.docx">Documentation</a></li>
-    <li><a href="./app/Documentation/Timelock presentation.pptx">Presentation</a></li>
-    <li><a href="./app/Documentation/TimelockUnitTesting.xlsx">QA Documentation</a></li>
-   </ul>
+<li><a href="https://codingburgas-my.sharepoint.com/:w:/g/personal/zvyankova22_codingburgas_bg/ESglxP12RhpAposZShDYC9YBriaqXMj2JC4HczYBxYYG5w?e=oh7qqg">Documentation</a></li>
+<li><a href="https://codingburgas-my.sharepoint.com/:p:/g/personal/zvyankova22_codingburgas_bg/EYeWfsDCMVNKhe_nhB1BfHABNsiMLb5GzaKsWSXO7QBcNA?e=Pfwmdm">Presentation</a></li>
+<li><a href="https://codingburgas-my.sharepoint.com/:x:/g/personal/zvyankova22_codingburgas_bg/EWRJXcjBrwlDm3KEorF4Yt8B4g76XY13VQQs6PRC_jdFjg?e=2DwW0o">QA Documentation</a></li>
+</ul>  
+<br>
 
-<# 👥 Team Members
-
-| Name | Role | Grade |
-| :---:   | :---: | :---: |
-|  <h3>Veselina Varadeva</a></h3> | Scrum-Trainer |🟩 10V |
-| <h3>Gabriela Encheva</a></h3> | Back-end Developer |🟩 10V |
-| <h3>Jaklin Yankova</a></h3> | Front-end Developer |🟥 10B |
-| <h3>Lachezar Gospodinov</a></h3> | QA |🟨 10A |
-
-<h2 align="center">
- If you like the app, you can give a 🌟 to our repository!
-</h2>
+<h2 align="left">👨🏻‍💻 Team Members </h2>
+<table >
+<tr>
+<td align="center">Name</td>
+<td align="center">Role</td>
+<td align="center">Grade</td>
+<td align="center">Github</td>
+</tr>
+<tr>
+<td align="center">Veselina Varadeva</td>
+<td align="center">Scrum Trainer</td>
+<td align="center">🟩 10V</td>
+<td align="center"> <a href="https://github.com/VTVaradeva22">VTVaradeva22 </a></td>
+</tr>
+<tr>
+<td align="center">Gabriela Encheva</td>
+<td align="center">Back-end developer</td>
+<td align="center">🟩 10V</td>
+<td align="center"> <a href="https://github.com/GVEncheva22">GVEncheva22 </a></td>
+</tr>
+<tr>
+<td align="center"> Zhaklin Yankova</td>
+<td align="center">Front-end developer</td>
+<td align="center">🟥 10B</td>
+<td align="center"> <a href="https://github.com/ZVYankova22">ZVYankova22 </a></td>
+</tr>
+<tr>
+<td align="center">Lachezar Gospodinov</td>
+<td align="center">QA</td>
+<td align="center">🟨 10A</td>
+<td align="center"> <a href="https://github.com/LGGospodinov22">LGGospodinov22 </a></td>
+</table>
+<br>
+ 
+<h2 align="left">🔒🔑 Access</h2>
+ 
+<p> Open cmd and clone our repo by typing</p>
+ 
+```
+https://github.com/codingburgas/linked-list-sprint-project-timelock.git
+```
+<p>Thank you for scrolling this far! Show some 🤍 by starring the repo!</p>
