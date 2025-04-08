@@ -9,11 +9,11 @@
 #include <conio.h> 
 #include <vector>
 #include <algorithm>
-#include <dirent.h>
 #include <string>
 
 using namespace std;
 using std::this_thread::sleep_for;
+using std::chrono::milliseconds;
 using std::chrono::seconds;
 
 #pragma once
@@ -30,10 +30,19 @@ struct QUIZNODE
     QUIZNODE* next;
 };
 
-struct SEARCH {
+struct SEARCH 
+{
     string fileName;
     string content;
     SEARCH* next;
+};
+
+struct FAVOURITE {
+    string username;
+    string era;
+    string title;
+    string content;
+    FAVOURITE* next;
 };
 
 extern int progres;

@@ -51,12 +51,9 @@ void login()
     string redColor = "\033[31m";     // Red
     string greenColor = "\033[32m";   // Green
     string resetColor = "\033[37m";   // White 
-
-
     
     loadAccounts();
-    
-    
+   
 
     string username, password;
 
@@ -101,8 +98,12 @@ void login()
 
     cout << endl;
     centerText(greenColor + "                  Login successful! You are logged in as " + role + "." + resetColor);
+    if (role == "pending") {
+        printEndl(2);
+        centerText(greenColor + "                  For now, you have user rigts!" + resetColor);
+    }
     loadUserProgress();
-    sleep_for(seconds(1));
+    sleep_for(milliseconds(1500));
 
     system("cls"); 
 

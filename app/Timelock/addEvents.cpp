@@ -1,8 +1,5 @@
 #include "addEvents.h"
-#include "pch.h"
 #include "dateUtils.h"
-
-using namespace std;
 
 string getEraPath(int page)
 {
@@ -15,6 +12,40 @@ string getEraPath(int page)
     case 5: return "../data/modern";
     default: return "";
     }
+}
+
+void displayAddTitle()
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+
+    cout << endl;
+    printStrRepeat(" ", 2);
+    cout << "PRESS " << purpleColor << "ESC" << resetColor << " TO GO BACK";
+
+    string quiz[11] =
+    {
+         "",
+         "          .**************..**************..***************.",
+         "          *   .________.      ________          ________    *",
+         "          *   |   __   |      |   __   \\       |   __   \\   *",
+         "            *   |  |__|  |      |  |   |  |      |  |   |  |   *",
+         "            *   |   __   |      |  |   |  |      |  |   |  |   *",
+         "           *   |  |  |  |      |  |___|  |      |  |___|  |   *",
+         "            *   |__|  |__|      |_______./       |_______./    *",
+         "           *.              ..              ..               .*",
+         "           **************  **************  ***************",
+         ""
+    };
+
+    printEndl(2);
+
+    for (int i = 0; i < 11; i++)
+    {
+        centerText(purpleColor + quiz[i] + resetColor);
+        cout << endl;
+    }
+    printEndl(3);
 }
 
 void createEventFile(const string& folderPath, const string& title, const string& date, const string& description) {

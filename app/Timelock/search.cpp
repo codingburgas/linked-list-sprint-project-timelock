@@ -6,37 +6,31 @@ SEARCH* loadEventsFromFolder(const string& folderPath)
     SEARCH* head = nullptr;
     SEARCH* tail = nullptr;
 
-    DIR* dir = opendir(folderPath.c_str());
-    if (!dir)
+    string searchPath = folderPath + "\\*.txt";
+    WIN32_FIND_DATAA findFileData;
+    HANDLE hFind = FindFirstFileA(searchPath.c_str(), &findFileData);
+
+    if (hFind == INVALID_HANDLE_VALUE)
     {
         cout << "Failed to open directory: " << folderPath << endl;
         return nullptr;
     }
 
-    dirent* entry;
-    while ((entry = readdir(dir)) != nullptr)
+    do
     {
-        string fileName = entry->d_name;
-
-        if (fileName == "." || fileName == "..")
-        {
-            continue; 
-        }
-        if (fileName.find(".txt") == string::npos)
-        { 
-            continue;
-        }
+        string fileName = findFileData.cFileName;
 
         string lowerFileName = fileName;
         transform(lowerFileName.begin(), lowerFileName.end(), lowerFileName.begin(), ::tolower);
         if (lowerFileName.find("quiz") != string::npos)
-        { 
+        {
             continue;
         }
 
-        ifstream file(folderPath + "/" + fileName);
+        string filePath = folderPath + "\\" + fileName;
+        ifstream file(filePath);
         if (!file.is_open())
-        { 
+        {
             continue;
         }
 
@@ -52,14 +46,15 @@ SEARCH* loadEventsFromFolder(const string& folderPath)
         {
             head = tail = newNode;
         }
-        else 
+        else
         {
             tail->next = newNode;
             tail = newNode;
         }
-    }
 
-    closedir(dir);
+    } while (FindNextFileA(hFind, &findFileData) != 0);
+
+    FindClose(hFind);
     return head;
 }
 
@@ -69,92 +64,62 @@ void searchByDate(const string& folderPath)
     string resetColor = "\033[37m";
     string purpleColor = "\033[35m";
 
-    while (true) 
+    while (true)
     {
-    SEARCH* head = loadEventsFromFolder(folderPath);
-    if (!head)
-    {
-        return;
-    }
+        SEARCH* head = loadEventsFromFolder(folderPath);
+        if (!head) return;
 
-    string searchYear;
-    centerText("        Enter year: ");
-    cin >> searchYear;
+        string searchYear;
+        printEndl(2);
+        centerText("   Enter year: ");
+        cin >> searchYear;
 
-    SEARCH* current = head;
-    bool found = false;
-    while (current) 
-    {
-        if (current->content.find(searchYear) != string::npos)
+        SEARCH* current = head;
+        bool found = false;
+
+        while (current)
         {
-            printEndl(2);
-            centerText(purpleColor + "                  *** Match Found in " + current->fileName + " ***" + resetColor);
-            printEndl(2);
-
-            istringstream stream(current->content);
-            string line;
-            while (getline(stream, line))
+            if (current->content.find(searchYear) != string::npos)
             {
-                centerText(line);
+                printEndl(2);
+                centerText(purpleColor + "              *** Match Found in " + current->fileName + " ***" + resetColor);
+                printEndl(2);
+
+                istringstream stream(current->content);
+                string line;
+                while (getline(stream, line))
+                {
+                    centerText(line);
+                    printEndl(1); 
+                }
+                found = true;
             }
-            found = true;
+            current = current->next;
         }
-        current = current->next;
-    }
 
-    if (!found) 
-    {
         printEndl(2);
-        centerText(redColor + "                      No events found for year " + searchYear + "." + resetColor);
-        printEndl(2);
-        centerText(purpleColor + "                     Try another year? (Y/N)" + resetColor);
+
+        if (!found)
+        {
+            centerText(redColor + "                  No events found for year " + searchYear + "." + resetColor);
+            printEndl(2);
+            centerText(purpleColor + "                   Try another year? (Y/N): " + resetColor);
+        }
+        else
+        {
+            centerText(purpleColor + "             Search again? (Y/N): " + resetColor);
+        }
+
+        char ch;
         while (!_kbhit()) {}
-        char ch = _getch();
+        ch = _getch();
 
-        if (ch == 27)  // ESC
+        if (ch == 27 || ch == 'n' || ch == 'N') 
         {
             system("cls");
             displayTimeline();
             return;
         }
-        else if (ch == 'Y' || ch == 'y')
-        {
-            continue;
-        }
-        else
-        {
-            system("cls");
-            displayTimeline();
-            return;
-        }
-    }
-    else
-    {
-        printEndl(2);
-        centerText(purpleColor + "                  Search again? (Y/N)" + resetColor);
-        while (!_kbhit())
-        {
-
-        }
-        char ch = _getch();
-
-        if (ch == 27)
-        {
-            system("cls");
-            displayTimeline();
-            return;
-        }
-        else if (ch == 'Y' || ch == 'y')
-        {
-            continue;
-        }
-        else
-        {
-            system("cls");
-            displayTimeline();
-            return;
-        }
-    }
     }
 }
 
@@ -165,100 +130,69 @@ void searchByEvent(const string& folderPath)
     string purpleColor = "\033[35m";
 
     while (true)
-    { 
-    SEARCH* head = loadEventsFromFolder(folderPath);
-    if (!head) 
     {
-        return; 
-    }
+        SEARCH* head = loadEventsFromFolder(folderPath);
+        if (!head) return;
 
-    cin.ignore();
-    string keyword;
-    centerText("      Enter event keyword: ");
-    getline(cin, keyword);
-    transform(keyword.begin(), keyword.end(), keyword.begin(), ::tolower);
+        cin.ignore(); 
+        string keyword;
+        printEndl(2);
+        centerText("    Enter event keyword: ");
+        getline(cin, keyword);
+        transform(keyword.begin(), keyword.end(), keyword.begin(), ::tolower);
 
-    SEARCH* current = head;
-    bool found = false;
-    while (current)
-    {
-        string lowerContent = current->content;
-        transform(lowerContent.begin(), lowerContent.end(), lowerContent.begin(), ::tolower);
+        SEARCH* current = head;
+        bool found = false;
 
-        if (lowerContent.find(keyword) != string::npos)
+        while (current)
         {
-            printEndl(2);
-            centerText(purpleColor + "                  *** Match Found in " + current->fileName + " ***" + resetColor);
-            printEndl(2);
+            string lowerContent = current->content;
+            transform(lowerContent.begin(), lowerContent.end(), lowerContent.begin(), ::tolower);
 
-            istringstream stream(current->content);
-            string line;
-            while (getline(stream, line))
+            if (lowerContent.find(keyword) != string::npos)
             {
-                centerText(line);
+                printEndl(2);
+                centerText(purpleColor + "              *** Match Found in " + current->fileName + " ***" + resetColor);
+                printEndl(2);
+
+                istringstream stream(current->content);
+                string line;
+                while (getline(stream, line))
+                {
+                    centerText(line);
+                    printEndl(1); 
+                }
+                found = true;
             }
-            found = true;
+            current = current->next;
         }
-        current = current->next;
-    }
 
-    if (!found)
-    {
-        printEndl(2);
-        centerText(redColor + "                    No events found containing \"" + keyword + "\"." + resetColor);
-        printEndl(2);
-        centerText(purpleColor + "                     Try another keyword? (Y/N) " + resetColor);
         printEndl(2);
 
-        while (!_kbhit())
+        if (!found)
         {
-
-        }
-        char ch = _getch();
-
-        if (ch == 27)
-        {
-            system("cls");
-            displayTimeline();
-            return;
-        }
-        else if (ch == 'Y' || ch == 'y')
-        {
-            continue;
+            centerText(redColor + "                 No events found containing \"" + keyword + "\"." + resetColor);
+            printEndl(2);
+            centerText(purpleColor + "                Try another keyword? (Y/N): " + resetColor);
         }
         else
         {
-            system("cls");
-            displayTimeline();
-            return;
+            centerText(purpleColor + "             Search again? (Y/N): " + resetColor);
         }
-    }
-    else
-    {
-        printEndl(2);
-        centerText(purpleColor + "                  Search again? (Y/N)" + resetColor);
-        while (!_kbhit())
-        {
-        }
-        char ch = _getch();
 
-        if (ch == 27)
+        char ch;
+        while (!_kbhit()) 
+        {
+        
+        }
+        ch = _getch();
+
+        if (ch == 27 || ch == 'n' || ch == 'N')
         {
             system("cls");
             displayTimeline();
             return;
         }
-        else if (ch == 'Y' || ch == 'y')
-        {
-            continue;
-        }
-        else
-        {
-            system("cls");
-            displayTimeline();
-            return;
-        }
-    }
     }
 }
   

@@ -136,6 +136,7 @@
     <ClCompile Include="earlyModern.cpp" />
     <ClCompile Include="editEvents.cpp" />
     <ClCompile Include="events.cpp" />
+    <ClCompile Include="favourites.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="middleAge.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="earlyModern.h" />
     <ClInclude Include="editEvents.h" />
     <ClInclude Include="events.h" />
+    <ClInclude Include="favourites.h" />
     <ClInclude Include="login.h" />
     <ClInclude Include="middleAge.h" />
     <ClInclude Include="modern.h" />

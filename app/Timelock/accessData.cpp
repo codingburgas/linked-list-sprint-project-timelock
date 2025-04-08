@@ -100,3 +100,102 @@ void saveUserProgress()
     }
     outFile.close();
 }
+
+void approveAdmin()
+{
+    string resetColor = "\033[37m";   // White 
+    string purpleColor = "\033[35m";  // Purple
+    string redColor = "\033[31m";     // Red
+    string greenColor = "\033[32m";   // Green
+
+    string title[11] = {
+    "",
+    "            .**************..**************..**************..***************..**************..**************..**************. ",
+    "           *    _______        .________.        ________        .__.  .__.      .________.        ______       .________.   *",
+    "           *   |   __  \\       |  ______|       /  .__.  \\       |  |  |  |      |  ______|       '  ____|      |___  ___|   *",
+    "           *   |  |__|  |      |  |_____        |  |  |  |       |  |  |  |      |  |_____       |  (__            |  |      *",
+    "           *   |   _   /       |  ______|       |  | _|_ |       |  |  |  |      |  ______|       '.___ `.         |  |      *",
+    "           *   |  |\\  \\        |  |_____        |  |_\\  \\|       |  |__|  |      |  |_____        _____)  |        |  |      *",
+    "           *   |__| \\__\\       |________|       \\_____\\__\\       \\________/      |________|      |______.'         |__|      *",
+    "           *.              ..              ..              ..               ..              ..               ..             .*",
+    "           **************  **************  **************  ***************  **************  **************  **************",
+    ""
+    };
+
+    printEndl(2);
+
+    for (int i = 0; i < 11; i++)
+    {
+        centerText(purpleColor + title[i] + resetColor);
+        cout << endl;
+    }
+
+    ACCOUNT* temp = head;
+    bool foundPending = false;
+    vector<string> updatedLines;
+
+
+    ifstream inFile("../data/accounts.csv");
+    string line;
+
+    while (getline(inFile, line))
+    {
+        stringstream ss(line);
+        string username, password, role, progressStr;
+        getline(ss, username, ',');
+        getline(ss, password, ',');
+        getline(ss, role, ',');
+        getline(ss, progressStr, ',');
+
+
+        if (role == "pending")
+        {
+            foundPending = true;
+            printEndl(3);
+            centerText(purpleColor + "           Pending account found: " + resetColor + username);
+            printEndl(2);
+            centerText(purpleColor + "           Approve this account as admin? (Y/N): " + resetColor);
+
+            char choice;
+            cin >> choice;
+            printEndl(2);
+            choice = tolower(choice);
+
+            if (choice == 'y')
+            {
+                role = "admin";
+                progressStr = "4";
+                centerText(greenColor + "           Approved: " + resetColor + username);
+                cout << endl;
+            }
+            else
+            {
+                centerText(redColor + "            "  + username + "'s request rejected!" + resetColor);
+                cout << endl;
+                role = "user";
+            }
+        }
+
+
+        updatedLines.push_back(username + "," + password + "," + role + "," + progressStr);
+    }
+    inFile.close();
+
+    if (!foundPending)
+    {
+        printEndl(2);
+        centerText(redColor + "             No pending accounts found." + resetColor);
+        cout << endl;
+        return;
+    }
+
+
+    ofstream outFile("../data/accounts.csv", ios::trunc);
+    for (const string& updatedLine : updatedLines)
+    {
+        outFile << updatedLine << endl;
+    }
+    outFile.close();
+
+
+}

@@ -7,6 +7,7 @@
 #include "modern.h"
 #include "events.h"
 #include "search.h"
+#include "favourites.h"
 
 void userPanel(int page)
 {
@@ -26,7 +27,7 @@ void userPanel(int page)
     cout << "4. Attempt quiz.";
 
     printStrRepeat(" ", 8);
-    cout << "5. Open favourites."; // TODO: Add favourites functionality
+    cout << "5. Open favourites."; 
 
     printEndl(3);
     centerText(purpleColor + "            Choose an option! " + resetColor);
@@ -94,12 +95,26 @@ void userPanel(int page)
         }
         break;
     case 5:
-        // TODO: Implement favourites later
-        // system("cls");
-        // displayFavourites(page);
-        break;
-    default:
-        cout << "\nInvalid option. Returning to timeline.\n";
+        system("cls");
+        displayEventsTitle();
+        switch (page)
+        {
+        case 1:
+            displayFavouritesByEra("Prehistoric");
+            break;
+        case 2:
+            displayFavouritesByEra("Classical");
+            break;
+        case 3:
+            displayFavouritesByEra("Middle Ages");
+            break;
+        case 4:
+            displayFavouritesByEra("Early Modern");
+            break;
+        case 5:
+            displayFavouritesByEra("Modern");
+            break;
+        }
         break;
     }
 }

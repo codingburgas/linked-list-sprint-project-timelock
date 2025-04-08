@@ -108,17 +108,25 @@ void signUp()
         }
         else
         {
+            if (role == "admin") 
+            {
+                role = "pending";
+            }
             validRole = true;
         }
     }
 
-    
     saveAccount(username, password, role, progress);
+
+    if (role == "admin")
+    {
+        progress = 4;
+    }
 
     cout << endl;
     centerText(greenColor + "               SIGN UP successful!" + resetColor);
 
-    sleep_for(seconds(1));
+    sleep_for(milliseconds(1500));
 
     system("cls");
 

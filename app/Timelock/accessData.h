@@ -19,4 +19,5 @@ void saveAccount(const string& username, const string& password, const string& r
 void loadAccounts();
 void loadUserProgress();
 void saveUserProgress();
+void approveAdmin();
 

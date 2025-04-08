@@ -10,7 +10,8 @@
 #include "deleteEvents.h"
 #include "search.h"
 #include "addEvents.h"
-
+#include "favourites.h"
+#include "accessData.h"
 
 void adminPanel(int page)
 {
@@ -42,6 +43,11 @@ void adminPanel(int page)
 
     printStrRepeat(" ", 12);
     cout << "8. Open favourites.";
+
+    printEndl(2);
+
+    printStrRepeat(" ", 65);
+    cout << "9. Approve admin.";
 
     printEndl(3);
     centerText(purpleColor + "            Choose an option! " + resetColor);
@@ -93,11 +99,13 @@ void adminPanel(int page)
 
     case 4:
         system("cls");
+        displayAddTitle();
         addEventAtBeginning(page); 
         break;
 
     case 5:
         system("cls");
+        displayAddTitle();
         addEventAtEnd(page); 
         break;
 
@@ -159,7 +167,30 @@ void adminPanel(int page)
 
     case 8:
         system("cls");
-        //openFavourites(page);
+        displayEventsTitle();
+        switch (page)
+        {
+        case 1:
+            displayFavouritesByEra("Prehistoric");
+            break;
+        case 2:
+            displayFavouritesByEra("Classical");
+            break;
+        case 3:
+            displayFavouritesByEra("Middle Ages");
+            break;
+        case 4:
+            displayFavouritesByEra("Early Modern");
+            break;
+        case 5:
+            displayFavouritesByEra("Modern");
+            break;
+        }
+        break;
+    case 9:
+        system("cls");
+        approveAdmin();
         break;
     }
+    
 }

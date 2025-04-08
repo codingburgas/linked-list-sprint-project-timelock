@@ -22,37 +22,34 @@ int extractYear(const string& text)
 
 int findExtremeYear(const string& folderPath, bool findMin)
 {
-    DIR* dir = opendir(folderPath.c_str());
-    if (dir == nullptr) 
+    string searchPath = folderPath + "\\*.txt";
+    WIN32_FIND_DATAA findFileData;
+    HANDLE hFind = FindFirstFileA(searchPath.c_str(), &findFileData);
+
+    if (hFind == INVALID_HANDLE_VALUE)
     {
         return -1;
     }
 
-    dirent* entry;
     int extremeYear = findMin ? 9999 : 0;
     bool found = false;
 
-    while ((entry = readdir(dir)) != nullptr) 
+    do
     {
-        string fileName = entry->d_name;
+        string fileName = findFileData.cFileName;
 
-        if (fileName == "." || fileName == "..")
+
+        string lowerFileName = fileName;
+        transform(lowerFileName.begin(), lowerFileName.end(), lowerFileName.begin(), ::tolower);
+
+        if (lowerFileName.find("quiz") != string::npos)
         {
             continue;
         }
 
-        if (fileName.find(".txt") == string::npos)
-        {
-            continue;
-        }
-
-        if (fileName.find("quiz") != string::npos || fileName.find("Quiz") != string::npos)
-        {
-            continue;
-        }
-
-        ifstream file(folderPath + "/" + fileName);
-        if (!file.is_open()) 
+        string filePath = folderPath + "\\" + fileName;
+        ifstream file(filePath);
+        if (!file.is_open())
         {
             continue;
         }
@@ -68,31 +65,16 @@ int findExtremeYear(const string& folderPath, bool findMin)
         if (year != -1)
         {
             found = true;
-            if (findMin) {
-                if (year < extremeYear)
-                {
-                    extremeYear = year;
-                }
-            }
+            if (findMin)
+                extremeYear = min(extremeYear, year);
             else
-            {
-                if (year > extremeYear)
-                {
-                    extremeYear = year;
-                }
-            }
+                extremeYear = max(extremeYear, year);
         }
-    }
 
-    closedir(dir);
-    if (found) 
-    {
-        return extremeYear;
-    }
-    else 
-    {
-        return -1;
-    }
+    } while (FindNextFileA(hFind, &findFileData) != 0);
+
+    FindClose(hFind);
+    return found ? extremeYear : -1;
 }
 
 bool isEarliestYear(int year, const string& folderPath)

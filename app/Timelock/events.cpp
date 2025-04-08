@@ -1,4 +1,5 @@
 #include "events.h"
+#include "favourites.h"
 
 void displayPrehistoricEventsInfo()
 {
@@ -115,6 +116,7 @@ void displayPrehistoricEventsInfo()
         if (list)
         {
             displayInfo(list);
+            askToAddToFavourites("Prehistoric", list);
         }
     }
 
@@ -264,6 +266,7 @@ void displayClassicalEventsInfo()
         if (list)
         {
             displayInfo(list);
+            askToAddToFavourites("Classical", list);
         }
     }
 
@@ -412,6 +415,7 @@ void displayMiddleAgeEventsInfo()
         if (list)
         {
             displayInfo(list);
+            askToAddToFavourites("Middle Ages", list);
         }
     }
 
@@ -535,6 +539,7 @@ void displayEarlyModernEventsInfo()
         if (list)
         {
             displayInfo(list);
+            askToAddToFavourites("Early Modern", list);
         }
     }
 
@@ -708,6 +713,7 @@ void displayModernEventsInfo()
         if (list)
         {
             displayInfo(list);
+            askToAddToFavourites("Modern", list);
         }
     }
 
