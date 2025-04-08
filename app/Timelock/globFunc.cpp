@@ -13,6 +13,10 @@ int getConsoleWidth()
     return width;
 }
 
+void clearScreen() {
+    system("cls");
+}
+
 void centerText(string text) 
 { 
     int consoleWidth = getConsoleWidth();

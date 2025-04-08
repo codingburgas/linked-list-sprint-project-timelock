@@ -52,6 +52,7 @@ extern int progres;
 // Generally used functions
 int getConsoleWidth();
 
+void clearScreen();
 void centerText(string text);
 void printEndl(int num);
 void printStrRepeat(string str, int num);

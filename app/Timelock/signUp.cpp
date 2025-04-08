@@ -129,7 +129,7 @@ void signUp()
 
     sleep_for(milliseconds(1500));
 
-    system("cls");
+    clearScreen();
 
     displayTimeline();
 }

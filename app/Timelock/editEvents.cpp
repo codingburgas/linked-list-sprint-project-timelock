@@ -49,7 +49,7 @@ void editPrehistoricEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -59,7 +59,7 @@ void editPrehistoricEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayPrehistoric();
             return;
         }
@@ -112,7 +112,7 @@ void editClassicalEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayClassical();
             return;
         }
@@ -122,7 +122,7 @@ void editClassicalEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayClassical();
             return;
         }
@@ -175,7 +175,7 @@ void editMiddleAgeEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayMiddleAge();
             return;
         }
@@ -185,7 +185,7 @@ void editMiddleAgeEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayMiddleAge();
             return;
         }
@@ -235,7 +235,7 @@ void editEarlyModernEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayEarlyModern();
             return;
         }
@@ -245,7 +245,7 @@ void editEarlyModernEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayEarlyModern();
             return;
         }
@@ -301,7 +301,7 @@ void editModernEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayModern();
             return;
         }
@@ -311,7 +311,7 @@ void editModernEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayModern();
             return;
         }

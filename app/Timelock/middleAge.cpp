@@ -228,7 +228,7 @@ void displayMiddleAge()
 
     if (ch == 27)
     {
-        system("cls");
+        clearScreen();
         displayMiddleAge();
     }
 }

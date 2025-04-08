@@ -223,7 +223,7 @@ void displayClassical()
 
     if (ch == 27)
     {
-        system("cls");
+        clearScreen();
         displayClassical();
     }
 }

@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  UnitTestTimelock.cpp
+C:\Users\Lacho\OneDrive - ПГКПИ - Бургас\Работен плот\sex\linked-list-sprint-project-timelock\app\UnitTestTimelock\UnitTestTimelock.cpp(16,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/UnitTestTimelock.cpp')
+  
+     Creating library C:\Users\Lacho\OneDrive - ПГКПИ - Бургас\Работен плот\sex\linked-list-sprint-project-timelock\app\x64\Debug\UnitTestTimelock.lib and object C:\Users\Lacho\OneDrive - ПГКПИ - Бургас\Работен плот\sex\linked-list-sprint-project-timelock\app\x64\Debug\UnitTestTimelock.exp
+  UnitTestTimelock.vcxproj -> C:\Users\Lacho\OneDrive - ПГКПИ - Бургас\Работен плот\sex\linked-list-sprint-project-timelock\app\x64\Debug\UnitTestTimelock.dll

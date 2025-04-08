@@ -118,7 +118,7 @@ void searchByDate(const string& folderPath)
 
         if (ch == 27 || ch == 'n' || ch == 'N')
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -192,7 +192,7 @@ void searchByEvent(const string& folderPath)
 
         if (ch == 27 || ch == 'n' || ch == 'N')
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }

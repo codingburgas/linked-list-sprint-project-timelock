@@ -59,7 +59,7 @@ void adminPanel(int page)
     switch (option)
     {
     case 1:
-        system("cls");
+        clearScreen();
         displayEventsTitle();
         switch (page)
         {
@@ -87,31 +87,31 @@ void adminPanel(int page)
         break;
 
     case 2:
-        system("cls");
+        clearScreen();
         displaySearchTitle();
         searchByDate(page);
         break;
 
     case 3:
-        system("cls");
+        clearScreen();
         displaySearchTitle();
         searchByEvent(page);
         break;
 
     case 4:
-        system("cls");
+        clearScreen();
         displayAddTitle();
         addEventAtBeginning(page); 
         break;
 
     case 5:
-        system("cls");
+        clearScreen();
         displayAddTitle();
         addEventAtEnd(page); 
         break;
 
     case 6:
-        system("cls");
+        clearScreen();
         displayEventsTitle();
         switch (page)
         {
@@ -139,7 +139,7 @@ void adminPanel(int page)
         break;
 
     case 7:
-        system("cls");
+        clearScreen();
         displayEventsTitle();
         switch (page)
         {
@@ -167,7 +167,7 @@ void adminPanel(int page)
         break;
 
     case 8:
-        system("cls");
+        clearScreen();
         displayEventsTitle();
         switch (page)
         {
@@ -189,7 +189,7 @@ void adminPanel(int page)
         }
         break;
     case 9:
-        system("cls");
+        clearScreen();
         approveAdmin();
         break;
     }

@@ -44,7 +44,7 @@ void deletePrehistoricEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -54,7 +54,7 @@ void deletePrehistoricEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -107,7 +107,7 @@ void deleteClassicalEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -117,7 +117,7 @@ void deleteClassicalEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -170,7 +170,7 @@ void deleteMiddleAgeEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -180,7 +180,7 @@ void deleteMiddleAgeEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -230,7 +230,7 @@ void deleteEarlyModernEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -240,7 +240,7 @@ void deleteEarlyModernEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -296,7 +296,7 @@ void deleteModernEvents()
         char ch = _getch();
         if (ch == 27)
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }
@@ -306,7 +306,7 @@ void deleteModernEvents()
         }
         else
         {
-            system("cls");
+            clearScreen();
             displayTimeline();
             return;
         }

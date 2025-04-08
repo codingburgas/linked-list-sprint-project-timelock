@@ -106,13 +106,13 @@ void displayTimeline()
     switch (era)
     {
     case 1:
-        system("cls");
+        clearScreen();
         displayPrehistoric();
         break;
     case 2:
         if (progres >= 1)
         {
-            system("cls");
+            clearScreen();
             displayClassical();
             break;
         }
@@ -121,14 +121,14 @@ void displayTimeline()
             printEndl(2);
             centerText(redColor + "                Invalid choice! Complete Prehistoric Era first! " + resetColor);
             sleep_for(seconds(1));
-            system("cls");
+            clearScreen();
             displayTimeline();
             break;
         }
     case 3:
         if (progres >= 2)
         {
-            system("cls");
+            clearScreen();
             displayMiddleAge();
             break;
         }
@@ -137,14 +137,14 @@ void displayTimeline()
             printEndl(2);
             centerText(redColor + "                Invalid choice! Complete Classical Era first! " + resetColor);
             sleep_for(seconds(1));
-            system("cls");
+            clearScreen();
             displayTimeline();
             break;
         }
     case 4:
         if (progres >= 3)
         {
-            system("cls");
+            clearScreen();
             displayEarlyModern();
             break;
         }
@@ -153,14 +153,14 @@ void displayTimeline()
             printEndl(2);
             centerText(redColor + "                Invalid choice! Complete Middle Age Era first! " + resetColor);
             sleep_for(seconds(1));
-            system("cls");
+            clearScreen();
             displayTimeline();
             break;
         }
     case 5:
         if (progres == 4)
         {
-            system("cls");
+            clearScreen();
             displayModern();
             break;
         }
@@ -169,7 +169,7 @@ void displayTimeline()
             printEndl(2);
             centerText(redColor + "                Invalid choice! Complete Early Modern Era first! " + resetColor);
             sleep_for(seconds(1));
-            system("cls");
+            clearScreen();
             displayTimeline();
             break;
         }

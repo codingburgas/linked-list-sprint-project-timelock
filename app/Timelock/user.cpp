@@ -36,7 +36,7 @@ void userPanel(int page)
     int option;
     cin >> option;
 
-    system("cls");
+    clearScreen();
 
     switch (option)
     {
@@ -96,7 +96,7 @@ void userPanel(int page)
         }
         break;
     case 5:
-        system("cls");
+        clearScreen();
         displayEventsTitle();
         switch (page)
         {

@@ -228,7 +228,7 @@ void displayEarlyModern()
 
     if (ch == 27)
     {
-        system("cls");
+        clearScreen();
         displayEarlyModern();
     }
 }

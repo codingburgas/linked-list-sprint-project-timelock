@@ -63,13 +63,13 @@ void chooseAnswer()
         if (choice == 1)
         {
             isValid = true;
-            system("cls");
+            clearScreen();
             displaySignUp();
         }
         else if (choice == 2)
         {
             isValid = true;
-            system("cls");
+            clearScreen();
             displayLogin();
         }
         else
