@@ -1,4 +1,5 @@
 #include "search.h"
+#include "timeline.h"
 
 SEARCH* loadEventsFromFolder(const string& folderPath)
 {
@@ -22,18 +23,21 @@ SEARCH* loadEventsFromFolder(const string& folderPath)
             continue; 
         }
         if (fileName.find(".txt") == string::npos)
-        { continue;
+        { 
+            continue;
         }
 
         string lowerFileName = fileName;
         transform(lowerFileName.begin(), lowerFileName.end(), lowerFileName.begin(), ::tolower);
         if (lowerFileName.find("quiz") != string::npos)
-        { continue;
+        { 
+            continue;
         }
 
         ifstream file(folderPath + "/" + fileName);
         if (!file.is_open())
-        { continue;
+        { 
+            continue;
         }
 
         string line, fullContent;
@@ -61,6 +65,12 @@ SEARCH* loadEventsFromFolder(const string& folderPath)
 
 void searchByDate(const string& folderPath)
 {
+    string redColor = "\033[31m";
+    string resetColor = "\033[37m";
+    string purpleColor = "\033[35m";
+
+    while (true) 
+    {
     SEARCH* head = loadEventsFromFolder(folderPath);
     if (!head)
     {
@@ -68,7 +78,7 @@ void searchByDate(const string& folderPath)
     }
 
     string searchYear;
-    cout << "Enter year: ";
+    centerText("        Enter year: ");
     cin >> searchYear;
 
     SEARCH* current = head;
@@ -77,8 +87,16 @@ void searchByDate(const string& folderPath)
     {
         if (current->content.find(searchYear) != string::npos)
         {
-            cout << "\n=== Match Found in " << current->fileName << " ===" << endl;
-            cout << current->content << "\n" << endl;
+            printEndl(2);
+            centerText(purpleColor + "                  *** Match Found in " + current->fileName + " ***" + resetColor);
+            printEndl(2);
+
+            istringstream stream(current->content);
+            string line;
+            while (getline(stream, line))
+            {
+                centerText(line);
+            }
             found = true;
         }
         current = current->next;
@@ -86,12 +104,68 @@ void searchByDate(const string& folderPath)
 
     if (!found) 
     {
-        cout << "\nNo events found for year " << searchYear << endl;
+        printEndl(2);
+        centerText(redColor + "                      No events found for year " + searchYear + "." + resetColor);
+        printEndl(2);
+        centerText(purpleColor + "                     Try another year? (Y/N)" + resetColor);
+        while (!_kbhit()) {}
+        char ch = _getch();
+
+        if (ch == 27)  // ESC
+        {
+            system("cls");
+            displayTimeline();
+            return;
+        }
+        else if (ch == 'Y' || ch == 'y')
+        {
+            continue;
+        }
+        else
+        {
+            system("cls");
+            displayTimeline();
+            return;
+        }
+    }
+    else
+    {
+        printEndl(2);
+        centerText(purpleColor + "                  Search again? (Y/N)" + resetColor);
+        while (!_kbhit())
+        {
+
+        }
+        char ch = _getch();
+
+        if (ch == 27)
+        {
+            system("cls");
+            displayTimeline();
+            return;
+        }
+        else if (ch == 'Y' || ch == 'y')
+        {
+            continue;
+        }
+        else
+        {
+            system("cls");
+            displayTimeline();
+            return;
+        }
+    }
     }
 }
 
 void searchByEvent(const string& folderPath)
 {
+    string redColor = "\033[31m";
+    string resetColor = "\033[37m";
+    string purpleColor = "\033[35m";
+
+    while (true)
+    { 
     SEARCH* head = loadEventsFromFolder(folderPath);
     if (!head) 
     {
@@ -100,7 +174,7 @@ void searchByEvent(const string& folderPath)
 
     cin.ignore();
     string keyword;
-    cout << "Enter event keyword: ";
+    centerText("      Enter event keyword: ");
     getline(cin, keyword);
     transform(keyword.begin(), keyword.end(), keyword.begin(), ::tolower);
 
@@ -113,8 +187,16 @@ void searchByEvent(const string& folderPath)
 
         if (lowerContent.find(keyword) != string::npos)
         {
-            cout << "\n=== Match Found in " << current->fileName << " ===" << endl;
-            cout << current->content << "\n" << endl;
+            printEndl(2);
+            centerText(purpleColor + "                  *** Match Found in " + current->fileName + " ***" + resetColor);
+            printEndl(2);
+
+            istringstream stream(current->content);
+            string line;
+            while (getline(stream, line))
+            {
+                centerText(line);
+            }
             found = true;
         }
         current = current->next;
@@ -122,9 +204,64 @@ void searchByEvent(const string& folderPath)
 
     if (!found)
     {
-        cout << "\nNo events found containing \"" << keyword << "\"\n";
+        printEndl(2);
+        centerText(redColor + "                    No events found containing \"" + keyword + "\"." + resetColor);
+        printEndl(2);
+        centerText(purpleColor + "                     Try another keyword? (Y/N) " + resetColor);
+        printEndl(2);
+
+        while (!_kbhit())
+        {
+
+        }
+        char ch = _getch();
+
+        if (ch == 27)
+        {
+            system("cls");
+            displayTimeline();
+            return;
+        }
+        else if (ch == 'Y' || ch == 'y')
+        {
+            continue;
+        }
+        else
+        {
+            system("cls");
+            displayTimeline();
+            return;
+        }
+    }
+    else
+    {
+        printEndl(2);
+        centerText(purpleColor + "                  Search again? (Y/N)" + resetColor);
+        while (!_kbhit())
+        {
+        }
+        char ch = _getch();
+
+        if (ch == 27)
+        {
+            system("cls");
+            displayTimeline();
+            return;
+        }
+        else if (ch == 'Y' || ch == 'y')
+        {
+            continue;
+        }
+        else
+        {
+            system("cls");
+            displayTimeline();
+            return;
+        }
+    }
     }
 }
+  
 
 void searchByDate(int page)
 {

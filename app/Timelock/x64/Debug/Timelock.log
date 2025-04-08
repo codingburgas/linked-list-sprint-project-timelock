@@ -1,7 +1,4 @@
-﻿  addEvents.cpp
-  dateUtils.cpp
-  search.cpp
-  Generating Code...
+﻿  search.cpp
   Timelock.vcxproj -> C:\Users\Lenovo\Downloads\linked-list-sprint-project-timelock\app\x64\Debug\Timelock.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
