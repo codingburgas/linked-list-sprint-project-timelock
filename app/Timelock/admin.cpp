@@ -9,6 +9,8 @@
 #include "editEvents.h"
 #include "deleteEvents.h"
 #include "search.h"
+#include "addEvents.h"
+
 
 void adminPanel(int page)
 {
@@ -91,12 +93,12 @@ void adminPanel(int page)
 
     case 4:
         system("cls");
-        // addEventAtBeginning(page); 
+        addEventAtBeginning(page); 
         break;
 
     case 5:
         system("cls");
-        // addEventAtEnd(page); 
+        addEventAtEnd(page); 
         break;
 
     case 6:

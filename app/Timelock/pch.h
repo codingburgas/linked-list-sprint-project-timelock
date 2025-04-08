@@ -10,6 +10,7 @@
 #include <vector>
 #include <algorithm>
 #include <dirent.h>
+#include <string>
 
 using namespace std;
 using std::this_thread::sleep_for;

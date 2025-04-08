@@ -128,8 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="accessData.cpp" />
+    <ClCompile Include="addEvents.cpp" />
     <ClCompile Include="admin.cpp" />
     <ClCompile Include="classical.cpp" />
+    <ClCompile Include="dateUtils.cpp" />
     <ClCompile Include="deleteEvents.cpp" />
     <ClCompile Include="earlyModern.cpp" />
     <ClCompile Include="editEvents.cpp" />
@@ -149,8 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="accessData.h" />
+    <ClInclude Include="addEvents.h" />
     <ClInclude Include="admin.h" />
     <ClInclude Include="classical.h" />
+    <ClInclude Include="dateUtils.h" />
     <ClInclude Include="deleteEvents.h" />
     <ClInclude Include="earlyModern.h" />
     <ClInclude Include="editEvents.h" />

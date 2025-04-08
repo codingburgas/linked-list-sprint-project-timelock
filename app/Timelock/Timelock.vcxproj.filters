@@ -72,6 +72,12 @@
     <ClCompile Include="search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="addEvents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dateUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="startingScreen.h">
@@ -126,6 +132,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="addEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dateUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
